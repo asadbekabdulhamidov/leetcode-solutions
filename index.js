@@ -16,3 +16,13 @@ let res = twoSum([2, 7, 11, 15], 9);
 // let res = twoSum([3,3], 6);
 
 //===============================================
+
+// problem 2 isPolindrome
+function isPalindrome(num) {
+  let arrNum = num.toString().split('').reverse().join('');
+  if (Number(arrNum) === num) {
+    return true;
+  } else {
+    return false;
+  }
+}

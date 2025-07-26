@@ -226,3 +226,71 @@
 // console.log(isAnagram('Hello', 'Hello'));
 
 //==========================================================
+
+// Yagona elementni toping
+// Vazifa:
+// Berilgan arrayda barcha elementlar juftlab kelgan, faqat bitta elementdan bitta dona bor. O‘sha elementni topuvchi funksiya yozing.
+// Arrayda raqamlar bo‘ladi, va barcha raqamlar 2 martadan qatnashgan bo‘ladi, faqat bitta elementdan tashqari.
+
+// function findSingle(arr) {
+//   let obj = arr.reduce((acc, curVal) => {
+//     if (curVal in acc) {
+//       acc[curVal] += 1;
+//     } else {
+//       acc[curVal] = 1;
+//     }
+//     return acc;
+//   }, {});
+
+//   for (let num in obj) {
+//     if (obj[num] === 1) {
+//       return num;
+//     }
+//   }
+
+// }
+
+//2-usul
+
+// function findSingle(arr) {
+//   return arr.find((num) => arr.indexOf(num) === arr.lastIndexOf(num));
+// }
+
+// console.log(findSingle([2, 3, 5, 4, 5, 3, 4]));
+// console.log(findSingle([1, 1, 2]));
+// console.log(findSingle([7]));
+
+//=====================================
+
+// 4-masala: So‘zdagi takrorlanuvchi birinchi harfni toping
+// Vazifa:
+// Berilgan satrda birinchi marta takrorlangan harfni toping.
+// Agar hammasi unikal bo‘lsa, undefined qaytaring.
+
+// function firstDuplicateChar(str) {
+//   let firstDuplicate = str
+//     .toLowerCase()
+//     .replace(/[^a-z]/g, '')
+//     .split('');
+//   let unikArr = new Set(firstDuplicate);
+
+//   if ([...unikArr].length === firstDuplicate.length) {
+//     return undefined;
+//   } else {
+//     return firstDuplicate.find(
+//       (item, index, arr) => index !== arr.lastIndexOf(item)
+//     );
+//   }
+// }
+
+// let seen = new Set();
+
+// for (let ch of str) {
+//   if (seen.has(ch)) return ch;
+//   seen.add(ch);
+// }
+// return undefined;
+
+// console.log(firstDuplicateChar('javascript'));
+// console.log(firstDuplicateChar('abcde'));
+// console.log(firstDuplicateChar('hello'));

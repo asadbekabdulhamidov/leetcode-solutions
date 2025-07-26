@@ -89,5 +89,140 @@
 //   }
 // }
 
-fizzBuzz(15);
+// fizzBuzz(15);
 // 1, 2, "Fizz", 4, "Buzz", "Fizz", 7, 8, "Fizz", "Buzz", 11, "Fizz", 13, 14, "FizzBuzz"
+
+//=====================================================
+// 1-masala: So‘z ichidagi unli harflar soni
+// Vazifa:
+// Berilgan matnda nechta unli harf borligini toping (a, e, i, o, u harflari, katta-kichik farqsiz).
+
+// function countVowels(str) {
+//   let counter = 0;
+//   const unliHarflar = 'aeiouAEIOU'; // bu qatorda unli harflar kiritilishi kerak edi
+//   for (let i = 0; i < str.length; i++) { // <= emas, < bo‘lishi kerak
+//     if (unliHarflar.includes(str[i])) {
+//       counter++;
+//     }
+//   }
+//   return counter;
+// }
+
+//==========================================
+
+// 2-masala: Takrorlanuvchi elementni topish
+// Vazifa:
+// Berilgan array ichida birinchi bo‘lib takrorlangan elementni qaytaring. Agar yo‘q bo‘lsa, undefined qaytaring.
+
+// function findDuplicate(arr) {
+//   let num = undefined;
+//   arr.forEach((element, index, arr) => {
+//     if (index !== arr.lastIndexOf(element)) {
+//       num = element;
+//     }
+//   });
+//   console.log(num);
+
+//   return num;
+// }
+
+// function findDuplicate(arr) {
+//   let seen = new Set();
+//   for (let el of arr) {
+//     if (seen.has(el)) return el;
+//     seen.add(el);
+//   }
+//   return undefined;
+// }
+
+// findDuplicate([2, 5, 1, 2, 3, 5, 1, 2, 4]); // 2
+// findDuplicate([1, 2, 3, 4]); // undefined
+
+//============================
+// Eng ko‘p takrorlangan harfni topish
+// Vazifa:
+// Berilgan satrda eng ko‘p takrorlangan harfni toping va uni qaytaring.
+// Bo‘sh joylar, belgilar e’tiborga olinmasin. Agar bir nechta harflar bir xil takrorlangan bo‘lsa, birinchi uchraganini qaytaring.
+
+// function mostFrequentChar(str) {
+//   let word = str
+//     .toLowerCase()
+//     .trim()
+//     .split('')
+//     .reduce((acc, curVal) => {
+//       if (curVal in acc) {
+//         acc[curVal] += 1;
+//       } else if (curVal !== ' ') {
+//         acc[curVal] = 1;
+//       }
+//       return acc;
+//     }, {});
+//   let maxCount = 0;
+//   let mostFrequent = '';
+
+//   for (let char in word) {
+//     if (maxCount < word[char]) {
+//       maxCount = word[char];
+//       mostFrequent = char;
+//     }
+//   }
+//   return mostFrequent;
+// }
+
+// let res = mostFrequentChar('assssalomu alaykum');
+// console.log(res);
+
+//================================================
+// 2-masala: Anagram tekshirish
+// Vazifa:
+// Ikki so‘z berilgan. Ular anagram ekanligini aniqlang.
+// Anagram — harflari bir xil, lekin tartibi boshqacha bo‘lgan so‘zlar (masalan: "listen" va "silent").
+
+// ✅ Shartlar:
+// Faqat harflarni hisobga oling, boshqa belgilar bo‘lsa, e’tibor bermang.
+// Katta-kichik harf farqi bo‘lmasin.
+// Bo‘sh joylar e’tiborga olinmaydi.
+
+// const isAnagram = (prop1, prop2) => {
+//   let newProp1 = prop1
+//     .toLowerCase()
+//     .replace(/[^a-z]/g, '')
+//     .split('')
+//     .sort();
+//   let newProp2 = prop2
+//     .toLowerCase()
+//     .replace(/[^a-z]/g, '')
+//     .split('')
+//     .sort();
+//   if (newProp1.length !== newProp2.length) {
+//     return false;
+//   }
+
+//   let anagram = false;
+//   for (let i = 0; i <= newProp1.length; i++) {
+//     if (newProp1[i] === newProp2[i]) {
+//       anagram = true;
+//     } else {
+//       anagram = false;
+//     }
+//   }
+//   return anagram;
+// };
+
+// const isAnagram = (str1, str2) => {
+//   const normalize = (str) =>
+//     str
+//       .toLowerCase()
+//       .replace(/[^a-z]/g, '')
+//       .split('')
+//       .sort()
+//       .join('');
+
+//   return normalize(str1) === normalize(str2);
+// };
+
+// console.log(isAnagram('listen', 'silent'));
+// console.log(isAnagram('Hello', 'Hello'));
+// console.log(isAnagram('Hello', 'Hello'));
+
+//==========================================================

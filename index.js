@@ -481,3 +481,19 @@
 // }
 
 // searchProducts('an');
+
+//=====================================================
+
+let products = [
+  { id: 1, name: 'olma' },
+  { id: 2, name: 'anor' },
+  { id: 3, name: 'banan' },
+  { id: 4, name: 'shaftoli' },
+  { id: 5, name: 'gilos' },
+  { id: 6, name: 'nok' },
+  { id: 7, name: 'uzum' },
+];
+
+function paginateProducts(page, perPage) {}
+
+console.log(paginateProducts(1, 4));

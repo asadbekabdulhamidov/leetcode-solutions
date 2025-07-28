@@ -418,3 +418,40 @@
 // }
 
 // deleteProduct('banan');
+
+//==============================
+
+// Obyektlar ro‘yxati bilan CRUD
+
+// createProduct(name) – yangi mahsulot qo‘shadi (id avtomatik)
+
+// getProducts() – mahsulotlar ro‘yxatini qaytaradi
+
+// updateProduct(id, newName) – id bo‘yicha nomini o‘zgartiradi
+
+// deleteProduct(id) – id bo‘yicha mahsulotni o‘chiradi
+
+let products = [
+  { id: 1, name: 'olma' },
+  { id: 2, name: 'anor' },
+  { id: 3, name: 'banan' },
+];
+
+function getProducts() {
+  return products;
+}
+
+function createProduct(name) {
+  const newId = products.length ? products[products.length - 1].id + 1 : 1;
+  products.push({ id: newId, name });
+}
+
+const updateProduct = (id, newName) => {
+  products = products.map((prod) =>
+    prod.id === id ? { ...prod, name: newName } : prod
+  );
+};
+
+function deleteProduct(id) {
+  products = products.filter((item) => item.id !== id);
+}

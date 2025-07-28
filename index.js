@@ -431,27 +431,53 @@
 
 // deleteProduct(id) – id bo‘yicha mahsulotni o‘chiradi
 
-let products = [
-  { id: 1, name: 'olma' },
-  { id: 2, name: 'anor' },
-  { id: 3, name: 'banan' },
-];
+// let products = [
+//   { id: 1, name: 'olma' },
+//   { id: 2, name: 'anor' },
+//   { id: 3, name: 'banan' },
+// ];
 
-function getProducts() {
-  return products;
-}
+// function getProducts() {
+//   return products;
+// }
 
-function createProduct(name) {
-  const newId = products.length ? products[products.length - 1].id + 1 : 1;
-  products.push({ id: newId, name });
-}
+// function createProduct(name) {
+//   const newId = products.length ? products[products.length - 1].id + 1 : 1;
+//   products.push({ id: newId, name });
+// }
 
-const updateProduct = (id, newName) => {
-  products = products.map((prod) =>
-    prod.id === id ? { ...prod, name: newName } : prod
-  );
-};
+// const updateProduct = (id, newName) => {
+//   products = products.map((prod) =>
+//     prod.id === id ? { ...prod, name: newName } : prod
+//   );
+// };
 
-function deleteProduct(id) {
-  products = products.filter((item) => item.id !== id);
-}
+// function deleteProduct(id) {
+//   products = products.filter((item) => item.id !== id);
+// }
+
+//=====================================
+
+// Bugun quyidagilarni qo‘shamiz:
+
+// 🔍 searchProducts(keyword)
+// — mahsulot nomida keyword bo‘lsa, chiqarish
+
+// let products = [
+//   { id: 1, name: 'olma' },
+//   { id: 2, name: 'anor' },
+//   { id: 3, name: 'banan' },
+// ];
+// let filteredProducts = [...products];
+
+// function searchProducts(keyword) {
+//   if (!keyword) {
+//     filteredProducts = [...products]; // 🔁 bo‘sh bo‘lsa, tiklaymiz
+//   } else {
+//     filteredProducts = products.filter((item) =>
+//       item.name.toLowerCase().includes(keyword.toLowerCase())
+//     );
+//   }
+// }
+
+// searchProducts('an');

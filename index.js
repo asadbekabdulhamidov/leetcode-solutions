@@ -494,6 +494,10 @@ let products = [
   { id: 7, name: 'uzum' },
 ];
 
-function paginateProducts(page, perPage) {}
+function paginateProducts(page, perPage) {
+  const startIndex = (page - 1) * perPage;
+  const endIndex = startIndex + perPage;
+  return products.slice(startIndex, endIndex);
+}
 
 console.log(paginateProducts(1, 4));

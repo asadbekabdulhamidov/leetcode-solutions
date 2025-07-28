@@ -294,3 +294,127 @@
 // console.log(firstDuplicateChar('javascript'));
 // console.log(firstDuplicateChar('abcde'));
 // console.log(firstDuplicateChar('hello'));
+
+//=====================================================
+
+// 5-masala: So‘zlarni teskari tartibda chiqarish
+// Vazifa:
+// Berilgan gapdagi so‘zlarni teskari tartibda chiqaradigan funksiya yozing.
+// Faqat so‘zlar o‘rnini almashtiring, har bir so‘z ichidagi harflar joyida qoladi.
+
+// function reverseWords(str) {
+//   let arr = str.split(' ').reverse().join(' ');
+//   return arr;
+// }
+
+// console.log(reverseWords('salom Asadbek'));
+
+//======================================================
+// 6-masala: So‘zlar ichidagi harflarni teskari qilish
+// Vazifa:
+// Gapdagi har bir so‘zning harflarini teskari qilib, umumiy tartibni saqlab qoling.
+
+// function reverseLetters(str) {
+//   let newStr = str
+//     .split(' ')
+//     .map((item) => {
+//       return item.split('').reverse().join('');
+//     })
+//     .join(' ');
+
+//   return newStr;
+// }
+
+// console.log(reverseLetters('Men React o‘rganayapman'));
+
+//=================================================
+
+// 7-masala: Faqat raqamlarni ajratib olish
+// Vazifa:
+// Berilgan matndan faqat raqamlarni ajratib olib, ularni bitta yangi stringga birlashtiring.
+// Agar hech qanday raqam bo‘lmasa, "raqam topilmadi" deb qaytaring.
+
+// function extractNumbers(str) {
+//   let numberStr = '';
+//   for (let i of str) {
+//     if (!isNaN(i) && i !== ' ') {
+//       numberStr += i;
+//     }
+//     // console.log(i);
+//   }
+
+//   return numberStr ? numberStr : 'raqam topilmadi';
+// }
+
+// console.log(extractNumbers('Bugun 2025-yil 7-iyul'));
+// console.log(extractNumbers('Men 2 ta olma va 4 ta banan oldim'));
+
+//=================================================================
+
+// Masala: Slug generator (URL friendly)
+// Vazifa:
+// Berilgan sarlavhadan (title) slug yasovchi funksiya yozing — masalan, URL uchun.
+// Slug — bu kichik harflar, bo‘sh joy o‘rniga -, va faqat harf/raqamlar bo‘ladi.
+
+// function generateSlug(title) {
+//   return title
+//     .toLowerCase()
+//     .replace(/[^a-z0-9\s]/g, '')
+//     .trim()
+//     .replace(/\s+/g, '-');
+// }
+
+// console.log(generateSlug('Men React o‘rganayapman!'));
+
+//=======================================================
+// masala: Email manzilini tekshirish
+// Vazifa:
+// Foydalanuvchi kiritgan string haqiqiy email manzilmi yoki yo‘qmi — shuni tekshiradigan funksiya yozing.
+// function isValidEmail(email) {
+//   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//   return regex.test(email);
+// }
+// console.log(isValidEmail('asadbek@gmail.com'));
+// console.log(isValidEmail('test123@domainco'));
+
+//==================================================
+// CRUD uchun boshlang‘ich masala:
+// 🧩 Masala: Mahsulotlar ro‘yxatini boshqarish
+// Vazifa:
+// Quyidagi funksiyalarni yozing:
+
+// createProduct(name) — mahsulot qo‘shadi
+
+// getProducts() — barcha mahsulotni qaytaradi
+
+// updateProduct(oldName, newName) — nomni yangilaydi
+
+// deleteProduct(name) — mahsulotni o‘chiradi
+
+// let products = ['olma', 'anor', 'banan'];
+
+// function getProducts() {
+//   return products;
+// }
+
+// function createProduct(item) {
+//   products.push(item);
+// }
+// createProduct('shaftoli');
+
+// function updateProduct(oldName, newName) {
+//     products = products.map((item) =>
+//         item === oldName ? newName : item
+//       );
+
+//   getProducts(products);
+// }
+// updateProduct('anor', 'anjir');
+
+// function deleteProduct(name) {
+//   products = products.filter((item) => item !== name);
+
+//   getProducts(products);
+// }
+
+// deleteProduct('banan');

@@ -550,18 +550,45 @@
 // Nomidagi harflar soni 5 yoki undan ko‘p bo‘lgan mahsulotlar
 //
 
-let products = [
-  { id: 1, name: 'olma' },
-  { id: 2, name: 'anor' },
-  { id: 3, name: 'banan' },
-  { id: 4, name: 'shaftoli' },
-  { id: 5, name: 'gilos' },
-];
+// let products = [
+//   { id: 1, name: 'olma' },
+//   { id: 2, name: 'anor' },
+//   { id: 3, name: 'banan' },
+//   { id: 4, name: 'shaftoli' },
+//   { id: 5, name: 'gilos' },
+// ];
 
-function filterLongNames(products) {
-  return (products = products.filter((product) => {
-    return product.name.length >= 5;
-  }));
-}
+// function filterLongNames(products) {
+//   return (products = products.filter((product) => {
+//     return product.name.length >= 5;
+//   }));
+// }
 
-console.log(filterLongNames(products));
+// console.log(filterLongNames(products));
+
+//=======================================================
+// Katta harfga o‘zgartirish + filter
+
+// 🎯 Vazifa:
+// Quyidagi ishlarni bir funksiyada bajaring:
+// Faqat name.length >= 5 bo‘lgan mahsulotlarni ajratib oling
+// Har bir nameni katta harflar bilan (toUpperCase()) qaytaring
+// name o‘rniga uppercaseName sifatida qaytaring
+
+// let products = [
+//   { id: 1, name: 'olma' },
+//   { id: 2, name: 'anor' },
+//   { id: 3, name: 'banan' },
+//   { id: 4, name: 'shaftoli' },
+//   { id: 5, name: 'gilos' },
+// ];
+
+// function transformProducts(products) {
+//   return (products = products
+//     .filter((product) => product.name.length >= 5)
+//     .map((item) => {
+//       return { id: item.id, uppercaseName: item.name.toUpperCase() };
+//     }));
+// }
+
+// console.log(transformProducts(products));

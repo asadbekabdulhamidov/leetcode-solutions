@@ -592,3 +592,30 @@
 // }
 
 // console.log(transformProducts(products));
+
+//===================================================
+
+// Chegirma berish — faqat uzun nomlilarga
+
+// Nima qilishi kerak?
+// Faqat nomi 6 yoki undan ko‘p harfdan iborat mahsulotlarni ajrating
+// Har biriga 10% chegirma bering (price * 0.9)
+// Yangi massiv qaytaring, original products o‘zgarmasin
+
+let products = [
+  { id: 1, name: 'olma', price: 8000 },
+  { id: 2, name: 'anor', price: 10000 },
+  { id: 3, name: 'banan', price: 12000 },
+  { id: 4, name: 'shaftoli', price: 15000 },
+  { id: 5, name: 'gilos', price: 11000 },
+];
+
+function applyDiscount(products) {
+  return (products = products
+    .filter((product) => product.name.length >= 6)
+    .map((item) => {
+      return { ...item, price: item.price * 0.9 };
+    }));
+}
+
+console.log(applyDiscount(products));

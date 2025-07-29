@@ -484,20 +484,84 @@
 
 //=====================================================
 
+// let products = [
+//   { id: 1, name: 'olma' },
+//   { id: 2, name: 'anor' },
+//   { id: 3, name: 'banan' },
+//   { id: 4, name: 'shaftoli' },
+//   { id: 5, name: 'gilos' },
+//   { id: 6, name: 'nok' },
+//   { id: 7, name: 'uzum' },
+// ];
+
+// function paginateProducts(page, perPage) {
+//   const startIndex = (page - 1) * perPage;
+//   const endIndex = startIndex + perPage;
+//   return products.slice(startIndex, endIndex);
+// }
+
+// console.log(paginateProducts(1, 4));
+
+//==========================================
+// Mahsulotlarni name bo‘yicha tartiblash (sort)
+
+// let products = [
+//   { id: 1, name: 'olma' },
+//   { id: 2, name: 'anor' },
+//   { id: 3, name: 'banan' },
+//   { id: 4, name: 'shaftoli' },
+//   { id: 5, name: 'gilos' },
+// ];
+
+// function sortProducts(order) {
+//   if (order === 'asc') {
+//     return products.sort((a, b) => a.name.localeCompare(b.name));
+//   } else if (order === 'desc') {
+//     return products.sort((a, b) => b.name.localeCompare(a.name));
+//   } else {
+//     throw new Error("Xatolikka yo'l qo'ydingiz");
+//   }
+// }
+
+// sortProducts('asc');
+// sortProducts('desc');
+
+//==================================================
+// Mahsulotga inStock: true qo‘shish
+// 🎯 Vazifa:
+// Yangi array qaytaruvchi funksiya yozing:
+// Har bir mahsulotga inStock: true qo‘shilsin
+// Asl products o‘zgarmasin
+
+// let products = [
+//   { id: 1, name: 'olma' },
+//   { id: 2, name: 'anor' },
+//   { id: 3, name: 'banan' },
+// ];
+// function addStockFlag(products) {
+//   return (products = products.map((item) => {
+//     return { ...item, inStock: true };
+//   }));
+// }
+
+// console.log(addStockFlag(products));
+
+//=================================================
+// Nomidagi harflar soni 5 yoki undan ko‘p bo‘lgan mahsulotlar
+//
+
 let products = [
   { id: 1, name: 'olma' },
   { id: 2, name: 'anor' },
   { id: 3, name: 'banan' },
   { id: 4, name: 'shaftoli' },
   { id: 5, name: 'gilos' },
-  { id: 6, name: 'nok' },
-  { id: 7, name: 'uzum' },
 ];
 
-function paginateProducts(page, perPage) {
-  const startIndex = (page - 1) * perPage;
-  const endIndex = startIndex + perPage;
-  return products.slice(startIndex, endIndex);
+function filterLongNames(products) {
+  return (products = products.filter((product) => {
+    return product.name.length >= 5;
+  }));
 }
 
-console.log(paginateProducts(1, 4));
+console.log(filterLongNames(products));

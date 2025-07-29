@@ -602,20 +602,47 @@
 // Har biriga 10% chegirma bering (price * 0.9)
 // Yangi massiv qaytaring, original products o‘zgarmasin
 
-let products = [
-  { id: 1, name: 'olma', price: 8000 },
-  { id: 2, name: 'anor', price: 10000 },
-  { id: 3, name: 'banan', price: 12000 },
-  { id: 4, name: 'shaftoli', price: 15000 },
-  { id: 5, name: 'gilos', price: 11000 },
-];
+// let products = [
+//   { id: 1, name: 'olma', price: 8000 },
+//   { id: 2, name: 'anor', price: 10000 },
+//   { id: 3, name: 'banan', price: 12000 },
+//   { id: 4, name: 'shaftoli', price: 15000 },
+//   { id: 5, name: 'gilos', price: 11000 },
+// ];
 
-function applyDiscount(products) {
-  return (products = products
-    .filter((product) => product.name.length >= 6)
-    .map((item) => {
-      return { ...item, price: item.price * 0.9 };
-    }));
-}
+// function applyDiscount(products) {
+//   return (products = products
+//     .filter((product) => product.name.length >= 6)
+//     .map((item) => {
+//       return { ...item, price: item.price * 0.9 };
+//     }));
+// }
 
-console.log(applyDiscount(products));
+// console.log(applyDiscount(products));
+
+//=================================
+//Yangi mahsulotlarga "YANGI" badge qo‘shish
+// 🎯 Vazifa:
+// Faqat so‘nggi 7 kunda qo‘shilgan mahsulotlarni ajratib ol
+// Har biriga { ...product, badge: "YANGI" } sifatida badge qo‘sh
+// Yangi array qaytar (original products o‘zgarmasin)
+
+// let products = [
+//   { id: 1, name: 'olma', createdAt: '2024-11-01' },
+//   { id: 2, name: 'anor', createdAt: '2025-06-01' },
+//   { id: 3, name: 'banan', createdAt: '2025-07-20' },
+//   { id: 4, name: 'shaftoli', createdAt: '2025-07-26' },
+//   { id: 5, name: 'gilos', createdAt: '2025-07-22' },
+// ];
+
+// function markNewProducts(products) {
+//   const now = new Date();
+//   let sevenDay = 7 * 24 * 60 * 60 * 1000;
+//   return (newProducts = products
+//     .filter((product) => now - new Date(product.createdAt) <= sevenDay)
+//     .map((item) => {
+//       return { ...item, badge: 'YANGI' };
+//     }));
+// }
+
+// console.log(markNewProducts(products));

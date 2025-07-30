@@ -667,4 +667,21 @@
 
 // console.log(objNumbers);
 
-// 👇 Bu yerga kod yoziladi
+//======================================================
+
+// Barcha mahsulotlar narxi 5000 so‘mdan katta ekanini tekshiring
+// Masala:
+// Quyidagi arraydagi barcha mahsulotlar narxi 5000 so‘mdan katta yoki yo‘qligini tekshiring.
+
+const products = [
+  { name: 'olma', price: 8000 },
+  { name: 'anor', price: 10000 },
+  { name: 'banan', price: 3000 }, // bu past!
+];
+
+function priceProducts(products) {
+  let a = products.every((product) => product.price >= 5000);
+  return a;
+}
+
+console.log(priceProducts(products));

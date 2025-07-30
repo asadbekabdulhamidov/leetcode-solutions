@@ -780,11 +780,29 @@
 //================================================
 // Mahsulotlarni narx bo‘yicha saralash
 
-const products = [
-  { name: 'olma', price: 12000 },
-  { name: 'banan', price: 8000 },
-  { name: 'gilos', price: 15000 },
-  { name: 'anor', price: 10000 },
-];
-const sortedProducts = products.sort((a, b) => a.price - b.price);
-console.log(sortedProducts);
+// const products = [
+//   { name: 'olma', price: 12000 },
+//   { name: 'banan', price: 8000 },
+//   { name: 'gilos', price: 15000 },
+//   { name: 'anor', price: 10000 },
+// ];
+// const sortedProducts = products.sort((a, b) => a.price - b.price);
+// console.log(sortedProducts);
+
+//========================================
+//Foydalanuvchini ID bo‘yicha topish
+
+// const users = [
+//   { id: 1, name: 'Asadbek' },
+//   { id: 2, name: 'Javlon' },
+//   { id: 3, name: 'Sardor' },
+//   { id: 4, name: 'Muhammad' },
+// ];
+
+// function findUserById(id) {
+//   const user = users.find((user) => user.id === id);
+//   return user ?? { message: 'User topilmadi' };
+// }
+
+// console.log(findUserById(3)); // 👉 { id: 3, name: 'Sardor' }
+// console.log(findUserById(11)); // 👉 { id: 3, name: 'Sardor' }

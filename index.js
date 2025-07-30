@@ -731,3 +731,16 @@
 // console.log(allStudentsArrays);
 
 //=================================================
+// Kamida bitta mahsulot narxi 10000 so‘mdan yuqori ekanini tekshiring
+//Vazifa:
+// some() metodidan foydalanib, ushbu mahsulotlar ichida kamida bitta mahsulot narxi 10000 so‘mdan katta ekanini aniqlang.
+
+// const products = [
+//   { name: 'olma', price: 8000 },
+//   { name: 'anor', price: 9500 },
+//   { name: 'banan', price: 12000 },
+//   { name: 'gilos', price: 7000 },
+// ];
+
+// let someProduct = products.some((product) => product.price > 10000);
+// console.log(someProduct);

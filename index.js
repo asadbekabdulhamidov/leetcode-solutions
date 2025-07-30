@@ -691,12 +691,43 @@
 // Narxi 10 000 so‘mdan past birinchi mahsulotning indeksini toping
 //Vazifa:
 // price < 10000 bo‘lgan birinchi mahsulot indeksini findIndex() yordamida toping.
-const products = [
-  { name: 'olma', price: 12000 },
-  { name: 'shaftoli', price: 15000 },
-  { name: 'gilos', price: 9000 },
-  { name: 'banan', price: 8000 },
-];
+// const products = [
+//   { name: 'olma', price: 12000 },
+//   { name: 'shaftoli', price: 15000 },
+//   { name: 'gilos', price: 9000 },
+//   { name: 'banan', price: 8000 },
+// ];
 
-let item = products.findIndex((item) => item.price <= 10);
-console.log(item);
+// let item = products.findIndex((item) => item.price <= 10);
+// console.log(item);
+
+//====================================
+
+// Quyidagi kurslar ro‘yxatida har bir kursda o‘quvchilar bor.
+// Vazifa: barcha kurslardagi o‘quvchilardan faqat "active: true" bo‘lganlarni tekis (bitta) arrayga yig‘ing.
+
+// const courses = [
+//   {
+//     title: 'Frontend',
+//     students: [
+//       { name: 'Asad', active: true },
+//       { name: 'Sardor', active: false },
+//     ],
+//   },
+//   {
+//     title: 'Backend',
+//     students: [
+//       { name: 'Javlon', active: true },
+//       { name: 'Muhammad', active: false },
+//     ],
+//   },
+// ];
+
+// const allStudentsArrays = courses
+//   .map((course) => course.students)
+//   .flat(Infinity)
+//   .filter((item) => item.active);
+
+// console.log(allStudentsArrays);
+
+//=================================================

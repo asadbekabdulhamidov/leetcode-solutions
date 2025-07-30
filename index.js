@@ -646,3 +646,25 @@
 // }
 
 // console.log(markNewProducts(products));
+
+//=======================================================
+//reduce bilan array ichidagi sonlar nechta marta qatnashganini hisoblang
+
+// Masala:
+// Quyidagi arrayda har bir son necha marta qatnashganini aniqlang.
+// Natija obyekt bo‘lishi kerak.
+
+// const numbers = [4, 2, 4, 3, 2, 1, 4, 2];
+
+// let objNumbers = numbers.reduce((acc, curVal) => {
+//   if (curVal in acc) {
+//     acc[curVal] += 1;
+//   } else {
+//     acc[curVal] = 1;
+//   }
+//   return acc;
+// }, {});
+
+// console.log(objNumbers);
+
+// 👇 Bu yerga kod yoziladi

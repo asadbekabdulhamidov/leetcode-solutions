@@ -760,3 +760,21 @@
 // console.log(includeName('Asadbek'));
 
 //=]===================================
+
+// Savatchadagi jami narxni hisoblang
+// Vazifa:
+// reduce() yordamida umumiy summa (jami narx)ni hisoblang.
+// const cart = [
+//   { name: 'olma', price: 8000, quantity: 2 },
+//   { name: 'anor', price: 10000, quantity: 1 },
+//   { name: 'banan', price: 5000, quantity: 3 },
+// ];
+
+// const allPrice = cart.reduce((acc, curVal) => {
+//   acc += curVal.price * curVal.quantity;
+//   return acc;
+// }, 0);
+
+// console.log(allPrice);
+
+//================================================

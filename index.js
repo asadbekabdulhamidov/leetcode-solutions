@@ -806,3 +806,25 @@
 
 // console.log(findUserById(3)); // 👉 { id: 3, name: 'Sardor' }
 // console.log(findUserById(11)); // 👉 { id: 3, name: 'Sardor' }
+
+//=======================================
+
+// Yangilangan mahsulot nomini saqlash
+// Vazifa:
+// Berilgan id bo‘yicha mahsulot nomini yangilaydigan funksiya yozing.
+// Massivni yangilangan holatda qaytarsin.
+// Agar id mavjud bo‘lmasa, massiv o‘zgarmasdan qaytishi kerak.
+
+// const products = [
+//   { id: 1, name: 'olma' },
+//   { id: 2, name: 'anor' },
+//   { id: 3, name: 'banan' },
+// ];
+
+// function updateProductName(id, productName) {
+//   return products.map((item) =>
+//     item.id === id ? { ...item, name: productName } : item
+//   );
+// }
+
+// console.log(updateProductName(2, 'gilos'));

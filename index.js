@@ -744,3 +744,19 @@
 
 // let someProduct = products.some((product) => product.price > 10000);
 // console.log(someProduct);
+
+//=========================================
+
+// Foydalanuvchi nomi ro‘yxatda bormi??
+// Vazifa:
+// Foydalanuvchi kiritgan ism ro‘yxatda bor-yo‘qligini includes() yordamida tekshir.
+// Case-insensitive bo‘lishi kerak (ya'ni Asadbek, ASADBЕК, asadbek — hammasi tanilsin).
+
+// const users = ['asadbek', 'javlon', 'sardor', 'muhammad'];
+
+// let includeName = (name) => {
+//   return users.includes(name.toLowerCase());
+// };
+// console.log(includeName('Asadbek'));
+
+//=]===================================

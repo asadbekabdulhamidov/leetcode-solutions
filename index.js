@@ -673,15 +673,30 @@
 // Masala:
 // Quyidagi arraydagi barcha mahsulotlar narxi 5000 so‘mdan katta yoki yo‘qligini tekshiring.
 
+// const products = [
+//   { name: 'olma', price: 8000 },
+//   { name: 'anor', price: 10000 },
+//   { name: 'banan', price: 3000 }, // bu past!
+// ];
+
+// function priceProducts(products) {
+//   let a = products.every((product) => product.price >= 5000);
+//   return a;
+// }
+
+// console.log(priceProducts(products));
+
+//========================================
+
+// Narxi 10 000 so‘mdan past birinchi mahsulotning indeksini toping
+//Vazifa:
+// price < 10000 bo‘lgan birinchi mahsulot indeksini findIndex() yordamida toping.
 const products = [
-  { name: 'olma', price: 8000 },
-  { name: 'anor', price: 10000 },
-  { name: 'banan', price: 3000 }, // bu past!
+  { name: 'olma', price: 12000 },
+  { name: 'shaftoli', price: 15000 },
+  { name: 'gilos', price: 9000 },
+  { name: 'banan', price: 8000 },
 ];
 
-function priceProducts(products) {
-  let a = products.every((product) => product.price >= 5000);
-  return a;
-}
-
-console.log(priceProducts(products));
+let item = products.findIndex((item) => item.price <= 10);
+console.log(item);

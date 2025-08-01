@@ -892,16 +892,16 @@
 //=================================================
 //Ya’ni price * quantity har biri uchun, so‘ng umumiy hisob.
 
-const cart = [
-  { name: 'olma', price: 8000, quantity: 3 },
-  { name: 'banan', price: 6000, quantity: 2 },
-  { name: 'gilos', price: 15000, quantity: 1 },
-];
+// const cart = [
+//   { name: 'olma', price: 8000, quantity: 3 },
+//   { name: 'banan', price: 6000, quantity: 2 },
+//   { name: 'gilos', price: 15000, quantity: 1 },
+// ];
 
-function allPrice(cart) {
-  return cart.reduce((acc, curVal) => {
-    return (acc += curVal.price * curVal.quantity);
-  }, 0);
-}
+// function allPrice(cart) {
+//   return cart.reduce((acc, curVal) => {
+//     return (acc += curVal.price * curVal.quantity);
+//   }, 0);
+// }
 
-console.log(allPrice(cart));
+// console.log(allPrice(cart));

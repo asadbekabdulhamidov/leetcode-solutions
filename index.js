@@ -980,15 +980,32 @@
 //====================================================
 //Quyidagi mahsulotlar ro‘yhatidan id orqali mahsulotni olib tashlang:
 
-const products = [
-  { id: 1, name: 'olma', price: 12000 },
-  { id: 2, name: 'banan', price: 8000 },
-  { id: 3, name: 'gilos', price: 15000 },
-];
+// const products = [
+//   { id: 1, name: 'olma', price: 12000 },
+//   { id: 2, name: 'banan', price: 8000 },
+//   { id: 3, name: 'gilos', price: 15000 },
+// ];
 
-function deleteProductById(products, id) {
-  let filteredProducts = products.filter((product) => product.id !== id);
-  return filteredProducts;
-}
+// function deleteProductById(products, id) {
+//   let filteredProducts = products.filter((product) => product.id !== id);
+//   return filteredProducts;
+// }
 
-console.log(deleteProductById(products, 2));
+// console.log(deleteProductById(products, 2));
+
+//===================================================
+
+//addProduct funksiyasini yozamiz
+
+// const products = [
+//   { id: 1, name: 'olma', price: 12000 },
+//   { id: 2, name: 'banan', price: 8000 },
+// ];
+
+// function addProduct(products, newProduct) {
+//   return [...products, newProduct]; // 🔁 yangi array
+// }
+
+// console.log(addProduct(products, { id: 3, name: 'gilos', price: 15000 }));
+
+//-====================================

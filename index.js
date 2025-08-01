@@ -844,3 +844,12 @@
 // console.log(getTopTwo([4, 7, 2, 9, 1, 5, 3])); // 👉 [9, 7]
 
 //==================================================
+
+//Eng uzun so‘zni topadigan funksiya yozing.
+const strings = ['salom', 'olma', 'dunyo', 'kitob', 'telefon'];
+
+function longWord(arr) {
+  return [...arr].sort((a, b) => b.length - a.length)[0];
+}
+
+console.log(longWord(strings));

@@ -828,3 +828,19 @@
 // }
 
 // console.log(updateProductName(2, 'gilos'));
+
+//==========================================
+
+// Quyidagi kabi sonlar massiv berilgan:
+// Eng katta ikki sondan iborat yangi massiv hosil qiladigan funksiya yozing.
+// Masalan: [9, 7] bo‘lishi kerak.
+// const numbers = [4, 7, 2, 9, 1, 5, 3];
+
+// function getTopTwo(arr) {
+//   const sorted = [...arr].sort((a, b) => b - a); // kamayish tartibida saralash
+//   return sorted.slice(0, 2); // birinchi ikki elementni olish
+// }
+
+// console.log(getTopTwo([4, 7, 2, 9, 1, 5, 3])); // 👉 [9, 7]
+
+//==================================================

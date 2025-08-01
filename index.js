@@ -909,16 +909,36 @@
 //============================================
 // Shu massiv ichidan id bo‘yicha foydalanuvchini topuvchi funksiya yozing.
 
-const users = [
-  { id: 1, name: 'Asadbek', role: 'admin' },
-  { id: 2, name: 'Sarvar', role: 'user' },
-  { id: 3, name: 'Dilnoza', role: 'moderator' },
-];
+// const users = [
+//   { id: 1, name: 'Asadbek', role: 'admin' },
+//   { id: 2, name: 'Sarvar', role: 'user' },
+//   { id: 3, name: 'Dilnoza', role: 'moderator' },
+// ];
 
-function findUserById(users, id) {
-  let result = users.find((user) => user.id === id);
-  return result;
-}
+// function findUserById(users, id) {
+//   let result = users.find((user) => user.id === id);
+//   return result;
+// }
 
-console.log(findUserById(users, 4));
-console.log(findUserById(users, 2));
+// console.log(findUserById(users, 4));
+// console.log(findUserById(users, 2));
+
+//============================================
+
+// Quyidagi kabi foydalanuvchilar roʻyxati berilgan. 18 yoshdan katta foydalanuvchilarning ism va yoshini qaytaradigan funksiya yozing:
+
+// const users = [
+//   { id: 1, name: 'Asadbek', age: 17 },
+//   { id: 2, name: 'Zarina', age: 22 },
+//   { id: 3, name: 'Javlon', age: 19 },
+//   { id: 4, name: 'Diyor', age: 15 },
+// ];
+
+// function getAdults(users) {
+//   let filteredUsers = users
+//     .filter((user) => user.age >= 18)
+//     .map((user) => ({ name: user.name, age: user.age }));
+//   return filteredUsers;
+// }
+
+// console.log(getAdults(users));

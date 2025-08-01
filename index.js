@@ -905,3 +905,20 @@
 // }
 
 // console.log(allPrice(cart));
+
+//============================================
+// Shu massiv ichidan id bo‘yicha foydalanuvchini topuvchi funksiya yozing.
+
+const users = [
+  { id: 1, name: 'Asadbek', role: 'admin' },
+  { id: 2, name: 'Sarvar', role: 'user' },
+  { id: 3, name: 'Dilnoza', role: 'moderator' },
+];
+
+function findUserById(users, id) {
+  let result = users.find((user) => user.id === id);
+  return result;
+}
+
+console.log(findUserById(users, 4));
+console.log(findUserById(users, 2));

@@ -856,10 +856,37 @@
 
 //==============================================
 //Faqat juft sonlarni ajratib, yangi massivga qaytaradigan funksiya yozing.
-const nums = [3, 6, 8, 11, 14, 17];
+// const nums = [3, 6, 8, 11, 14, 17];
 
-function evenNumber(nums) {
-  return (evenNums = [...nums].filter((num) => num % 2 == 0));
-}
+// function evenNumber(nums) {
+//   return let evenNums = [...nums].filter((num) => num % 2 == 0);
+// }
 
-console.log(evenNumber(nums));
+// console.log(evenNumber(nums));
+
+//=================================
+// Masala 4 (array of objects):
+// Quyidagi users massividan 18 yoshdan katta foydalanuvchilarni ajratib, faqat ularning name larini qaytaradigan funksiya yozing:
+
+// const users = [
+//   { name: 'Ali', age: 17 },
+//   { name: 'Vali', age: 21 },
+//   { name: 'Soli', age: 19 },
+//   { name: 'Karim', age: 16 },
+//   { name: 'Anvar', age: 23 },
+// ];
+
+// function namesMassiv(users) {
+//   let names = [];
+//   users.forEach((user) => {
+//     if (user.age >= 18) {
+//       names.push(user.name);
+//     }
+//   });
+
+//   return names;
+// }
+
+// namesMassiv(users);
+
+//=================================================

@@ -942,3 +942,20 @@
 // }
 
 // console.log(getAdults(users));
+
+//===================================================
+
+// Quyidagi mahsulotlar ro‘yxati berilgan. Har bir mahsulot nomini kattagina harflarda qaytaradigan funksiya yozing.
+
+const products = [
+  { id: 1, name: 'olma', price: 12000 },
+  { id: 2, name: 'banan', price: 8000 },
+  { id: 3, name: 'gilos', price: 15000 },
+];
+
+function getUpperCaseNames(products) {
+  let upperCaseNames = products.map((product) => product.name.toUpperCase());
+  return upperCaseNames;
+}
+
+console.log(getUpperCaseNames(products));

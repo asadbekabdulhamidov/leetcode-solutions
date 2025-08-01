@@ -947,15 +947,32 @@
 
 // Quyidagi mahsulotlar ro‘yxati berilgan. Har bir mahsulot nomini kattagina harflarda qaytaradigan funksiya yozing.
 
-const products = [
-  { id: 1, name: 'olma', price: 12000 },
-  { id: 2, name: 'banan', price: 8000 },
-  { id: 3, name: 'gilos', price: 15000 },
-];
+// const products = [
+//   { id: 1, name: 'olma', price: 12000 },
+//   { id: 2, name: 'banan', price: 8000 },
+//   { id: 3, name: 'gilos', price: 15000 },
+// ];
 
-function getUpperCaseNames(products) {
-  let upperCaseNames = products.map((product) => product.name.toUpperCase());
-  return upperCaseNames;
-}
+// function getUpperCaseNames(products) {
+//   let upperCaseNames = products.map((product) => product.name.toUpperCase());
+//   return upperCaseNames;
+// }
 
-console.log(getUpperCaseNames(products));
+// console.log(getUpperCaseNames(products));
+
+//================================================
+// Endi siz id orqali mahsulotni topib, uning price qiymatini yangilaydigan funksiya yozishingiz kerak.
+// const products = [
+//   { id: 1, name: 'olma', price: 12000 },
+//   { id: 2, name: 'banan', price: 8000 },
+//   { id: 3, name: 'gilos', price: 15000 },
+// ];
+
+// function updateProductPrice(products, id, newPrice) {
+//   let mapedArr = products.map((product) => {
+//     return product.id === id ? { ...product, price: newPrice } : product;
+//   });
+//   return mapedArr;
+// }
+
+// console.log(updateProductPrice(products, 2, 9000));

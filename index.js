@@ -846,10 +846,20 @@
 //==================================================
 
 //Eng uzun so‘zni topadigan funksiya yozing.
-const strings = ['salom', 'olma', 'dunyo', 'kitob', 'telefon'];
+// const strings = ['salom', 'olma', 'dunyo', 'kitob', 'telefon'];
 
-function longWord(arr) {
-  return [...arr].sort((a, b) => b.length - a.length)[0];
+// function longWord(arr) {
+//   return [...arr].sort((a, b) => b.length - a.length)[0];
+// }
+
+// console.log(longWord(strings));
+
+//==============================================
+//Faqat juft sonlarni ajratib, yangi massivga qaytaradigan funksiya yozing.
+const nums = [3, 6, 8, 11, 14, 17];
+
+function evenNumber(nums) {
+  return (evenNums = [...nums].filter((num) => num % 2 == 0));
 }
 
-console.log(longWord(strings));
+console.log(evenNumber(nums));

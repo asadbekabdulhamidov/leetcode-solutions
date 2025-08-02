@@ -1079,18 +1079,36 @@
 //=========================================================
 
 // Product name o‘zgartirish
-const products = [
-  { id: 1, name: 'olma' },
-  { id: 2, name: 'banan' },
-  { id: 3, name: 'gilos' },
-];
+// const products = [
+//   { id: 1, name: 'olma' },
+//   { id: 2, name: 'banan' },
+//   { id: 3, name: 'gilos' },
+// ];
 
-function updateProductName(id, newName) {
-  let newProducts = [...products].map((product) => {
-    return product.id === id ? { ...product, name: newName } : product;
-  });
+// function updateProductName(id, newName) {
+//   let newProducts = [...products].map((product) => {
+//     return product.id === id ? { ...product, name: newName } : product;
+//   });
 
-  return newProducts;
-}
+//   return newProducts;
+// }
 
-console.log(updateProductName(2, 'shaftoli'));
+// console.log(updateProductName(2, 'shaftoli'));
+
+//============================================
+
+// : Mahsulotni o‘chirish
+// Quyidagi mahsulotlar ro‘yxatidan berilgan idga ega mahsulotni o‘chiradigan funksiya yozing:
+
+// const products = [
+//   { id: 1, name: 'olma' },
+//   { id: 2, name: 'banan' },
+//   { id: 3, name: 'gilos' },
+// ];
+
+// function deleteProductById(id) {
+//   let newProducts = [...products].filter((product) => product.id !== id);
+//   return newProducts;
+// }
+
+// console.log(deleteProductById(1));

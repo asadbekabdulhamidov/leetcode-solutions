@@ -1162,3 +1162,21 @@
 // console.log(groupProductsByCategory(products));
 
 //=================================================
+
+// So‘zlar chastotasini hisoblash
+
+const words = ['olma', 'banan', 'olma', 'gilos', 'banan', 'olma'];
+
+function countWords(words) {
+  let count = words.reduce((acc, word) => {
+    if (word in acc) {
+      acc[word] += 1;
+    } else {
+      acc[word] = 1;
+    }
+    return acc;
+  }, {});
+  return count;
+}
+
+console.log(countWords(words));

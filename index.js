@@ -1112,3 +1112,26 @@
 // }
 
 // console.log(deleteProductById(1));
+
+//=================================================
+
+// Yangi mahsulot qo‘shish (duplicate check bilan)
+
+// const products = [
+//   { id: 1, name: 'olma' },
+//   { id: 2, name: 'banan' },
+//   { id: 3, name: 'gilos' },
+// ];
+
+// function addProduct(products, newProduct) {
+//   const isDuplicate = products.some((product) => product.id === newProduct.id);
+
+//   if (isDuplicate) {
+//     console.log('❌ Bunday id mavjud');
+//     return products; // eski ro‘yxatni qaytaramiz
+//   }
+
+//   return [...products, newProduct];
+// }
+
+// console.log(addProduct(products, { id: 2, name: 'anor' }));

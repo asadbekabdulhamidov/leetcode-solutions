@@ -1135,3 +1135,30 @@
 // }
 
 // console.log(addProduct(products, { id: 2, name: 'anor' }));
+
+//==================================================
+
+// : Mahsulotlarni kategoriyaga qarab guruhlash
+// const products = [
+//   { id: 1, name: 'olma', category: 'meva' },
+//   { id: 2, name: 'banan', category: 'meva' },
+//   { id: 3, name: 'sabzi', category: 'sabzavot' },
+//   { id: 4, name: 'gilos', category: 'meva' },
+//   { id: 5, name: 'kartoshka', category: 'sabzavot' },
+// ];
+
+// function groupProductsByCategory(products) {
+//   const newproducts = [...products].reduce((acc, product) => {
+//     if (!acc[product.category]) {
+//       acc[product.category] = [];
+//     }
+
+//     acc[product.category].push(product);
+//     return acc;
+//   }, {});
+//   return newproducts;
+// }
+
+// console.log(groupProductsByCategory(products));
+
+//=================================================

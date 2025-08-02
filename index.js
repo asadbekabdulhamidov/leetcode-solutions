@@ -1048,3 +1048,19 @@
 //   }
 
 // console.log(checkAccess(users));
+
+//===================================================
+
+// const products = [
+//   { name: 'olma', price: 8000 },
+//   { name: 'banan', price: 6000 },
+//   { name: 'gilos', price: 12000 },
+// ];
+
+// let newProducts = [...products].map((product) => {
+//   return { ...product, discountedPrice: product.price * 0.9 };
+// });
+
+// console.log(newProducts);
+
+//=====================================================

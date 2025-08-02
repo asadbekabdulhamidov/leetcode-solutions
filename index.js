@@ -1022,3 +1022,29 @@
 // }
 
 // console.log(searchUser(users, 2));
+
+//========================================================
+//Access tekshirish
+//Quyidagi users ro‘yxatidan foydalanuvchi admin yoki moderator bo‘lsa — unga ruxsat bor deb hisoblaymiz:
+
+// const users = [
+//   { name: 'Asadbek', role: 'admin' },
+//   { name: 'Sarvar', role: 'user' },
+//   { name: 'Dilnoza', role: 'moderator' },
+//   { name: 'Karim', role: 'guest' },
+// ];
+
+// function checkAccess(users) {
+//   // 👉 true (chunki admin va moderator bor)
+
+//   return users.some(
+//     (user) => user.role === 'moderator' || user.role === 'admin'
+//   );
+// }
+
+// function checkAccess(users) {
+//     const allowedRoles = ['admin', 'moderator'];
+//     return users.some(user => allowedRoles.includes(user.role));
+//   }
+
+// console.log(checkAccess(users));

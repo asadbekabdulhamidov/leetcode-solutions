@@ -1076,3 +1076,21 @@
 // const sortedProducts = [...products].sort((a, b) => a.price - b.price);
 
 // console.log(sortedProducts);
+//=========================================================
+
+// Product name o‘zgartirish
+const products = [
+  { id: 1, name: 'olma' },
+  { id: 2, name: 'banan' },
+  { id: 3, name: 'gilos' },
+];
+
+function updateProductName(id, newName) {
+  let newProducts = [...products].map((product) => {
+    return product.id === id ? { ...product, name: newName } : product;
+  });
+
+  return newProducts;
+}
+
+console.log(updateProductName(2, 'shaftoli'));

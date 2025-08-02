@@ -1064,3 +1064,15 @@
 // console.log(newProducts);
 
 //=====================================================
+//Quyidagi products massividagi mahsulotlarni narx bo‘yicha oshish tartibida saralovchi funksiya yozing:
+
+// const products = [
+//   { name: 'olma', price: 12000 },
+//   { name: 'banan', price: 8000 },
+//   { name: 'gilos', price: 15000 },
+//   { name: 'anor', price: 10000 },
+// ];
+
+// const sortedProducts = [...products].sort((a, b) => a.price - b.price);
+
+// console.log(sortedProducts);

@@ -1009,3 +1009,16 @@
 // console.log(addProduct(products, { id: 3, name: 'gilos', price: 15000 }));
 
 //-====================================
+//Quyidagi users massiv berilgan:
+
+// const users = [
+//   { id: 1, name: 'Asadbek', role: 'admin' },
+//   { id: 2, name: 'Sarvar', role: 'user' },
+//   { id: 3, name: 'Dilnoza', role: 'moderator' },
+// ];
+
+// function searchUser(users, id) {
+//   return users.find((user) => user.id === id);
+// }
+
+// console.log(searchUser(users, 2));

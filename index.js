@@ -1264,3 +1264,22 @@
 // }
 
 // console.log(getGmailUsers(users));
+
+//===============================================
+
+// Eng arzon qimmat mahsulotni topish
+// const products = [
+//   { id: 1, name: 'olma', price: 8000 },
+//   { id: 2, name: 'banan', price: 12000 },
+//   { id: 3, name: 'gilos', price: 15000 },
+//   { id: 4, name: 'anor', price: 11000 },
+//   { id: 5, name: 'shaftoli', price: 9000 },
+// ];
+
+// function getCheapestExpensive(products) {
+//   return products
+//     .filter((product) => product.price > 10000)
+//     .reduce((acc, product) => (product.price < acc.price ? product : acc));
+// }
+
+// console.log(getCheapestExpensive(products));

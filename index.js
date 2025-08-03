@@ -1165,18 +1165,45 @@
 
 // So‘zlar chastotasini hisoblash
 
-const words = ['olma', 'banan', 'olma', 'gilos', 'banan', 'olma'];
+// const words = ['olma', 'banan', 'olma', 'gilos', 'banan', 'olma'];
 
-function countWords(words) {
-  let count = words.reduce((acc, word) => {
-    if (word in acc) {
-      acc[word] += 1;
-    } else {
-      acc[word] = 1;
-    }
-    return acc;
-  }, {});
-  return count;
-}
+// function countWords(words) {
+//   let count = words.reduce((acc, word) => {
+//     if (word in acc) {
+//       acc[word] += 1;
+//     } else {
+//       acc[word] = 1;
+//     }
+//     return acc;
+//   }, {});
+//   return count;
+// }
 
-console.log(countWords(words));
+// console.log(countWords(words));
+
+//=====================================================
+//Qiymat bo‘yicha guruhlab, ID ro‘yxatini tuzish
+
+// const users = [
+//   { id: 1, status: 'active' },
+//   { id: 2, status: 'inactive' },
+//   { id: 3, status: 'active' },
+//   { id: 4, status: 'pending' },
+//   { id: 5, status: 'inactive' },
+// ];
+
+// function groupUserIdsByStatus(users) {
+//   let reducerArr = users.reduce((acc, user) => {
+//     if (!acc[user.status]) {
+//       acc[user.status] = [];
+//     }
+
+//     acc[user.status].push(user.id);
+//     return acc;
+//   }, {});
+//   return reducerArr;
+// }
+
+// console.log(groupUserIdsByStatus(users));
+
+//===========================================

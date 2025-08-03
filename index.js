@@ -1283,3 +1283,33 @@
 // }
 
 // console.log(getCheapestExpensive(products));
+
+//=====================================================
+
+// Sahifalash (pagination) uchun ma'lumotlarni ajratish
+
+// const products = [
+//   { id: 1, name: 'olma' },
+//   { id: 2, name: 'banan' },
+//   { id: 3, name: 'gilos' },
+//   { id: 4, name: 'anor' },
+//   { id: 5, name: 'shaftoli' },
+//   { id: 6, name: 'behi' },
+//   { id: 7, name: 'uzum' },
+//   { id: 8, name: 'nok' },
+//   { id: 9, name: 'limon' },
+//   { id: 10, name: 'olxori' },
+// ];
+
+// function paginate(arr, page, perPage) {
+//   // Sahifa indeksi 1-based bo'lgani uchun 0-based ga o'tkazamiz
+//   const startIndex = (page - 1) * perPage;
+//   const endIndex = startIndex + perPage;
+
+//   // Massivdan kerakli qismini ajratib olamiz
+//   const paginatedItems = arr.slice(startIndex, endIndex);
+
+//   return paginatedItems;
+// }
+
+// console.log(paginate(products, 3, 4));

@@ -1313,3 +1313,36 @@
 // }
 
 // console.log(paginate(products, 3, 4));
+//===================================================
+
+// Siz validateForm(data) funksiyasini yozishingiz kerak. U quyidagilarni tekshiradi:
+// name — bo‘sh bo‘lmasligi kerak
+// email — @ belgisi bo‘lishi shart
+// age — 18 va undan katta bo‘lishi kerak
+
+// const formData = {
+//   name: 'Asadbek',
+//   email: 'asadbekgmail.com',
+//   age: 17,
+// };
+
+// function validateForm(data) {
+//   return Object.entries(data).reduce((acc, [key, value]) => {
+//     switch (key) {
+//       case 'name':
+//         acc[key] = !!value && value.trim().length > 0;
+//         break;
+//       case 'email':
+//         acc[key] = typeof value === 'string' && value.includes('@');
+//         break;
+//       case 'age':
+//         acc[key] = Number(value) >= 18;
+//         break;
+//       default:
+//         acc[key] = true;
+//     }
+//     return acc;
+//   }, {});
+// }
+
+// console.log(validateForm(formData));

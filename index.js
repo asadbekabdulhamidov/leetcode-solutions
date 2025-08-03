@@ -1207,3 +1207,41 @@
 // console.log(groupUserIdsByStatus(users));
 
 //===========================================
+
+// Foydalanuvchining shahar nomlarini ajratib olish
+
+// const users = [
+//   {
+//     id: 1,
+//     name: 'Asadbek',
+//     address: {
+//       city: "Farg'ona",
+//       street: "Bog'i shamol",
+//     },
+//   },
+//   {
+//     id: 2,
+//     name: 'Sarvar',
+//     address: {
+//       city: 'Toshkent',
+//       street: 'Yunusobod',
+//     },
+//   },
+//   {
+//     id: 3,
+//     name: 'Dilnoza',
+//     address: {
+//       city: 'Andijon',
+//       street: "Navro'z",
+//     },
+//   },
+// ];
+
+// function getCities(users) {
+//   let cities = [...users].map((user) => {
+//     return user?.address?.city;
+//   });
+//   return cities;
+// }
+
+// console.log(getCities(users));

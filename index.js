@@ -1245,3 +1245,22 @@
 // }
 
 // console.log(getCities(users));
+
+//=====================================================
+//Email'lari @gmail.com bo‘lgan foydalanuvchilarni topish va ularning namelarini olish
+
+// const users = [
+//   { id: 1, name: 'Asadbek', email: 'asadbek@gmail.com' },
+//   { id: 2, name: 'Sarvar', email: 'sarvar@mail.ru' },
+//   { id: 3, name: 'Dilnoza', email: 'dilnoza@gmail.com' },
+//   { id: 4, name: 'Anvar', email: 'anvar@yandex.com' },
+// ];
+
+// function getGmailUsers(users) {
+//   let namesArr = [...users]
+//     .filter((user) => user?.email.endsWith('@gmail.com'))
+//     .map((user) => user?.name);
+//   return namesArr;
+// }
+
+// console.log(getGmailUsers(users));

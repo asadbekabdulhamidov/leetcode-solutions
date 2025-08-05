@@ -1421,3 +1421,17 @@
 // console.log(getUniqueCategories(products));
 
 //=========================================================
+//Mahsulotga rating qo‘shish yoki yangilash
+// const products = [
+//   { id: 1, name: 'olma', price: 8000 },
+//   { id: 2, name: 'banan', price: 9000 },
+//   { id: 3, name: 'gilos', price: 12000 },
+// ];
+
+// function updateProductRating(products, id, rating) {
+//   return products.map((product) =>
+//     product.id === id ? { ...product, rating } : product
+//   );
+// }
+
+// console.log(updateProductRating(products, 1, 4.5));

@@ -1439,17 +1439,32 @@
 //===============================================
 
 // Yangi mahsulot qo‘shish (id avtomatik bo‘lsin)
-const products = [
-  { id: 1, name: 'olma', price: 8000 },
-  { id: 2, name: 'banan', price: 9000 },
-  { id: 3, name: 'gilos', price: 12000 },
-];
+// const products = [
+//   { id: 1, name: 'olma', price: 8000 },
+//   { id: 2, name: 'banan', price: 9000 },
+//   { id: 3, name: 'gilos', price: 12000 },
+// ];
 
-function addNewProduct(products, newProduct) {
-  return [
-    ...products,
-    { id: products[products.length - 1]?.id + 1, ...newProduct },
-  ];
-}
+// function addNewProduct(products, newProduct) {
+//   return [
+//     ...products,
+//     { id: products[products.length - 1]?.id + 1, ...newProduct },
+//   ];
+// }
 
-console.log(addNewProduct(products, { name: 'anor', price: 10000 }));
+// console.log(addNewProduct(products, { name: 'anor', price: 10000 }));
+
+//==========================================================
+
+//Mahsulotni id bo‘yicha o‘chirish (agar mavjud bo‘lsa)
+// const products = [
+//   { id: 1, name: 'olma', price: 8000 },
+//   { id: 2, name: 'banan', price: 9000 },
+//   { id: 3, name: 'gilos', price: 12000 },
+// ];
+
+// function deleteProductById(products, id) {
+//   return products.filter((product) => product.id !== id);
+// }
+
+// console.log(deleteProductById(products, 4));

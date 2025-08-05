@@ -1435,3 +1435,21 @@
 // }
 
 // console.log(updateProductRating(products, 1, 4.5));
+
+//===============================================
+
+// Yangi mahsulot qo‘shish (id avtomatik bo‘lsin)
+const products = [
+  { id: 1, name: 'olma', price: 8000 },
+  { id: 2, name: 'banan', price: 9000 },
+  { id: 3, name: 'gilos', price: 12000 },
+];
+
+function addNewProduct(products, newProduct) {
+  return [
+    ...products,
+    { id: products[products.length - 1]?.id + 1, ...newProduct },
+  ];
+}
+
+console.log(addNewProduct(products, { name: 'anor', price: 10000 }));

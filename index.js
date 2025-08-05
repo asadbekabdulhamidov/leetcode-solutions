@@ -1400,3 +1400,24 @@
 
 // console.log(areAllCheap(products, 10000));
 // console.log(areAllCheap(products, 7000));
+
+//=========================================
+
+//Mahsulot kategoriyalarini unikal qilib ajratish
+// const products = [
+//   { id: 1, name: 'olma', category: 'meva' },
+//   { id: 2, name: 'banan', category: 'meva' },
+//   { id: 3, name: 'sabzi', category: 'sabzavot' },
+//   { id: 4, name: 'gilos', category: 'meva' },
+//   { id: 5, name: 'kartoshka', category: 'sabzavot' },
+//   { id: 6, name: 'non', category: 'non' },
+// ];
+
+// function getUniqueCategories(products) {
+//   let mySet = new Set(products.map((prod) => prod.category));
+//   return [...mySet];
+// }
+
+// console.log(getUniqueCategories(products));
+
+//=========================================================

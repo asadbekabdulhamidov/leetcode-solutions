@@ -1366,3 +1366,20 @@
 // }
 
 // console.log(filterProducts(products, 10000, 'meva'));
+
+//======================================================
+
+// Kamida bitta mahsulot 20,000 dan qimmatroqmi?
+
+// const products = [
+//   { id: 1, name: 'olma', price: 8000 },
+//   { id: 2, name: 'banan', price: 12000 },
+//   { id: 3, name: 'gilos', price: 25000 },
+//   { id: 4, name: 'anor', price: 10000 },
+// ];
+
+// function hasExpensiveProduct(products, limitPrice) {
+//   return products.some((product) => product.price > limitPrice);
+// }
+
+// console.log(hasExpensiveProduct(products, 20000));

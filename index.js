@@ -1346,3 +1346,23 @@
 // }
 
 // console.log(validateForm(formData));
+
+//=======================================================
+
+// Mahsulotlarni narx va kategoriya bo‘yicha filtrlash
+// const products = [
+//   { id: 1, name: 'olma', price: 8000, category: 'meva' },
+//   { id: 2, name: 'banan', price: 12000, category: 'meva' },
+//   { id: 3, name: 'sabzi', price: 4000, category: 'sabzavot' },
+//   { id: 4, name: 'gilos', price: 15000, category: 'meva' },
+//   { id: 5, name: 'kartoshka', price: 3000, category: 'sabzavot' },
+//   { id: 6, name: 'behi', price: 11000, category: 'meva' },
+// ];
+
+// function filterProducts(products, minPrice, category) {
+//   return products.filter(
+//     (product) => product.price > minPrice && product.category === category
+//   );
+// }
+
+// console.log(filterProducts(products, 10000, 'meva'));

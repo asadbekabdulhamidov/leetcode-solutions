@@ -1383,3 +1383,20 @@
 // }
 
 // console.log(hasExpensiveProduct(products, 20000));
+
+//=========================================
+
+// Hamma mahsulotlar arzonmi?
+// const products = [
+//   { id: 1, name: 'olma', price: 8000 },
+//   { id: 2, name: 'banan', price: 9000 },
+//   { id: 3, name: 'gilos', price: 9500 },
+//   { id: 4, name: 'anor', price: 7000 },
+// ];
+
+// function areAllCheap(products, maxPrice) {
+//   return products.every((product) => product.price < maxPrice);
+// }
+
+// console.log(areAllCheap(products, 10000));
+// console.log(areAllCheap(products, 7000));

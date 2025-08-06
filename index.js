@@ -1519,3 +1519,24 @@
 // console.log(findProductByName(products, 'banan'));
 
 //==========================================================
+
+// Mahsulotlarni name bo‘yicha izlash (qisman moslik, case-insensitive)
+// name ichida searchTerm bo‘lsa — mahsulotni qaytaradi
+// Harf katta-kichikligi farq qilmaydi (case-insensitive)
+// Yangi massiv qaytaradi
+// Agar hech nima topilmasa — bo‘sh massiv []
+
+// const products = [
+//   { id: 1, name: 'Olma', price: 8000 },
+//   { id: 2, name: 'Banan', price: 9000 },
+//   { id: 3, name: 'Gilos', price: 12000 },
+//   { id: 4, name: 'Anor', price: 10000 },
+// ];
+
+// function searchProducts(products, searchTerm) {
+//   let newProducts = products.filter((item) =>
+//     item.name.toLowerCase().includes(searchTerm.toLowerCase())
+//   );
+//   return newProducts;
+// }
+// console.log(searchProducts(products, 'k'));

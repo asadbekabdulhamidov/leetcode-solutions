@@ -1468,3 +1468,26 @@
 // }
 
 // console.log(deleteProductById(products, 4));
+
+//=============================================
+
+//==========================================
+//Mahsulot narxini yangilash (agar topilsa)
+// const products = [
+//   { id: 1, name: 'olma', price: 8000 },
+//   { id: 2, name: 'banan', price: 9000 },
+//   { id: 3, name: 'gilos', price: 12000 },
+// ];
+
+// function updateProductPrice(products, id, newPrice) {
+//   const productExists = products.some((prod) => prod.id === id);
+
+//   if (!productExists) {
+//     return 'Mahsulot topilmadi';
+//   }
+
+//   return products.map((prod) =>
+//     prod.id === id ? { ...prod, price: newPrice } : prod
+//   );
+// }
+// console.log(updateProductPrice(products, 4, 10000));

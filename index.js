@@ -1491,3 +1491,31 @@
 //   );
 // }
 // console.log(updateProductPrice(products, 4, 10000));
+
+//==================================================
+
+// Mahsulotni name bo‘yicha topish (case-insensitive)
+
+// Funksiya nima qiladi?
+// Mahsulot nomini (name) bo‘yicha topadi
+// Harf katta-kichikligiga e’tibor bermaydi (case-insensitive)
+// Agar topilsa → obyekt qaytaradi
+// Agar topilmasa → "Mahsulot topilmadi" yozuvi qaytarad
+
+// const products = [
+//   { id: 1, name: 'Olma', price: 8000 },
+//   { id: 2, name: 'Banan', price: 9000 },
+//   { id: 3, name: 'Gilos', price: 12000 },
+// ];
+
+// function findProductByName(products, name) {
+//   const product = products.find(
+//     (prod) => prod.name.toLowerCase() === name.toLowerCase()
+//   );
+
+//   return product || 'Mahsulot topilmadi';
+// }
+
+// console.log(findProductByName(products, 'banan'));
+
+//==========================================================

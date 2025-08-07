@@ -1585,3 +1585,20 @@
 // }
 
 // console.log(filterByPriceRange(products, 80000, 100000));
+//=======================================================
+
+// Mahsulotni name bo‘yicha o‘chirish (case-insensitive)
+
+// const products = [
+//   { id: 1, name: 'Olma', price: 8000 },
+//   { id: 2, name: 'Banan', price: 9000 },
+//   { id: 3, name: 'Gilos', price: 12000 },
+// ];
+
+// function deleteProductByName(products, name) {
+//   return products.filter(
+//     (prod) => prod.name.toLowerCase() !== name.toLowerCase()
+//   );
+// }
+
+// console.log(deleteProductByName(products, 'archa'));

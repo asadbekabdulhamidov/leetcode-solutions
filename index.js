@@ -1625,3 +1625,37 @@
 // }
 
 // console.log(addAvailabilityFlag(products));
+
+//=======================================
+//Mahsulotlarni category bo‘yicha guruhlab, umumiy narxini hisoblash
+// Funksiya vazifasi:
+// category bo‘yicha mahsulotlarni guruhlaydi
+// Har bir kategoriyadagi price larni yig‘adi
+// Quyidagi shakldagi obyekt qaytaradi:
+// {
+//   meva: 29000,      // 8000 + 9000 + 12000
+//   nonvoy: 7000      // 3000 + 4000
+// }
+
+// const products = [
+//   { id: 1, name: 'Olma', category: 'meva', price: 8000 },
+//   { id: 2, name: 'Banan', category: 'meva', price: 9000 },
+//   { id: 3, name: 'Non', category: 'nonvoy', price: 3000 },
+//   { id: 4, name: 'Bulochka', category: 'nonvoy', price: 4000 },
+//   { id: 5, name: 'Gilos', category: 'meva', price: 12000 },
+// ];
+
+// function sumPricesByCategory(products) {
+//   return products.reduce((acc, curVal) => {
+//     if (curVal.category in acc) {
+//       acc[curVal.category] += curVal.price;
+//     } else {
+//       acc[curVal.category] = curVal.price;
+//     }
+//     return acc;
+//   }, {});
+// }
+
+// console.log(sumPricesByCategory(products));
+
+//====================================================

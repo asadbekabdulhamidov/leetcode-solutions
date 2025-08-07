@@ -1566,3 +1566,22 @@
 // }
 
 // console.log(addUniqueProduct(products, { name: 'anor', price: 10000 }));
+
+//===========================================================================
+//Narx oralig‘idagi mahsulotlarni ajratish
+
+// const products = [
+//   { id: 1, name: 'Olma', price: 8000 },
+//   { id: 2, name: 'Banan', price: 9000 },
+//   { id: 3, name: 'Gilos', price: 12000 },
+//   { id: 4, name: 'Anor', price: 10000 },
+//   { id: 5, name: 'Uzum', price: 7000 },
+// ];
+
+// function filterByPriceRange(products, min, max) {
+//   return products.filter(
+//     (product) => product.price >= min && product.price <= max
+//   );
+// }
+
+// console.log(filterByPriceRange(products, 80000, 100000));

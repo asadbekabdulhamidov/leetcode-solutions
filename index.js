@@ -1688,3 +1688,27 @@
 // console.log(updateProductCategory(products, 2, 'tropik'));
 
 //===================================================
+//Meva va arzon mahsulotlarni o‘chirish
+// Funksiya vazifasi:
+// Faqatgina:
+// category === "meva" va price < 10000
+// bo‘lgan mahsulotlarni o‘chiradi
+// Qolgan barcha mahsulotlar saqlanib qoladi
+// Har doim yangi array qaytariladi
+
+// const products = [
+//   { id: 1, name: 'Olma', category: 'meva', price: 8000 },
+//   { id: 2, name: 'Banan', category: 'meva', price: 90000 },
+//   { id: 3, name: 'Gilos', category: 'meva', price: 12000 },
+//   { id: 4, name: 'Non', category: 'nonvoy', price: 3000 },
+// ];
+
+// function deleteCheapFruits(products) {
+//   return products.filter(
+//     (prod) => prod.category !== 'meva' && prod.price < 10000
+//   );
+// }
+
+// console.log(deleteCheapFruits(products));
+
+//====================================================

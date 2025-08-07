@@ -1602,3 +1602,26 @@
 // }
 
 // console.log(deleteProductByName(products, 'archa'));
+
+//=============================
+// //Har bir mahsulotga isAvailable qiymatini qo‘shish
+// Funksiya nima qiladi?
+// Har bir mahsulotga yangi isAvailable maydoni qo‘shadi
+// Qoidaga ko‘ra:
+// Agar price >= 10000 bo‘lsa → isAvailable: true
+// Aks holda → isAvailable: false
+// Har doim yangi array qaytadi
+
+// const products = [
+//   { id: 1, name: 'Olma', price: 8000 },
+//   { id: 2, name: 'Banan', price: 9000 },
+//   { id: 3, name: 'Gilos', price: 12000 },
+// ];
+
+// function addAvailabilityFlag(products) {
+//   return products.map((product) => {
+//     return { ...product, isAvailable: product.price >= 10000 ? true : false };
+//   });
+// }
+
+// console.log(addAvailabilityFlag(products));

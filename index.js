@@ -1659,3 +1659,32 @@
 // console.log(sumPricesByCategory(products));
 
 //====================================================
+
+// Mahsulotning categorysini yangilash (id orqali topib)
+// Funksiya vazifasi:
+// id bo‘yicha mahsulotni topadi
+// Uning category qiymatini newCategory bilan almashtiradi
+// Boshqa mahsulotlarga tegmaydi
+// Har doim yangi array qaytaradi
+// Agar mahsulot topilmasa — Mahsulot topilmadi deb yozadi
+
+// const products = [
+//   { id: 1, name: 'Olma', category: 'meva', price: 8000 },
+//   { id: 2, name: 'Banan', category: 'meva', price: 9000 },
+//   { id: 3, name: 'Non', category: 'nonvoy', price: 3000 },
+// ];
+
+// function updateProductCategory(products, id, newCategory) {
+//   let isCheck = products.some((prod) => prod.id === id);
+//   if (isCheck) {
+//     return products.map((product) =>
+//       product.id === id ? { ...product, category: newCategory } : product
+//     );
+//   } else {
+//     return 'mahsulot topilmadi';
+//   }
+// }
+
+// console.log(updateProductCategory(products, 2, 'tropik'));
+
+//===================================================

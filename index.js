@@ -1540,3 +1540,29 @@
 //   return newProducts;
 // }
 // console.log(searchProducts(products, 'k'));
+
+//================================================
+
+//Yangi mahsulot qo‘shish (name bo‘yicha takrorlanmasin)
+
+// const products = [
+//   { id: 1, name: 'Olma', price: 8000 },
+//   { id: 2, name: 'Banan', price: 9000 },
+//   { id: 3, name: 'Gilos', price: 12000 },
+// ];
+
+// function addUniqueProduct(products, newProduct) {
+//   let isCheck = products.some(
+//     (prod) => prod.name.toLowerCase() === newProduct.name.toLowerCase()
+//   );
+//   if (!isCheck) {
+//     return [
+//       ...products,
+//       { id: products[products.length - 1].id + 1, ...newProduct },
+//     ];
+//   } else {
+//     return `mahsulot mavjudligi sababli qo‘shilmaydi`;
+//   }
+// }
+
+// console.log(addUniqueProduct(products, { name: 'anor', price: 10000 }));

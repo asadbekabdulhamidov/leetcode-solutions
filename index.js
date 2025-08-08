@@ -1778,3 +1778,34 @@
 // }
 
 // console.log(applyDiscount(products));
+
+//===============================================================
+
+//Kategoriya bo‘yicha saralangan mahsulotlar ro‘yxati
+
+// Qoidalar:
+// Faqat berilgan category dagi mahsulotlarni ajratib oladi.
+// Ularni price bo‘yicha o‘sish tartibida (low → high) saralaydi.
+// Agar berilgan category bo‘yicha mahsulot topilmasa — "Mahsulot topilmadi" deb qaytaradi.
+// Har doim yangi array qaytaradi.
+
+// const products = [
+//   { id: 2, name: 'Banan', category: 'meva', price: 12000 },
+//   { id: 1, name: 'Olma', category: 'meva', price: 8000 },
+//   { id: 3, name: 'Non', category: 'nonvoy', price: 3000 },
+//   { id: 4, name: 'Gilos', category: 'meva', price: 15000 },
+//   { id: 5, name: 'Shirin non', category: 'nonvoy', price: 10000 },
+// ];
+
+// function getSortedProductsByCategory(products, category) {
+//   let isCheck = products.some((item) => item.category === category);
+//   if (isCheck) {
+//     return products
+//       .filter((prod) => prod.category === category)
+//       .sort((a, b) => a.price - b.price);
+//   } else {
+//     return 'Mahsulot topilmadi';
+//   }
+// }
+
+// console.log(getSortedProductsByCategory(products, 'meva'));

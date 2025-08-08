@@ -1846,3 +1846,35 @@
 //     allowed
 //   )
 // );
+
+//=====================================================
+
+// Bir nechta mahsulot narxini oshirish
+// Qoidalar:
+// ids — bu array ([2, 4] kabi) bo‘lib, qaysi mahsulotlar narxi oshishini bildiradi.
+// percent — necha foizga oshirish kerakligini bildiradi (masalan: 10 → 10%).
+// Faqat ids ichida bo‘lgan mahsulotlarning price qiymati oshiriladi.
+// Yangi array qaytaradi.
+// Qolgan mahsulotlar o‘zgarishsiz qoladi.
+
+// const products = [
+//   { id: 1, name: 'Olma', category: 'meva', price: 8000 },
+//   { id: 2, name: 'Banan', category: 'meva', price: 12000 },
+//   { id: 3, name: 'Non', category: 'nonvoy', price: 3000 },
+//   { id: 4, name: 'Gilos', category: 'meva', price: 15000 },
+// ];
+
+// function increasePrices(products, ids, percent) {
+//   return products.map((product) => {
+//     if (ids.includes(product.id)) {
+//       return {
+//         ...product,
+//         price: product.price + (product.price * percent) / 100,
+//       };
+//     } else {
+//       return product;
+//     }
+//   });
+// }
+
+// console.log(increasePrices(products, [2, 4], 10));

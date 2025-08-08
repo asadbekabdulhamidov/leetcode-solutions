@@ -1742,3 +1742,39 @@
 //   { name: "Alice", age: 25 },
 //   { name: "Charlie", age: 30 }
 // ]
+
+//===================================================
+
+//category="meva" va price >= 10000 bo‘lgan mahsulotlarga 10% chegirma qo‘llash
+// Qoidalar:
+// Faqat category === "meva" va price >= 10000 bo‘lganlarga 10% chegirma qo‘llang
+// (ya’ni newPrice = Math.round(price * 0.9)).
+// Chegirma qo‘llanganlarga oldPrice degan maydon ham qo‘shing (chegirmagacha bo‘lgan narx).
+// Qolgan mahsulotlar o‘zgarmasdan qoladi.
+// Har doim yangi array qaytadi.
+// Agar hech kimga chegirma tushmasa — yuqoridagi qoidaga ko‘ra asl ro‘yxatni qaytaring (xohlasangiz console.log("Chegirma qo‘llanmadi") ham qiling).
+
+// const products = [
+//   { id: 1, name: 'Olma', category: 'meva', price: 8000 },
+//   { id: 2, name: 'Banan', category: 'meva', price: 12000 },
+//   { id: 3, name: 'Non', category: 'nonvoy', price: 3000 },
+//   { id: 4, name: 'Gilos', category: 'meva', price: 15000 },
+// ];
+
+// function applyDiscount(products) {
+//   return products.map((prod) => {
+//     if (
+//       prod.category === 'meva' ||
+//       (prod.category !== 'meva' && prod.price >= 10000)
+//     ) {
+//       return {
+//         ...prod,
+//         oldPrice: prod.price,
+//         price: Math.round(prod.price * 0.9),
+//       };
+//     }
+//     return prod;
+//   });
+// }
+
+// console.log(applyDiscount(products));

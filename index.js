@@ -1809,3 +1809,40 @@
 // }
 
 // console.log(getSortedProductsByCategory(products, 'meva'));
+
+//==================================================================
+
+//Yangi mahsulot qo‘shish (kategoriya tekshiruv bilan)
+// Qoidalar:
+// allowedCategories degan array bor (masalan: ["meva", "nonvoy", "ichimlik"]).
+// Agar yangi mahsulotning category qiymati shu ro‘yxatda bo‘lmasa → "Bunday kategoriya mavjud emas" deb qaytaradi.
+// Aks holda yangi mahsulotni ro‘yxat oxiriga qo‘shadi.
+// id qiymati — eng oxirgi mahsulot idsi + 1 bo‘lishi kerak.
+// Har doim yangi array qaytaradi.
+
+// const products = [
+//   { id: 1, name: 'Olma', category: 'meva', price: 8000 },
+//   { id: 2, name: 'Banan', category: 'meva', price: 12000 },
+//   { id: 3, name: 'Non', category: 'nonvoy', price: 3000 },
+// ];
+
+// function addProductWithCategoryCheck(products, newProduct, allowedCategories) {
+//   let isCheck = allowedCategories.includes(newProduct.category);
+//   if (isCheck) {
+//     return [
+//       ...products,
+//       { id: products[products.length - 1].id + 1, ...newProduct },
+//     ];
+//   } else {
+//     return 'Bunday kategoriya mavjud emas';
+//   }
+// }
+
+// const allowed = ['meva', 'nonvoy', 'ichimlik'];
+// console.log(
+//   addProductWithCategoryCheck(
+//     products,
+//     { name: 'Gilos', category: 'meva', price: 15000 },
+//     allowed
+//   )
+// );

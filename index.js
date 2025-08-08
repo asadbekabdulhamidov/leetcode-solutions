@@ -1712,3 +1712,33 @@
 // console.log(deleteCheapFruits(products));
 
 //====================================================
+
+//Vazifa: Berilgan massivdagi har bir elementni kvadratga ko'tarib, yangi massiv qaytaring.
+// const numbers = [1, 2, 3, 4, 5];
+// // Natija: [1, 4, 9, 16, 25]
+
+// function elementKv(arr) {
+//   return arr.map((item) => item ** 2);
+// }
+
+// console.log(elementKv(numbers));
+
+//====================================================
+// Quyidagi obyektlarni age bo'yicha o'sish tartibida saralang.
+// const people = [
+//   { name: 'Alice', age: 25 },
+//   { name: 'Bob', age: 20 },
+//   { name: 'Charlie', age: 30 },
+// ];
+
+// function sortedAge(people) {
+//   return people.sort((a, b) => a.age - b.age);
+// }
+
+// console.log(sortedAge(people));
+
+// Natija: [
+//   { name: "Bob", age: 20 },
+//   { name: "Alice", age: 25 },
+//   { name: "Charlie", age: 30 }
+// ]

@@ -1937,3 +1937,67 @@
 // }
 
 // console.log(deleteByRules(products));
+
+//===============================================================
+//upsertProduct(products, incoming)
+// Qoidalar
+// Validation:
+// name: string, trim().length > 0
+// category: string, trim().length > 0
+// price: number, > 0
+// 👉 Noto‘g‘ri bo‘lsa: "Noto‘g‘ri ma’lumot" qaytaring.
+// Upsert:
+// Agar incoming.id mavjud bo‘lsa → o‘sha mahsulotni yangilang (name/category/price).
+// Agar mavjud bo‘lmasa → yangi mahsulot qilib qo‘shing.
+// id = max id + 1.
+// Har doim yangi array qaytaring (immutability).
+
+const products = [
+  { id: 1, name: 'Olma', category: 'meva', price: 8000 },
+  { id: 2, name: 'Banan', category: 'meva', price: 12000 },
+  { id: 3, name: 'Non', category: 'nonvoy', price: 3000 },
+];
+
+function upsertProduct(products, incoming) {
+  // 1️⃣ Validation
+  if (
+    typeof incoming.name !== 'string' ||
+    incoming.name.trim().length === 0 ||
+    typeof incoming.category !== 'string' ||
+    incoming.category.trim().length === 0 ||
+    typeof incoming.price !== 'number' ||
+    incoming.price <= 0
+  ) {
+    return 'Noto‘g‘ri ma’lumot';
+  }
+
+  // 2️⃣ Mavjud id bormi?
+  const exists = products.some((p) => p.id === incoming.id);
+
+  if (exists) {
+    // 3️⃣ Yangilash
+    return products.map((p) =>
+      p.id === incoming.id
+        ? {
+            ...p,
+            name: incoming.name,
+            category: incoming.category,
+            price: incoming.price,
+          }
+        : p
+    );
+  } else {
+    // 4️⃣ Qo‘shish
+    const newId = Math.max(...products.map((p) => p.id)) + 1;
+    return [...products, { id: newId, ...incoming }];
+  }
+}
+
+console.log(
+  upsertProduct(products, {
+    id: 2,
+    name: 'Banan Premium',
+    category: 'meva',
+    price: 13500,
+  })
+);

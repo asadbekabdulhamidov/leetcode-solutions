@@ -1878,3 +1878,32 @@
 // }
 
 // console.log(increasePrices(products, [2, 4], 10));
+//============================================================
+// Mahsulotlarni guruhlash va tartiblash
+
+// Vazifa:
+// Mahsulotlarni category bo‘yicha guruhlab chiqish (Electronics, Food va h.k.).
+// Har bir category ichida mahsulotlarni price bo‘yicha kamayish tartibida (desc) joylashtirish.
+// Natija quyidagi formatda bo‘lishi kerak:
+
+// const products = [
+//   { id: 1, name: 'Keyboard', category: 'Electronics', price: 120 },
+//   { id: 2, name: 'Banana', category: 'Food', price: 2 },
+//   { id: 3, name: 'Monitor', category: 'Electronics', price: 300 },
+//   { id: 4, name: 'Apple', category: 'Food', price: 3 },
+//   { id: 5, name: 'Mouse', category: 'Electronics', price: 25 },
+//   { id: 6, name: 'Bread', category: 'Food', price: 1 },
+// ];
+
+// function categoryProducts(products) {
+//   return products.reduce((acc, curVal) => {
+//     if (curVal.category in acc) {
+//       acc[curVal.category].push(curVal);
+//     } else {
+//       acc[curVal.category] = [];
+//     }
+//     return acc;
+//   }, {});
+// }
+
+// console.log(categoryProducts(products));

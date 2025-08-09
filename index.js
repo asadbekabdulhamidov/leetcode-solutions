@@ -1907,3 +1907,33 @@
 // }
 
 // console.log(categoryProducts(products));
+
+//=================================================
+
+// Delete + Multiple condition
+// Qoidalar
+// Quyidagi ikki holatga tushadigan mahsulotlar o‘chiriladi (ya’ni qaytgan massivda bo‘lmaydi):
+// category === "meva" va price < 12000
+// category === "nonvoy" va price < 4000
+// Qolganlari saqlanadi. Har doim yangi array qaytadi. Agar hech kim o‘chirilmasa — asl ro‘yxatni qaytaring (xohlasangiz console.log("Hech narsa o‘chmadi") ham qiling).
+
+// const products = [
+//   { id: 1, name: 'Olma', category: 'meva', price: 8000 },
+//   { id: 2, name: 'Banan', category: 'meva', price: 12000 },
+//   { id: 3, name: 'Non', category: 'nonvoy', price: 3000 },
+//   { id: 4, name: 'Bulochka', category: 'nonvoy', price: 4500 },
+//   { id: 5, name: 'Gilos', category: 'meva', price: 15000 },
+// ];
+
+// function deleteByRules(products) {
+//   return products.filter((product) => {
+//     if (
+//       (product.category === 'meva' && product.price >= 12000) ||
+//       (product.category === 'nonvoy' && product.price > 4000)
+//     ) {
+//       return product;
+//     }
+//   });
+// }
+
+// console.log(deleteByRules(products));

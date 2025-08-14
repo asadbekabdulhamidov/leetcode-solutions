@@ -1952,52 +1952,98 @@
 // id = max id + 1.
 // Har doim yangi array qaytaring (immutability).
 
+// const products = [
+//   { id: 1, name: 'Olma', category: 'meva', price: 8000 },
+//   { id: 2, name: 'Banan', category: 'meva', price: 12000 },
+//   { id: 3, name: 'Non', category: 'nonvoy', price: 3000 },
+// ];
+
+// function upsertProduct(products, incoming) {
+//   // 1️⃣ Validation
+//   if (
+//     typeof incoming.name !== 'string' ||
+//     incoming.name.trim().length === 0 ||
+//     typeof incoming.category !== 'string' ||
+//     incoming.category.trim().length === 0 ||
+//     typeof incoming.price !== 'number' ||
+//     incoming.price <= 0
+//   ) {
+//     return 'Noto‘g‘ri ma’lumot';
+//   }
+
+//   // 2️⃣ Mavjud id bormi?
+//   const exists = products.some((p) => p.id === incoming.id);
+
+//   if (exists) {
+//     // 3️⃣ Yangilash
+//     return products.map((p) =>
+//       p.id === incoming.id
+//         ? {
+//             ...p,
+//             name: incoming.name,
+//             category: incoming.category,
+//             price: incoming.price,
+//           }
+//         : p
+//     );
+//   } else {
+//     // 4️⃣ Qo‘shish
+//     const newId = Math.max(...products.map((p) => p.id)) + 1;
+//     return [...products, { id: newId, ...incoming }];
+//   }
+// }
+
+// console.log(
+//   upsertProduct(products, {
+//     id: 2,
+//     name: 'Banan Premium',
+//     category: 'meva',
+//     price: 13500,
+//   })
+// );
+
+//===========================================================================
+
+// upsertProduct (create yoki update, immutably)
+
+// Vazifa:
+// upsertProduct(products, draft, allowedCategories) funksiyasini yozing.
+// Agar draft.id mavjud bo‘lsa va products ichida shu id topilsa → o‘sha product update qilinsin (faqat berilgan maydonlar).
+// Aks holda → create: yangi product qo‘shilsin va id — massivdagi eng katta id + 1.
+// Validatsiya:
+// name: bo‘sh emas, unique (case-insensitive). Update’da o‘ziga tekis kelsa ruxsat.
+// price: musbat son (0 dan katta).
+// category: allowedCategories ichida bo‘lishi shart.
+// Immutability: asl products o‘zgarmasin (yangi array qaytaring).
+// Natija: id bo‘yicha o‘sish tartibida qayting
+
+// ===========================================================
+// addProduct(products, newProduct)
+
+// id avtomatik: agar massiv bo‘sh bo‘lsa 1, aks holda maxId + 1.
+// name trim qilinsin; bo‘sh bo‘lsa yoki faqat probel bo‘lsa — xato.
+// price > 0 bo‘lsin; aks holda — xato.
+// category yuqoridagi to‘rttadan biri bo‘lsin; aks holda — xato.
+// inStock boolean bo‘lsin; aks holda — xato.
+// Unikal nom: bir xil category ichida name (case-insensitive) takrorlanmasin. Masalan, "Olma" va "olma" — bir xil deb olinadi. Takror bo‘lsa — xato.
+// Funksiya eski products ni o‘zgartirmasdan yangi massiv qaytarsin.
+// Xatolarda throw new Error('...') qiling — xabar aniq bo‘lsin (masalan: "Name is required", "Price must be greater than 0", "Duplicate name in category").
+
 const products = [
-  { id: 1, name: 'Olma', category: 'meva', price: 8000 },
-  { id: 2, name: 'Banan', category: 'meva', price: 12000 },
-  { id: 3, name: 'Non', category: 'nonvoy', price: 3000 },
+  { id: 1, name: 'Olma', price: 12000, category: 'fruit', inStock: true },
+  { id: 2, name: 'Banan', price: 8000, category: 'fruit', inStock: true },
+  { id: 3, name: 'Non', price: 4000, category: 'bakery', inStock: false },
 ];
 
-function upsertProduct(products, incoming) {
-  // 1️⃣ Validation
-  if (
-    typeof incoming.name !== 'string' ||
-    incoming.name.trim().length === 0 ||
-    typeof incoming.category !== 'string' ||
-    incoming.category.trim().length === 0 ||
-    typeof incoming.price !== 'number' ||
-    incoming.price <= 0
-  ) {
-    return 'Noto‘g‘ri ma’lumot';
-  }
-
-  // 2️⃣ Mavjud id bormi?
-  const exists = products.some((p) => p.id === incoming.id);
-
-  if (exists) {
-    // 3️⃣ Yangilash
-    return products.map((p) =>
-      p.id === incoming.id
-        ? {
-            ...p,
-            name: incoming.name,
-            category: incoming.category,
-            price: incoming.price,
-          }
-        : p
-    );
-  } else {
-    // 4️⃣ Qo‘shish
-    const newId = Math.max(...products.map((p) => p.id)) + 1;
-    return [...products, { id: newId, ...incoming }];
-  }
+function addProduct(products, newProduct) {
+  const lastId = products.length > 0 ? products.at(-1).id : 0;
+  return [...products, { id: lastId + 1, ...newProduct }];
 }
-
 console.log(
-  upsertProduct(products, {
-    id: 2,
-    name: 'Banan Premium',
-    category: 'meva',
-    price: 13500,
+  addProduct(products, {
+    name: 'Shaftoli',
+    price: 15000,
+    category: 'fruit',
+    inStock: true,
   })
 );

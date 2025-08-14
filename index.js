@@ -2029,21 +2029,45 @@
 // Funksiya eski products ni o‘zgartirmasdan yangi massiv qaytarsin.
 // Xatolarda throw new Error('...') qiling — xabar aniq bo‘lsin (masalan: "Name is required", "Price must be greater than 0", "Duplicate name in category").
 
-const products = [
-  { id: 1, name: 'Olma', price: 12000, category: 'fruit', inStock: true },
-  { id: 2, name: 'Banan', price: 8000, category: 'fruit', inStock: true },
-  { id: 3, name: 'Non', price: 4000, category: 'bakery', inStock: false },
-];
+// const products = [
+//   { id: 1, name: 'Olma', price: 12000, category: 'fruit', inStock: true },
+//   { id: 2, name: 'Banan', price: 8000, category: 'fruit', inStock: true },
+//   { id: 3, name: 'Non', price: 4000, category: 'bakery', inStock: false },
+// ];
 
-function addProduct(products, newProduct) {
-  const lastId = products.length > 0 ? products.at(-1).id : 0;
-  return [...products, { id: lastId + 1, ...newProduct }];
-}
-console.log(
-  addProduct(products, {
-    name: 'Shaftoli',
-    price: 15000,
-    category: 'fruit',
-    inStock: true,
-  })
-);
+// function addProduct(products, newProduct) {
+//   const lastId = products.length > 0 ? products.at(-1).id : 0;
+//   return [...products, { id: lastId + 1, ...newProduct }];
+// }
+// console.log(
+//   addProduct(products, {
+//     name: 'Shaftoli',
+//     price: 15000,
+//     category: 'fruit',
+//     inStock: true,
+//   })
+// );
+
+//==========================================================
+
+// Mahsulotlar ro‘yxatidan berilgan category bo‘yicha filterlab olish funksiyasini yozing.
+// Qoidalar
+// category qiymati to‘g‘ri keladigan mahsulotlar yangi massiv sifatida qaytishi kerak.
+// Agar hech narsa topilmasa → bo‘sh massiv qaytsin.
+// Taqqoslash case-insensitive bo‘lsin ('Fruit' bilan 'fruit' bir xil).
+
+// const products = [
+//   { id: 1, name: 'Olma', price: 12000, category: 'fruit', inStock: true },
+//   { id: 2, name: 'Banan', price: 8000, category: 'fruit', inStock: true },
+//   { id: 3, name: 'Non', price: 4000, category: 'bakery', inStock: false },
+// ];
+
+// function getProductsByCategory(products, category) {
+//   // shu yerga yozing
+
+//   return [...products].filter(
+//     (product) => product.category.toLowerCase() === category.toLowerCase()
+//   );
+// }
+
+// console.log(getProductsByCategory(products, 'fruit'));

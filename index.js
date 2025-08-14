@@ -2071,3 +2071,32 @@
 // }
 
 // console.log(getProductsByCategory(products, 'fruit'));
+
+//======================================================================
+// Mahsulotlar ro‘yxatida berilgan id ga teng mahsulotning price qiymatini yangilash.
+// Qoidalar
+// id topilsa — faqat o‘sha mahsulotning price qiymati yangilansin.
+// Eski massiv o‘zgarmasligi kerak (immutable).
+// Agar id topilmasa — eski massiv o‘zgarishsiz qaytsin.
+// newPrice qiymati 0 dan katta bo‘lishi kerak, aks holda xato (throw new Error('Price must be greater than 0'))
+
+// function updateProductPrice(products, id, newPrice) {
+//   // shu yerga yozing
+//   if (0 < newPrice) {
+//     return products.map((product) =>
+//       product.id === id ? { ...product, price: newPrice } : product
+//     );
+//   } else {
+//     throw new Error('Price must be greater than 0');
+//   }
+// }
+
+// const products = [
+//   { id: 1, name: 'Olma', price: 12000, category: 'fruit', inStock: true },
+//   { id: 2, name: 'Banan', price: 8000, category: 'fruit', inStock: true },
+//   { id: 3, name: 'Non', price: 4000, category: 'bakery', inStock: false },
+// ];
+
+// console.log(updateProductPrice(products, 2, 9000));
+
+//===========================================

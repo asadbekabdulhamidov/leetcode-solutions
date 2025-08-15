@@ -2124,3 +2124,20 @@
 // console.log(updateProductPrice(products, 2, 9000));
 
 //=======================================
+
+// const products = [
+//   { id: 1, name: 'Olma', price: 12000 },
+//   { id: 2, name: 'Banan', price: 8000 },
+//   { id: 3, name: 'Gilos', price: 15000 },
+// ];
+
+// deleteProductById(products, id) funksiyasini yozing:
+// Funksiya berilgan id bo‘yicha mahsulotni o‘chirib tashlasin.
+// Agar id topilmasa, massiv o‘zgarmagan holda qaytarsin.
+// Asl massivni o‘zgartirmasligi kerak (immutable).
+
+// function deleteProductById(products, id) {
+//   return products.filter((prod) => prod.id !== id);
+// }
+
+// console.log(deleteProductById(products, 2));

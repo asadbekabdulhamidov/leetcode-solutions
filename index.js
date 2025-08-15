@@ -2100,3 +2100,27 @@
 // console.log(updateProductPrice(products, 2, 9000));
 
 //===========================================
+
+// updateProductPrice(products, id, newPrice) funksiyasini yozing.
+// Funksiya id bo‘yicha mahsulotni topib, narxini newPrice ga o‘zgartirsin.
+// Agar id topilmasa, asl massivni o‘zgartirmasdan qaytarsin.
+// newPrice 0 dan kichik bo‘lmasligi kerak. Aks holda xato (Error) chiqarsin.
+
+// const products = [
+//   { id: 1, name: 'Olma', price: 12000 },
+//   { id: 2, name: 'Banan', price: 8000 },
+//   { id: 3, name: 'Gilos', price: 15000 },
+// ];
+
+// function updateProductPrice(products, id, newPrice) {
+//   if (newPrice <= 0) {
+//     throw new Error('Price must be greater than 0');
+//   }
+
+//   return products.map((item) =>
+//     item.id === id ? { ...item, price: newPrice } : item
+//   );
+// }
+// console.log(updateProductPrice(products, 2, 9000));
+
+//=======================================

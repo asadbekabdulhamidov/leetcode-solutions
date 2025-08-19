@@ -2224,3 +2224,39 @@
 //   { id: 1, name: "Olma", category: "meva", price: 12000, reviews: ["Yaxshi meva"] },
 //   { id: 2, name: "Non", category: "nonvoy", price: 4000, reviews: ["Juda mazali non edi!"] }
 // ]
+
+//==========================================================
+
+// const products = [
+//   {
+//     id: 1,
+//     name: 'Olma',
+//     category: 'meva',
+//     price: 12000,
+//     reviews: [{ userId: 1, text: 'Yaxshi meva' }],
+//   },
+//   {
+//     id: 2,
+//     name: 'Non',
+//     category: 'nonvoy',
+//     price: 4000,
+//     reviews: [],
+//   },
+// ];
+
+// function addReview(products, productId, review) {
+//   return products.map((prod) =>
+//     prod.id == productId
+//       ? { ...prod, reviews: [...prod.reviews, review] }
+//       : prod
+//   );
+// }
+
+// console.log(
+//   addReview(products, 2, { userId: 2, text: 'Issiq holda zo‘r ekan!' })
+// );
+// Natija:
+// [
+//   { id: 1, name: "Olma", category: "meva", price: 12000, reviews: [{ userId: 1, text: "Yaxshi meva" }] },
+//   { id: 2, name: "Non", category: "nonvoy", price: 4000, reviews: [{ userId: 2, text: "Issiq holda zo‘r ekan!" }] }
+// ]

@@ -2164,23 +2164,63 @@
 
 //================================================
 
-const products = [
-  { id: 1, name: 'Olma', category: 'meva', price: 12000 },
-  { id: 2, name: 'Non', category: 'nonvoy', price: 4000 },
-  { id: 3, name: 'Banan', category: 'meva', price: 15000 },
-];
+// const products = [
+//   { id: 1, name: 'Olma', category: 'meva', price: 12000 },
+//   { id: 2, name: 'Non', category: 'nonvoy', price: 4000 },
+//   { id: 3, name: 'Banan', category: 'meva', price: 15000 },
+// ];
 
-function updatePrice(products, id, newPrice) {
-  // shu yerga yozing
-  return products.map((prod) =>
-    prod.id === id ? { ...prod, price: newPrice } : prod
-  );
-}
+// function updatePrice(products, id, newPrice) {
+//   // shu yerga yozing
+//   return products.map((prod) =>
+//     prod.id === id ? { ...prod, price: newPrice } : prod
+//   );
+// }
 
-console.log(updatePrice(products, 2, 5000));
+// console.log(updatePrice(products, 2, 5000));
 // Natija:
 // [
 //   { id: 1, name: "Olma", category: "meva", price: 12000 },
 //   { id: 2, name: "Non", category: "nonvoy", price: 5000 },
 //   { id: 3, name: "Banan", category: "meva", price: 15000 },
+// ]
+
+//==========================================================
+
+// Vazifa:
+// Sizda mahsulotlar ro‘yxati bor, har bir mahsulotda reviews (izohlar) mavjud.
+// Berilgan productId bo‘yicha izoh qo‘shuvchi funksiya yozing.
+// Funksiya yangi array qaytarishi kerak (immutability saqlanadi).
+
+// const products = [
+//   {
+//     id: 1,
+//     name: 'Olma',
+//     category: 'meva',
+//     price: 12000,
+//     reviews: ['Yaxshi meva'],
+//   },
+//   {
+//     id: 2,
+//     name: 'Non',
+//     category: 'nonvoy',
+//     price: 4000,
+//     reviews: [],
+//   },
+// ];
+
+// function addReview(products, productId, reviewText) {
+//   // shu yerga yozing
+//   return products.map((product) =>
+//     product.id == productId
+//       ? { ...product, reviews: [...product.reviews, reviewText] }
+//       : product
+//   );
+// }
+
+// console.log(addReview(products, 2, 'Juda mazali non edi!'));
+// Natija:
+// [
+//   { id: 1, name: "Olma", category: "meva", price: 12000, reviews: ["Yaxshi meva"] },
+//   { id: 2, name: "Non", category: "nonvoy", price: 4000, reviews: ["Juda mazali non edi!"] }
 // ]

@@ -2260,3 +2260,45 @@
 //   { id: 1, name: "Olma", category: "meva", price: 12000, reviews: [{ userId: 1, text: "Yaxshi meva" }] },
 //   { id: 2, name: "Non", category: "nonvoy", price: 4000, reviews: [{ userId: 2, text: "Issiq holda zo‘r ekan!" }] }
 // ]
+
+//========================================================================
+// Berilgan productId va userId bo‘yicha izohni yangilang.
+// Agar izoh topilmasa, arrayni o‘zgarishsiz qaytarishi kerak.
+
+// const products = [
+//   {
+//     id: 1,
+//     name: 'Olma',
+//     category: 'meva',
+//     price: 12000,
+//     reviews: [{ userId: 1, text: 'Yaxshi meva' }],
+//   },
+//   {
+//     id: 2,
+//     name: 'Non',
+//     category: 'nonvoy',
+//     price: 4000,
+//     reviews: [{ userId: 2, text: 'Issiq holda zo‘r ekan!' }],
+//   },
+// ];
+
+// function updateReview(products, productId, userId, newText) {
+//   return products.map((prod) => {
+//     if (prod.id === productId) {
+//       return {
+//         ...prod,
+//         reviews: prod.reviews.map((item) =>
+//           item.userId === userId ? { ...item, text: newText } : item
+//         ),
+//       };
+//     }
+//     return prod;
+//   });
+// }
+
+// console.log(updateReview(products, 2, 2, 'Biroz quruqroq edi'));
+// Natija:
+// [
+//   { id: 1, name: "Olma", category: "meva", price: 12000, reviews: [{ userId: 1, text: "Yaxshi meva" }] },
+//   { id: 2, name: "Non", category: "nonvoy", price: 4000, reviews: [{ userId: 2, text: "Bi...roq edi" }] }
+// ]

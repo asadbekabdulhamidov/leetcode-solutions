@@ -2147,19 +2147,40 @@
 // products massivida turli kategoriyadagi mahsulotlar bor.
 // Faqatgina "meva" kategoriyasidagi mahsulotlarni qaytaradigan funksiya yozing.
 
+// const products = [
+//   { id: 1, name: 'Olma', category: 'meva', price: 12000 },
+//   { id: 2, name: 'Non', category: 'nonvoy', price: 4000 },
+//   { id: 3, name: 'Banan', category: 'meva', price: 15000 },
+//   { id: 4, name: 'Sut', category: 'ichimlik', price: 8000 },
+// ];
+
+// function getFruits(products) {
+//   // shu yerga yozing
+//   return products.filter((product) => product.category === 'meva');
+// }
+
+// console.log(getFruits(products));
+// // Natija: [{id:1, name:"Olma", ...}, {id:3, name:"Banan", ...}]
+
+//================================================
+
 const products = [
   { id: 1, name: 'Olma', category: 'meva', price: 12000 },
   { id: 2, name: 'Non', category: 'nonvoy', price: 4000 },
   { id: 3, name: 'Banan', category: 'meva', price: 15000 },
-  { id: 4, name: 'Sut', category: 'ichimlik', price: 8000 },
 ];
 
-function getFruits(products) {
+function updatePrice(products, id, newPrice) {
   // shu yerga yozing
-  return products.filter((product) => product.category === 'meva');
+  return products.map((prod) =>
+    prod.id === id ? { ...prod, price: newPrice } : prod
+  );
 }
 
-console.log(getFruits(products));
-// Natija: [{id:1, name:"Olma", ...}, {id:3, name:"Banan", ...}]
-
-//================================================
+console.log(updatePrice(products, 2, 5000));
+// Natija:
+// [
+//   { id: 1, name: "Olma", category: "meva", price: 12000 },
+//   { id: 2, name: "Non", category: "nonvoy", price: 5000 },
+//   { id: 3, name: "Banan", category: "meva", price: 15000 },
+// ]

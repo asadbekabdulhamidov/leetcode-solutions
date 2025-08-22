@@ -2343,3 +2343,17 @@
 // }
 
 // console.log(deleteReview(products, 1, 3));
+
+//================================================
+// Berilgan stringdagi har bir so‘zni teskari qilib qaytaring, lekin so‘zlar tartibi o‘zgarmasin.
+
+// function reverseWords(str) {
+//   // shu yerga yozing
+//   return str.split('').reverse().join('').split(' ').reverse();
+// }
+
+// console.log(reverseWords('salom dunyo'));
+// // "molas oynud"
+
+// console.log(reverseWords('javascript zor til'));
+// "tpircsavaj roz lit"

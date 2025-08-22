@@ -2357,3 +2357,22 @@
 
 // console.log(reverseWords('javascript zor til'));
 // "tpircsavaj roz lit"
+
+//========================================================
+
+// Berilgan massivdan faqat unique elementlarni qaytaring. Bunda reduce ishlatishingiz kerak.
+
+// function getUnique(arr) {
+//   return arr.reduce((acc, curVal) => {
+//     if (!acc.includes(curVal)) {
+//       acc.push(curVal);
+//     }
+//     return acc;
+//   }, []);
+// }
+
+// console.log(getUnique([1, 2, 2, 3, 4, 4, 5]));
+// // [1, 2, 3, 4, 5]
+
+// console.log(getUnique(['olma', 'banan', 'olma', 'nok']));
+// // ["olma", "banan", "nok"]

@@ -2302,3 +2302,44 @@
 //   { id: 1, name: "Olma", category: "meva", price: 12000, reviews: [{ userId: 1, text: "Yaxshi meva" }] },
 //   { id: 2, name: "Non", category: "nonvoy", price: 4000, reviews: [{ userId: 2, text: "Bi...roq edi" }] }
 // ]
+
+//========================================================
+// Vazifa:
+// Berilgan productId va userId bo‘yicha reviews ichidan tegishli review’ni o‘chiradigan funksiya yozing.
+// Agar bunday review topilmasa, array o‘zgarishsiz qaytsin.
+
+// const products = [
+//   {
+//     id: 1,
+//     name: 'Olma',
+//     category: 'meva',
+//     price: 12000,
+//     reviews: [
+//       { userId: 1, text: 'Yaxshi meva' },
+//       { userId: 3, text: 'Shirin ekan' },
+//     ],
+//   },
+//   {
+//     id: 2,
+//     name: 'Non',
+//     category: 'nonvoy',
+//     price: 4000,
+//     reviews: [{ userId: 2, text: 'Issiq holda zo‘r ekan!' }],
+//   },
+// ];
+
+// function deleteReview(products, productId, userId) {
+//   // shu yerga yozing
+//   return products.map((prod) => {
+//     if (prod.id == productId) {
+//       return {
+//         ...prod,
+//         reviews: prod.reviews.filter((item) => item.userId !== userId),
+//       };
+//     } else {
+//       return prod;
+//     }
+//   });
+// }
+
+// console.log(deleteReview(products, 1, 3));

@@ -2409,13 +2409,28 @@
 // Berilgan massiv ichida yana massivlar bo‘lishi mumkin. Uni tekis bitta massivga aylantiring.
 // (Qo‘shimcha challenge: recursive usulda qilishingiz mumkin 😉)
 
-function flattenArray(arr) {
-  // shu yerga yozing
-  return arr.flat(Infinity);
-}
+// function flattenArray(arr) {
+//   // shu yerga yozing
+//   return arr.flat(Infinity);
+// }
 
-console.log(flattenArray([1, [2, 3], [4, [5, 6]], 7]));
-// [1, 2, 3, 4, 5, 6, 7]
+// console.log(flattenArray([1, [2, 3], [4, [5, 6]], 7]));
+// // [1, 2, 3, 4, 5, 6, 7]
 
-console.log(flattenArray([[['a']], 'b', ['c', ['d', 'e']]]));
-// ["a", "b", "c", "d", "e"]
+// console.log(flattenArray([[['a']], 'b', ['c', ['d', 'e']]]));
+// // ["a", "b", "c", "d", "e"]
+
+// function flattenArray(arr) {
+//   return arr.reduce((acc, cur) => {
+//     if (Array.isArray(cur)) {
+//       return acc.concat(flattenArray(cur)); // rekrusiya
+//     }
+//     return acc.concat(cur);
+//   }, []);
+// }
+
+// console.log(flattenArray([1, [2, 3], [4, [5, 6]], 7]));
+// // [1, 2, 3, 4, 5, 6, 7]
+
+// console.log(flattenArray([[['a']], 'b', ['c', ['d', 'e']]]));
+// // ["a", "b", "c", "d", "e"]

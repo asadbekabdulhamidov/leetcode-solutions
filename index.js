@@ -2376,3 +2376,29 @@
 
 // console.log(getUnique(['olma', 'banan', 'olma', 'nok']));
 // // ["olma", "banan", "nok"]
+
+//====================================================
+
+// Eng ko‘p takrorlangan elementni topish
+
+// Vazifa:
+// Berilgan massivdan eng ko‘p marta uchragan elementni topib qaytaring. Agar bir nechta element bir xil takrorlangan bo‘lsa, ulardan bittasini qaytarsa ham bo‘ladi.
+
+// function mostFrequent(arr) {
+//   // shu yerga yozing
+//   return arr.reduce((acc, curVal) => {
+//     if (curVal in acc) {
+//       acc[curVal] += 1;
+//     } else {
+//       acc[curVal] = 1;
+//     }
+
+//     return acc;
+//   }, {});
+// }
+
+// console.log(mostFrequent([1, 2, 2, 3, 3, 3, 4, 4]));
+// // 3
+
+// console.log(mostFrequent(['olma', 'banan', 'olma', 'nok', 'banan', 'olma']));
+// // "olma"

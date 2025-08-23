@@ -2442,20 +2442,43 @@
 // Anagram — bir xil harflardan tashkil topgan, faqat tartibi boshqacha bo‘lgan so‘z.
 // Masalan: "listen" va "silent" → anagram.
 
-function isAnagram(str1, str2) {
-  str1 = str1.toLowerCase().replace(/\s+/g, '');
-  str2 = str2.toLowerCase().replace(/\s+/g, '');
+// function isAnagram(str1, str2) {
+//   str1 = str1.toLowerCase().replace(/\s+/g, '');
+//   str2 = str2.toLowerCase().replace(/\s+/g, '');
 
-  if (str1.length !== str2.length) return false;
+//   if (str1.length !== str2.length) return false;
 
-  return str1.split('').sort().join('') === str2.split('').sort().join('');
-}
+//   return str1.split('').sort().join('') === str2.split('').sort().join('');
+// }
 
-console.log(isAnagram('listen', 'silent'));
-// true
+// console.log(isAnagram('listen', 'silent'));
+// // true
 
-console.log(isAnagram('hel lo', 'world '));
-// false
+// console.log(isAnagram('hel lo', 'world '));
+// // false
 
-console.log(isAnagram('rail safety', 'fairy tales'));
-// true
+// console.log(isAnagram('rail safety', 'fairy tales'));
+// // true
+
+//============================================================
+//Berilgan array ichidagi faqat juft sonlarni yig‘indisini hisoblang.
+
+// function sumOfEvens(arr) {
+//   return arr.reduce((acc, cur) => {
+//     if (cur % 2 == 0) {
+//       acc += cur;
+//     }
+//     return acc;
+//   }, 0);
+// }
+// function sumOfEvens(arr) {
+//   let counter = 0;
+//   for (let i of arr) {
+//     if (i % 2 == 0) counter += i;
+//   }
+//   return counter;
+// }
+
+// console.log(sumOfEvens([1, 2, 3, 4, 5, 6])); // 12 (2 + 4 + 6)
+// console.log(sumOfEvens([7, 11, 13])); // 0
+// console.log(sumOfEvens([10, 20, 30])); // 60

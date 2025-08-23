@@ -2482,3 +2482,35 @@
 // console.log(sumOfEvens([1, 2, 3, 4, 5, 6])); // 12 (2 + 4 + 6)
 // console.log(sumOfEvens([7, 11, 13])); // 0
 // console.log(sumOfEvens([10, 20, 30])); // 60
+
+//================================================
+
+// Berilgan arraydagi juft indekslarda turgan sonlarning yig‘indisini hisoblang.
+
+// function sumEvenIndex(arr) {
+//   // shu yerga yozing
+//   let counter = 0;
+//   for (let i in arr) {
+//     // console.log(i);
+
+//     if (i % 2 == 0) {
+//       counter += arr[i];
+//     }
+//   }
+//   return counter;
+// }
+// function sumEvenIndex(arr) {
+//   // shu yerga yozing
+//   return arr.reduce((acc, cur, index) => {
+//     if (index % 2 == 0) {
+//       acc += cur;
+//     }
+//     return acc;
+//   }, 0);
+// }
+
+// console.log(sumEvenIndex([1, 2, 3, 4, 5])); // 9 (1 + 3 + 5)
+// console.log(sumEvenIndex([10, 20, 30, 40, 50])); // 90 (10 + 30 + 50)
+// console.log(sumEvenIndex([7, 8, 9])); // 16 (7 + 9)
+
+//================================================================

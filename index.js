@@ -2535,3 +2535,25 @@
 // console.log(findMax([1, 7, 3, 9, 5])); // 9
 // console.log(findMax([-10, -3, -50, -1])); // -1
 // console.log(findMax([100])); // 100
+
+//================================================================
+
+// Berilgan array ichida indeksi toq bo‘lgan va qiymati juft elementlarni yig‘indisini qaytaring.
+
+// function sumEvenAtOddIndex(arr) {
+//   return arr.reduce((acc, cur, index) => {
+//     if (index % 2 == 1 && cur % 2 == 0) {
+//       acc += cur;
+//     }
+//     return acc;
+//   }, 0);
+// }
+
+// console.log(sumEvenAtOddIndex([1, 2, 3, 4, 6]));
+// // 6 (faqat index=3 → 4)
+
+// console.log(sumEvenAtOddIndex([10, 20, 30, 40, 50, 60]));
+// // 80 (20 + 60, chunki index=1 va index=5)
+
+// console.log(sumEvenAtOddIndex([7, 11, 13, 15]));
+// // 0 (toq indexlarda juft son yo‘q)

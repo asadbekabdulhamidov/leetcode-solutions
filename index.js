@@ -2598,3 +2598,17 @@
 // 0 (unli yo‘q)
 
 //===================================================
+//Berilgan string ichidan faqat uzunligi 3 dan katta bo‘lgan so‘zlarni qaytaruvchi funksiya yozing.
+
+// function filterWords(str) {
+//   return str.split(' ').filter((item) => item.length >= 3);
+// }
+
+// console.log(filterWords('I am learning JavaScript right now'));
+// // ["learning", "JavaScript", "right", "now"]
+
+// console.log(filterWords('Do or do not, there is no try'));
+// // ["there"]
+
+// console.log(filterWords('Go big or go home'));
+// // ["home"]

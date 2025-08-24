@@ -2514,3 +2514,24 @@
 // console.log(sumEvenIndex([7, 8, 9])); // 16 (7 + 9)
 
 //================================================================
+//Berilgan array ichidagi eng katta sonni qaytaruvchi funksiya yozing.
+// function findMax(arr) {
+//   let maxNum = arr[0];
+//   arr.forEach((item) => {
+//     if (item > maxNum && typeof item == 'number') {
+//       maxNum = item;
+//     }
+//   });
+
+//   return maxNum;
+// }
+// function findMax(arr) {
+//   return arr.reduce((acc, cur) => {
+//     acc < cur ? (acc = cur) : acc;
+//     return acc;
+//   }, arr[0]);
+// }
+
+// console.log(findMax([1, 7, 3, 9, 5])); // 9
+// console.log(findMax([-10, -3, -50, -1])); // -1
+// console.log(findMax([100])); // 100

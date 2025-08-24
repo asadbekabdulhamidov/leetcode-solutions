@@ -2557,3 +2557,44 @@
 
 // console.log(sumEvenAtOddIndex([7, 11, 13, 15]));
 // // 0 (toq indexlarda juft son yo‘q)
+
+//====================================================
+
+// Berilgan string ichida nechta unli harf (a, e, i, o, u) borligini qaytaring.
+// (Unlilarni katta-kichik farq qilmasligi kerak: A ham, a ham bitta unli).
+
+// Bu masalada siz:
+// stringni harflarga ajratishingiz kerak,
+// har bir harfni unlilar ro‘yxati bilan tekshirishingiz kerak,
+// sanab chiqishingiz kerak
+
+// function countVowels(str) {
+//   let unliArr = ['a', 'e', 'i', 'o', 'u'];
+//   let count = 0;
+//   for (let i of str) {
+//     if (unliArr.includes(i.toLowerCase())) count += 1;
+//   }
+//   return count;
+// }
+// function countVowels(str) {
+//   let unliArr = ['a', 'e', 'i', 'o', 'u'];
+//   let count = str.split('').reduce((acc, cur) => {
+//     if (unliArr.includes(cur.toLowerCase())) {
+//       acc += 1;
+//     }
+//     return acc;
+//   }, 0);
+
+//   return count;
+// }
+
+// console.log(countVowels('Hello World'));
+// // 3 (e, o, o)
+
+// console.log(countVowels('JAVASCRIPT'));
+// // 3 (A, A, I)
+
+// console.log(countVowels('GPT'));
+// 0 (unli yo‘q)
+
+//===================================================

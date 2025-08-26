@@ -2684,3 +2684,47 @@
 // ];
 
 // console.log(applyDiscount(products, 'meva', 33));
+
+//====================================
+
+// groupByCategory
+
+// Senga mahsulotlar ro‘yxati berilgan. Har bir mahsulotda:
+// id, name, price, category bor.
+// Agar products bo‘sh bo‘lsa → bo‘sh obyekt {} qaytariladi.
+// Har bir kategoriya kalit sifatida chiqadi.
+// Mahsulotlar o‘z kategoriyasi ichida array shaklida yig‘iladi
+
+// function groupByCategory(products) {
+//   if (!products.length) {
+//     return {};
+//   }
+
+//   return products.reduce((acc, cur) => {
+//     if (acc[cur.category]) {
+//       acc[cur.category].push(cur);
+//     } else {
+//       acc[cur.category] = [cur];
+//     }
+//     return acc;
+//   }, {});
+// }
+
+// function groupByCategory(products) {
+//   if (!products.length) return {};
+
+//   return products.reduce((acc, cur) => {
+//     (acc[cur.category] ??= []).push(cur);
+//     return acc;
+//   }, {});
+// }
+
+// const products = [
+//   { id: 1, name: 'Olma', price: 10000, category: 'meva' },
+//   { id: 2, name: 'Banan', price: 12000, category: 'meva' },
+//   { id: 3, name: 'Non', price: 4000, category: 'nonvoy' },
+//   { id: 4, name: 'Lag‘mon', price: 25000, category: 'taom' },
+//   { id: 5, name: 'Uzum', price: 15000, category: 'meva' },
+// ];
+
+// console.log(groupByCategory(products));

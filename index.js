@@ -2652,3 +2652,35 @@
 // ];
 
 // console.log(updateStock(products, 2, -5));
+
+//====================================================
+
+// Mahsulotlar ro‘yxatida har bir mahsulotda id, name, price va category mavjud.
+// Senga ma’lum bir kategoriya va foiz chegirma beriladi.
+// Sen shu kategoriyadagi barcha mahsulotlarga chegirmani qo‘llashing kerak.
+
+// Masalan, chegirma = 20 bo‘lsa, price 20% ga kamayadi.
+
+// function applyDiscount(products, category, protcent) {
+//   if (products.length === 0 || protcent <= 0 || protcent > 100) {
+//     return products;
+//   }
+
+//   return products.map((product) =>
+//     product.category === category
+//       ? {
+//           ...product,
+//           price: Math.round(product.price - (product.price / 100) * protcent),
+//         }
+//       : product
+//   );
+// }
+
+// const products = [
+//   { id: 1, name: 'Olma', price: 10000, category: 'meva' },
+//   { id: 2, name: 'Banan', price: 12000, category: 'meva' },
+//   { id: 3, name: 'Non', price: 4000, category: 'nonvoy' },
+//   { id: 4, name: 'Uzum', price: 15000, category: 'meva' },
+// ];
+
+// console.log(applyDiscount(products, 'meva', 33));

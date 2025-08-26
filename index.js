@@ -2612,3 +2612,43 @@
 
 // console.log(filterWords('Go big or go home'));
 // // ["home"]
+
+//=========================================================
+// Sizda mahsulotlar ro‘yxati bor. Har bir mahsulotda id, name, price, va stock (ombordagi soni) maydonlari mavjud.
+// Sizga id va count beriladi. Agar count musbat bo‘lsa — ombordagi mahsulot sonini oshiring, agar manfiy bo‘lsa — kamaytiring.
+// Agar stock hech qachon 0 dan pastga tushib qolsa, u holda 0 qilib qo‘ying.
+
+// function updateStock(products, id, count) {
+//   if (!products.length || count === 0) {
+//     return products;
+//   } // bu xolatda bosh array qaytaradi yozmasam ham qaytaradi lekin interatsiya bolmasili uchun bu if ichiga yozildi.
+
+//   if (count < 0) {
+//     return products.map((product) =>
+//       product.id === id
+//         ? {
+//             ...product,
+//             stock:
+//               product.stock - Math.abs(count) >= 0
+//                 ? product.stock - Math.abs(count)
+//                 : 0,
+//           }
+//         : product
+//     );
+//   }
+
+//   if (count > 0) {
+//     return products.map((product) =>
+//       product.id === id ? { ...product, stock: product.stock + count } : product
+//     );
+//   }
+
+// }
+
+// const products = [
+//   { id: 1, name: 'Olma', price: 10000, stock: 5 },
+//   { id: 2, name: 'Banan', price: 12000, stock: 3 },
+//   { id: 3, name: 'Uzum', price: 15000, stock: 10 },
+// ];
+
+// console.log(updateStock(products, 2, -5));

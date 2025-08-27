@@ -2837,7 +2837,33 @@
 //     return true;
 //   }
 
-console.log(isPrime(7));
-console.log(isPrime(10));
-console.log(isPrime(1));
-console.log(isPrime(2));
+// console.log(isPrime(7));
+// console.log(isPrime(10));
+// console.log(isPrime(1));
+// console.log(isPrime(2));
+
+//==============================================================
+//findSecondLargest
+// Berilgan sonlar massivida ikkinchi eng katta sonni topadigan funksiya yozing.
+// Agar 2 ta yoki undan kam turli element bo‘lsa → null qaytarsin.
+// Massivda musbat, manfiy sonlar bo‘lishi mumkin.
+// Eng katta son topilgandan keyin, undan kichik bo‘lgan eng kattasini topish kerak.
+
+function findSecondLargest(arr) {
+  let numArr = [...new Set(arr)];
+
+  if (numArr.length < 2) return null;
+
+  let maxNum = Math.max(...numArr);
+  let secontMax = 0;
+
+  for (let i of numArr) {
+    if (i < maxNum && i > secontMax) {
+      secontMax = i;
+    }
+  }
+
+  return secontMax;
+}
+console.log(findSecondLargest([10, 20, -30, 40]));
+console.log(findSecondLargest([10, 10, 10, 10]));

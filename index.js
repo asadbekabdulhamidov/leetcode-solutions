@@ -2849,21 +2849,28 @@
 // Massivda musbat, manfiy sonlar bo‘lishi mumkin.
 // Eng katta son topilgandan keyin, undan kichik bo‘lgan eng kattasini topish kerak.
 
+// function findSecondLargest(arr) {
+//   let numArr = [...new Set(arr)];
+
+//   if (numArr.length < 2) return null;
+
+//   let maxNum = Math.max(...numArr);
+//   let secontMax = 0;
+
+//   for (let i of numArr) {
+//     if (i < maxNum && i > secontMax) {
+//       secontMax = i;
+//     }
+//   }
+
+//   return secontMax;
+// }
 function findSecondLargest(arr) {
   let numArr = [...new Set(arr)];
-
   if (numArr.length < 2) return null;
-
   let maxNum = Math.max(...numArr);
-  let secontMax = 0;
-
-  for (let i of numArr) {
-    if (i < maxNum && i > secontMax) {
-      secontMax = i;
-    }
-  }
-
-  return secontMax;
+  return numArr.sort((a, b) => b - a)[1];
 }
+
 console.log(findSecondLargest([10, 20, -30, 40]));
 console.log(findSecondLargest([10, 10, 10, 10]));

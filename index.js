@@ -2738,27 +2738,63 @@
 // // Umumiy qiymat degani: price * stock.
 // Natija obyekt bo‘lishi kerak.
 
-const products = [
-  { id: 1, name: 'Olma', price: 10000, stock: 5, category: 'meva' },
-  { id: 2, name: 'Banan', price: 12000, stock: 3, category: 'meva' },
-  { id: 3, name: 'Non', price: 4000, stock: 10, category: 'nonvoy' },
-  { id: 4, name: 'Lag‘mon', price: 25000, stock: 2, category: 'taom' },
-  { id: 5, name: 'Uzum', price: 15000, stock: 4, category: 'meva' },
-];
+// const products = [
+//   { id: 1, name: 'Olma', price: 10000, stock: 5, category: 'meva' },
+//   { id: 2, name: 'Banan', price: 12000, stock: 3, category: 'meva' },
+//   { id: 3, name: 'Non', price: 4000, stock: 10, category: 'nonvoy' },
+//   { id: 4, name: 'Lag‘mon', price: 25000, stock: 2, category: 'taom' },
+//   { id: 5, name: 'Uzum', price: 15000, stock: 4, category: 'meva' },
+// ];
 
-function calculateCategoryTotals(products) {
-  if (!products.length) {
-    return {};
-  }
+// function calculateCategoryTotals(products) {
+//   if (!products.length) {
+//     return {};
+//   }
 
-  return products.reduce((acc, curVal) => {
-    if (curVal.category in acc) {
-      acc[curVal.category] += curVal.price * curVal.stock;
-    } else {
-      acc[curVal.category] = curVal.price * curVal.stock;
-    }
-    return acc;
-  }, {});
-}
+//   return products.reduce((acc, curVal) => {
+//     if (curVal.category in acc) {
+//       acc[curVal.category] += curVal.price * curVal.stock;
+//     } else {
+//       acc[curVal.category] = curVal.price * curVal.stock;
+//     }
+//     return acc;
+//   }, {});
+// }
 
-console.log(calculateCategoryTotals(products));
+// console.log(calculateCategoryTotals(products));
+
+//==============================================================
+
+// findTopProductByCategory
+
+// Senga mahsulotlar ro‘yxati berilgan (id, name, price, stock, category).
+// 👉 Vazifa: har bir kategoriya bo‘yicha eng qimmat mahsulotni topish.
+// Agar products bo‘sh bo‘lsa → {} qaytariladi.
+// Har bir kategoriya faqat bitta eng qimmat mahsulotni oladi.
+// Agar bir xil narxdagi mahsulotlar bo‘lsa → massivda oldin kelgani olinadi.
+
+// const products = [
+//   { id: 1, name: 'Olma', price: 10000, stock: 5, category: 'meva' },
+//   { id: 2, name: 'Banan', price: 12000, stock: 3, category: 'meva' },
+//   { id: 3, name: 'Non', price: 4000, stock: 10, category: 'nonvoy' },
+//   { id: 4, name: 'Lag‘mon', price: 25000, stock: 2, category: 'taom' },
+//   { id: 5, name: 'Uzum', price: 15000, stock: 4, category: 'meva' },
+//   { id: 6, name: 'Patir', price: 6000, stock: 6, category: 'nonvoy' },
+// ];
+
+// function findTopProductByCategory(products) {
+//   if (!products.length) {
+//     return {};
+//   }
+
+//   return products.reduce((acc, curVal) => {
+//     if (!acc[curVal.category]) {
+//       acc[curVal.category] = curVal;
+//     } else if (curVal.price > acc[curVal.category].price) {
+//       acc[curVal.category] = curVal;
+//     }
+//     return acc;
+//   }, {});
+// }
+
+// console.log(findTopProductByCategory(products));

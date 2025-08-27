@@ -2798,3 +2798,46 @@
 // }
 
 // console.log(findTopProductByCategory(products));
+
+// /==-=======================================
+
+// soning tub yoki tub emasligini aniqlash
+
+// function isPrime(num) {
+//   if (!Number.isInteger(num) || num <= 1) return false;
+
+//   let counter = 0;
+//   for (let i = 1; i <= num; i++) {
+//     if (num % i === 0) counter += 1;
+//   }
+//   if (counter === 2) return true;
+//   else return false;
+// }  bu usul yaxshi faqat katta sonda optimal emas
+
+// function isPrime(num) {
+//     // 1️⃣ Son butun bo‘lmasligi yoki 1 dan kichik/tenk bo‘lsa → tub emas
+//     if (!Number.isInteger(num) || num <= 1) return false;
+
+//     // 2️⃣ 2 tub son sifatida alohida ko‘rib chiqiladi
+//     if (num === 2) return true;
+
+//     // 3️⃣ Agar son juft bo‘lsa (masalan 4, 6, 8) → tub emas
+//     if (num % 2 === 0) return false;
+
+//     // 4️⃣ Faqat toq bo‘luvchilarni tekshiramiz
+//     //    "i <= Math.sqrt(num)" degani: faqat kvadrat ildizgacha tekshiramiz
+//     //    chunki agar num bo‘luvchisi √num dan katta bo‘lsa,
+//     //    albatta √num dan kichik ham bir bo‘luvchisi mavjud bo‘ladi.
+//     for (let i = 3; i <= Math.sqrt(num); i += 2) {
+//       // Agar num bo‘linadigan son topilsa → tub emas
+//       if (num % i === 0) return false;
+//     }
+
+//     // 5️⃣ Hech qanday bo‘luvchi topilmasa → tub
+//     return true;
+//   }
+
+console.log(isPrime(7));
+console.log(isPrime(10));
+console.log(isPrime(1));
+console.log(isPrime(2));

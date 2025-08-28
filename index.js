@@ -2865,12 +2865,46 @@
 
 //   return secontMax;
 // }
-function findSecondLargest(arr) {
-  let numArr = [...new Set(arr)];
-  if (numArr.length < 2) return null;
-  let maxNum = Math.max(...numArr);
-  return numArr.sort((a, b) => b - a)[1];
-}
+// function findSecondLargest(arr) {
+//   let numArr = [...new Set(arr)];
+//   if (numArr.length < 2) return null;
+//   return numArr.sort((a, b) => b - a)[1];
+// }
 
-console.log(findSecondLargest([10, 20, -30, 40]));
-console.log(findSecondLargest([10, 10, 10, 10]));
+// console.log(findSecondLargest([10, 20, -30, 40]));
+// console.log(findSecondLargest([10, 10, 10, 10]));
+
+//========================================================
+// mergeAndSumByCategory(arr1, arr2) funksiyasini yozing:
+// Ikkita massivni birlashtiradi.
+// Agar bir xil nomdagi mahsulot uchrasa → stock larini qo‘shib yuboradi.
+// Natija unique mahsulotlar massivi bo‘lsin.
+
+// const productsA = [
+//   { name: 'Olma', category: 'Meva', stock: 10 },
+//   { name: 'Sabzi', category: 'Sabzavot', stock: 5 },
+// ];
+
+// const productsB = [
+//   { name: 'Olma', category: 'Meva', stock: 7 },
+//   { name: 'Banan', category: 'Meva', stock: 3 },
+// ];
+
+// function mergeAndSumByCategory(productsA, productsB) {
+//   let allProducts = [...productsA, ...productsB];
+//   if (!allProducts.length) return [];
+
+//   const merged = allProducts.reduce((acc, cur) => {
+//     let key = cur.name + '_' + cur.category;
+//     if (acc[key]) {
+//       acc[key].stock += cur.stock;
+//     } else {
+//       acc[key] = { ...cur };
+//     }
+//     return acc;
+//   }, {});
+
+//   return Object.values(merged);
+// }
+
+// console.log(mergeAndSumByCategory(productsA, productsB));

@@ -2908,3 +2908,26 @@
 // }
 
 // console.log(mergeAndSumByCategory(productsA, productsB));
+
+//===================================================================
+// const products = [
+//   { name: 'Olma', category: 'Meva' },
+//   { name: 'Sabzi', category: 'Sabzavot' },
+//   { name: 'Banan', category: 'Meva' },
+//   { name: 'Bodring', category: 'Sabzavot' },
+// ];
+
+// function countByCategory(products) {
+//   if (!products.length) return {};
+//   return products.reduce((acc, cur) => {
+//     if (acc[cur.category]) {
+//       acc[cur.category] += 1;
+//     } else {
+//       acc[cur.category] = 1;
+//     }
+
+//     return acc;
+//   }, {});
+// }
+
+// console.log(countByCategory(products));

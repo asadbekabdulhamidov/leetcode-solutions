@@ -2965,3 +2965,37 @@
 
 // console.log(getUniqueNumbers([1, 2, 2, 3, 4, 4, 5]));
 // // Natija: [1, 2, 3, 4, 5]
+
+//=================================================
+
+// groupByCategory
+// Sizga mahsulotlar massivi beriladi. Har bir mahsulot obyekt ko‘rinishida bo‘ladi:
+// 👉 Vazifa: groupByCategory(products) funksiyasini yozing.
+// U products massivini kategoriyalar bo‘yicha guruhlab qaytarsin.
+// Shartlar:
+// Bo‘sh array kelsa, bo‘sh obyekt qaytishi kerak.
+// Har doim obyekt sifatida guruhlanishi kerak.
+// reduce, for, yoki boshqa usuldan foydalanishingiz mumkin.
+
+// const products = [
+//   { id: 1, name: 'Apple', category: 'fruit' },
+//   { id: 2, name: 'Cucumber', category: 'vegetable' },
+//   { id: 3, name: 'Banana', category: 'fruit' },
+//   { id: 4, name: 'Carrot', category: 'vegetable' },
+//   { id: 5, name: 'Orange', category: 'fruit' },
+// ];
+
+// function groupByCategory(products) {
+//   if (!products.length) return {};
+
+//   return products.reduce((acc, cur) => {
+//     if (acc[cur.category]) {
+//       acc[cur.category].push(cur);
+//     } else {
+//       acc[cur.category] = [cur];
+//     }
+//     return acc;
+//   }, {});
+// }
+
+// console.log(groupByCategory(products));

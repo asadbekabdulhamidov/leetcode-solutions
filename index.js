@@ -2931,3 +2931,37 @@
 // }
 
 // console.log(countByCategory(products));
+
+//=======================================================
+
+// getUniqueNumbers nomli funksiya yozing. U sonlardan iborat massiv qabul qiladi va faqat takrorlanmagan (unikal) sonlarni qaytarsin.
+
+// function getUniqueNumbers(arr) {
+//   if (!arr.length) return arr;
+//   let uniqueArr = [...new Set(arr)];
+//   return uniqueArr;
+// }
+
+// function getUniqueNumbers(arr) {
+//   if (!arr.length) return arr;
+//   let uniqueArr = [];
+
+//   for (let i of arr) {
+//     if (!uniqueArr.includes(i)) {
+//       uniqueArr.push(i);
+//     }
+//   }
+//   return uniqueArr;
+// }
+// function getUniqueNumbers(arr) {
+//   if (!arr.length) return arr;
+//   return arr.reduce((acc, cur) => {
+//     if (!acc.includes(cur)) {
+//       acc.push(cur);
+//     }
+//     return acc;
+//   }, []);
+// }
+
+// console.log(getUniqueNumbers([1, 2, 2, 3, 4, 4, 5]));
+// // Natija: [1, 2, 3, 4, 5]

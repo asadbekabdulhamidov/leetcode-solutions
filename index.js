@@ -2999,3 +2999,30 @@
 // }
 
 // console.log(groupByCategory(products));
+
+//===========================================================================
+
+// countWords
+
+// Sizga matn (string) beriladi.
+// countWords(text) funksiyasini yozing. U matndagi so‘zlarni sanab, obyekt ko‘rinishida qaytarsin.
+// Bo‘sh string kelsa, bo‘sh obyekt qaytsin.
+// So‘zlar bo‘sh joy (space) bilan ajratilgan deb hisoblang.
+// Hozircha vergul, nuqta, belgilar haqida o‘ylamasak ham bo‘ladi (faqat oddiy so‘zlar).
+
+// const text = 'apple banana apple orange banana apple';
+
+// function countWords(text) {
+//   if (typeof text !== 'string' || !text.length) return {};
+
+//   let arr = text.split(' ');
+//   return arr.reduce((acc, cur) => {
+//     if (acc[cur]) {
+//       acc[cur] += 1;
+//     } else {
+//       acc[cur] = 1;
+//     }
+//     return acc;
+//   }, {});
+// }
+// console.log(countWords(text));

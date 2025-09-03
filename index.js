@@ -3051,3 +3051,34 @@
 // console.log(addProduct(products, newProduct));
 
 //=======================================================
+
+// updateProduct nomli funksiya yoz.
+// Parametrlar:
+// products → mahsulotlar ro‘yxati
+// updatedProduct → yangilanadigan mahsulot (masalan, { id: 2, name: "Blue Pen", price: 6 })
+// Funksiya berilgan id bo‘yicha massivdan mahsulotni topib, uni yangilashi kerak.
+// Asl massivni o‘zgartirmasin, yangi massiv qaytarsin.
+
+// let products = [
+//   { id: 1, name: 'Book', price: 20 },
+//   { id: 2, name: 'Pen', price: 5 },
+// ];
+
+// let updatedProduct = { id: 2, name: 'Blue Pen', price: 6 };
+
+// const updateProduct = (products, updatedProduct) => {
+//   if (!products.some((item) => item.id === updatedProduct.id)) {
+//     return products; // o'zgarishsiz qaytarish
+//   }
+//   return products.map((item) =>
+//     item.id === updatedProduct.id ? updatedProduct : item
+//   );
+// };
+// console.log(updateProduct(products, updatedProduct));
+// Natija:
+// [
+//   { id: 1, name: "Book", price: 20 },
+//   { id: 2, name: "Blue Pen", price: 6 }
+// ]
+
+//=====================================================

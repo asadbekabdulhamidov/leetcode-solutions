@@ -3026,3 +3026,28 @@
 //   }, {});
 // }
 // console.log(countWords(text));
+
+//=====================================================
+
+// addProduct nomli funksiya yoz.
+// U ikkita parametr oladi:
+// products → mavjud mahsulotlar ro‘yxati (array)
+// newProduct → qo‘shilishi kerak bo‘lgan yangi mahsulot (object)
+// Funksiya yangi mahsulotni massiv oxiriga qo‘shib, yangi massivni qaytarishi kerak (asl massivni o‘zgartirmasdan).
+
+// let products = [
+//   { id: 1, name: 'Book', price: 20 },
+//   { id: 2, name: 'Pen', price: 5 },
+// ];
+
+// let newProduct = { id: 3, name: 'Pencil', price: 2 };
+
+// function addProduct(products, newProduct) {
+//   if (products.some((item) => item.id === newProduct.id)) {
+//     throw new Error('Product with this ID already exists');
+//   }
+//   return [...products, newProduct];
+// }
+// console.log(addProduct(products, newProduct));
+
+//=======================================================

@@ -3082,3 +3082,71 @@
 // ]
 
 //=====================================================
+
+//====================================================
+// deleteProduct nomli funksiya yoz.
+// Uchta shart qo‘shamiz:
+// Parametrlar:
+// products → mahsulotlar ro‘yxati
+// id → o‘chirilishi kerak bo‘lgan mahsulot IDsi
+// Agar ID mavjud bo‘lsa — o‘sha mahsulotni o‘chirib, yangi massiv qaytarsin.
+// Agar ID mavjud bo‘lmasa — massivni o‘zgarishsiz qaytarsin.
+// Agar massiv bo‘sh bo‘lsa — to‘g‘ridan-to‘g‘ri bo‘sh massivni qaytarsin.
+
+// let products = [
+//   { id: 1, name: 'Book', price: 20 },
+//   { id: 2, name: 'Pen', price: 5 },
+// ];
+
+// function deleteProduct(products, id) {
+//   if (!products.length) {
+//     return [];
+//   } else if (products.some((item) => item.id === id)) {
+//     return [...products].filter((product) => product.id !== id);
+//   } else {
+//     return products;
+//   }
+// }
+
+// let result = deleteProduct(products, 2);
+// console.log(result);
+
+// Natija:
+// [{ id: 1, name: "Book", price: 20 }]
+
+// let result = deleteProduct(products, 5);
+// console.log(result);
+
+// Natija (o‘zgarishsiz):
+// [
+//   { id: 1, name: "Book", price: 20 },
+//   { id: 2, name: "Pen", price: 5 }
+// ]
+
+// let result = deleteProduct([], 1);
+// console.log(result);
+
+//=======================================
+// findProductsByPriceRange nomli funksiya yoz:
+// Parametrlar: products, minPrice, maxPrice.
+// Natija: minPrice <= product.price <= maxPrice bo‘lgan mahsulotlar ro‘yxati.
+// Agar bunday mahsulotlar topilmasa, bo‘sh massiv qaytarilsin.
+
+let products = [
+  { id: 1, name: 'Book', price: 20 },
+  { id: 2, name: 'Pen', price: 5 },
+  { id: 3, name: 'Pencil', price: 2 },
+];
+
+function findProductsByPriceRange(products, min, max) {
+  if (!products.length) return [];
+
+  return products.filter((item) => item.price >= min && item.price <= max);
+}
+
+console.log(findProductsByPriceRange(products, 21, 25));
+// Natija:
+// [
+//   { id: 1, name: "Book", price: 20 },
+//   { id: 2, name: "Pen", price: 5 }
+// ]

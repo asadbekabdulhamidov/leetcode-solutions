@@ -3132,21 +3132,63 @@
 // Natija: minPrice <= product.price <= maxPrice bo‘lgan mahsulotlar ro‘yxati.
 // Agar bunday mahsulotlar topilmasa, bo‘sh massiv qaytarilsin.
 
-let products = [
-  { id: 1, name: 'Book', price: 20 },
-  { id: 2, name: 'Pen', price: 5 },
-  { id: 3, name: 'Pencil', price: 2 },
+// let products = [
+//   { id: 1, name: 'Book', price: 20 },
+//   { id: 2, name: 'Pen', price: 5 },
+//   { id: 3, name: 'Pencil', price: 2 },
+// ];
+
+// function findProductsByPriceRange(products, min, max) {
+//   if (!products.length) return [];
+
+//   return products.filter((item) => item.price >= min && item.price <= max);
+// }
+
+// console.log(findProductsByPriceRange(products, 21, 25));
+// // Natija:
+// // [
+// //   { id: 1, name: "Book", price: 20 },
+// //   { id: 2, name: "Pen", price: 5 }
+// // ]
+
+//============================================================
+// 👉 findProductsByCategoryAndPrice nomli funksiya yoz.
+// Parametrlar:
+// store → categoriyalarga bo‘lingan mahsulotlar ro‘yxati
+// categoryName → qaysi kategoriyadan qidirish kerak (string)
+// minPrice, maxPrice → narx oralig‘i
+// Funksiya:
+// Berilgan kategoriyani topishi kerak.
+// Shu kategoriya ichidan minPrice <= price <= maxPrice bo‘lgan mahsulotlarni qaytarishi kerak.
+// Agar kategoriya topilmasa yoki mahsulot mos kelmasa → [] qaytarishi kerak.
+let store = [
+  {
+    category: 'Books',
+    products: [
+      { id: 1, name: 'Book A', price: 20 },
+      { id: 2, name: 'Book B', price: 25 },
+    ],
+  },
+  {
+    category: 'Stationery',
+    products: [
+      { id: 3, name: 'Pen', price: 5 },
+      { id: 4, name: 'Pencil', price: 2 },
+    ],
+  },
 ];
 
-function findProductsByPriceRange(products, min, max) {
-  if (!products.length) return [];
-
-  return products.filter((item) => item.price >= min && item.price <= max);
+function findProductsByCategoryAndPrice(
+  store,
+  categoryName,
+  minPrice,
+  maxPrice
+) {
+  const category = store.find((item) => item.category === categoryName);
+  if (!category) return [];
+  return category.products.filter(
+    (item) => item.price >= minPrice && item.price <= maxPrice
+  );
 }
 
-console.log(findProductsByPriceRange(products, 21, 25));
-// Natija:
-// [
-//   { id: 1, name: "Book", price: 20 },
-//   { id: 2, name: "Pen", price: 5 }
-// ]
+console.log(findProductsByCategoryAndPrice(store, 'Stationery', 2, 5));

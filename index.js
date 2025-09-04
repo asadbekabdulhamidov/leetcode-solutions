@@ -3161,34 +3161,120 @@
 // Berilgan kategoriyani topishi kerak.
 // Shu kategoriya ichidan minPrice <= price <= maxPrice bo‘lgan mahsulotlarni qaytarishi kerak.
 // Agar kategoriya topilmasa yoki mahsulot mos kelmasa → [] qaytarishi kerak.
-let store = [
-  {
-    category: 'Books',
-    products: [
-      { id: 1, name: 'Book A', price: 20 },
-      { id: 2, name: 'Book B', price: 25 },
-    ],
-  },
-  {
-    category: 'Stationery',
-    products: [
-      { id: 3, name: 'Pen', price: 5 },
-      { id: 4, name: 'Pencil', price: 2 },
-    ],
-  },
-];
+// let store = [
+//   {
+//     category: 'Books',
+//     products: [
+//       { id: 1, name: 'Book A', price: 20 },
+//       { id: 2, name: 'Book B', price: 25 },
+//     ],
+//   },
+//   {
+//     category: 'Stationery',
+//     products: [
+//       { id: 3, name: 'Pen', price: 5 },
+//       { id: 4, name: 'Pencil', price: 2 },
+//     ],
+//   },
+// ];
 
-function findProductsByCategoryAndPrice(
-  store,
-  categoryName,
-  minPrice,
-  maxPrice
-) {
-  const category = store.find((item) => item.category === categoryName);
-  if (!category) return [];
-  return category.products.filter(
-    (item) => item.price >= minPrice && item.price <= maxPrice
-  );
-}
+// function findProductsByCategoryAndPrice(
+//   store,
+//   categoryName,
+//   minPrice,
+//   maxPrice
+// ) {
+//   const category = store.find((item) => item.category === categoryName);
+//   if (!category) return [];
+//   return category.products.filter(
+//     (item) => item.price >= minPrice && item.price <= maxPrice
+//   );
+// }
 
-console.log(findProductsByCategoryAndPrice(store, 'Stationery', 2, 5));
+// console.log(findProductsByCategoryAndPrice(store, 'Stationery', 2, 5));
+
+//===========================================================
+
+// findProductsByCategoriesAndPriceRange(store, categories, minPrice, maxPrice) funksiyasini yozing.
+// Shartlar:
+// categories — bu massiv bo‘ladi, masalan: ["Electronics", "Books"].
+// Funksiya faqat shu kategoriyalar ichidan mahsulotlarni qidiradi.
+// Mahsulot narxi minPrice va maxPrice oralig‘ida bo‘lishi kerak.
+// Agar birorta ham mos keladigan mahsulot topilmasa, bo‘sh massiv qaytarsin.
+// Natija bitta massiv bo‘lib, ichida mahsulot obyektlari bo‘ladi.
+
+//shartlar
+// categories — bu massiv bo‘ladi, masalan: ["Electronics", "Books"].
+// Funksiya faqat shu kategoriyalar ichidan mahsulotlarni qidiradi.
+// Mahsulot narxi minPrice va maxPrice oralig‘ida bo‘lishi kerak.
+// Agar birorta ham mos keladigan mahsulot topilmasa, bo‘sh massiv qaytarsin.
+// Natija bitta massiv bo‘lib, ichida mahsulot obyektlari bo‘ladi.
+// const store = [
+//   {
+//     category: 'Electronics',
+//     products: [
+//       { id: 1, name: 'Laptop', price: 1500 },
+//       { id: 2, name: 'Phone', price: 800 },
+//       { id: 3, name: 'Tablet', price: 600 },
+//     ],
+//   },
+//   {
+//     category: 'Clothes',
+//     products: [
+//       { id: 4, name: 'T-Shirt', price: 30 },
+//       { id: 5, name: 'Jeans', price: 60 },
+//       { id: 6, name: 'Jacket', price: 120 },
+//     ],
+//   },
+//   {
+//     category: 'Books',
+//     products: [
+//       { id: 7, name: 'Novel', price: 15 },
+//       { id: 8, name: 'Science', price: 40 },
+//       { id: 9, name: 'History', price: 25 },
+//     ],
+//   },
+// ];
+
+// function findProductsByCategoriesAndPriceRange(
+//   store,
+//   categories,
+//   minPrice,
+//   maxPrice
+// ) {
+//   let categoriesStore = store.filter((item) =>
+//     categories.includes(item.category)
+//   );
+
+//   if (!categoriesStore) return [];
+//   return categoriesStore
+//     .flatMap((item) => item.products)
+//     .filter((item) => item.price >= minPrice && item.price <= maxPrice);
+// }
+
+// function findProductsByCategoriesAndPriceRange(
+//   store,
+//   categories,
+//   minPrice,
+//   maxPrice
+// ) {
+//   return store.reduce((acc, item) => {
+//     if (categories.includes(item.category)) {
+//       acc.push(
+//         ...item.products.filter(
+//           (p) => p.price >= minPrice && p.price <= maxPrice
+//         )
+//       );
+//     }
+//     return acc;
+//   }, []);
+// }
+
+// console.log(
+//   findProductsByCategoriesAndPriceRange(
+//     store,
+//     ['Electronics', 'Books'],
+//     20,
+//     1000
+//   )
+// );

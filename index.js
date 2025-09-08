@@ -3321,40 +3321,86 @@
 // Agar storeId va productId mavjud bo‘lsa — narxni yangilab, yangi massiv qaytarsin (immutably).
 // Agar mavjud bo‘lmasa — massivni o‘zgarishsiz qaytarsin.
 
-const stores = [
-  {
-    id: 1,
-    name: 'Tech Store',
-    products: [
-      { id: 101, name: 'Phone', price: 1000 },
-      { id: 102, name: 'Laptop', price: 2000 },
-    ],
-  },
-  {
-    id: 2,
-    name: 'Clothes Store',
-    products: [
-      { id: 201, name: 'Shirt', price: 50 },
-      { id: 202, name: 'Jeans', price: 80 },
-    ],
-  },
-];
+// const stores = [
+//   {
+//     id: 1,
+//     name: 'Tech Store',
+//     products: [
+//       { id: 101, name: 'Phone', price: 1000 },
+//       { id: 102, name: 'Laptop', price: 2000 },
+//     ],
+//   },
+//   {
+//     id: 2,
+//     name: 'Clothes Store',
+//     products: [
+//       { id: 201, name: 'Shirt', price: 50 },
+//       { id: 202, name: 'Jeans', price: 80 },
+//     ],
+//   },
+// ];
 
-function updateProductPrice(stores, storeId, productId, newPrice) {
-  if (!stores.length) return [];
+// function updateProductPrice(stores, storeId, productId, newPrice) {
+//   if (!stores.length) return [];
 
-  return stores.map((store) => {
-    if (store.id === storeId) {
-      return {
-        ...store,
-        products: store.products.map((prod) =>
-          prod.id === productId ? { ...prod, price: newPrice } : prod
-        ),
-      };
-    } else {
-      return store;
-    }
-  });
-}
+//   return stores.map((store) => {
+//     if (store.id === storeId) {
+//       return {
+//         ...store,
+//         products: store.products.map((prod) =>
+//           prod.id === productId ? { ...prod, price: newPrice } : prod
+//         ),
+//       };
+//     } else {
+//       return store;
+//     }
+//   });
+// }
 
-console.log(updateProductPrice(stores, 1, 101, 1200));
+// console.log(updateProductPrice(stores, 1, 101, 1200));
+
+//============================================================================
+
+// deleteProduct funksiyasini yozing.
+// Shartlar:
+// Parametr sifatida uchta qiymat oladi:
+// stores → do‘konlar ro‘yxati
+// storeId → qaysi do‘kondan o‘chirish kerak
+// productId → qaysi mahsulotni o‘chirish kerak
+// Agar storeId mavjud bo‘lmasa → massivni o‘zgarishsiz qaytarsin.
+// Agar productId mavjud bo‘lmasa → massivni o‘zgarishsiz qaytarsin.
+
+// const stores = [
+//   {
+//     id: 1,
+//     name: 'Tech Store',
+//     products: [
+//       { id: 101, name: 'Phone', price: 1000 },
+//       { id: 102, name: 'Laptop', price: 2000 },
+//     ],
+//   },
+//   {
+//     id: 2,
+//     name: 'Clothes Store',
+//     products: [
+//       { id: 201, name: 'Shirt', price: 50 },
+//       { id: 202, name: 'Jeans', price: 80 },
+//     ],
+//   },
+// ];
+
+// function deleteProduct(stores, storeId, productId) {
+//   if (!stores.length) return [];
+//   return stores.map((store) => {
+//     if (storeId === store.id) {
+//       return {
+//         ...store,
+//         products: store.products.filter((prod) => prod.id !== productId),
+//       };
+//     } else {
+//       return store;
+//     }
+//   });
+// }
+
+// console.log(deleteProduct(stores, 2, 201));

@@ -3283,28 +3283,78 @@
 // Funksiya mahsulotlarni category bo‘yicha guruhlab obyekt qaytarsin.
 
 // Har bir category ostida shu kategoriyaga tegishli mahsulotlarning umumiy narxi (totalPrice) va mahsulotlar ro‘yxati (items) bo‘lishi kerak.
-const products = [
-  { id: 1, name: 'Phone', category: 'Electronics', price: 1200 },
-  { id: 2, name: 'TV', category: 'Electronics', price: 800 },
-  { id: 3, name: 'Shirt', category: 'Clothes', price: 50 },
-  { id: 4, name: 'Jeans', category: 'Clothes', price: 80 },
-  { id: 5, name: 'Bread', category: 'Food', price: 2 },
-  { id: 6, name: 'Milk', category: 'Food', price: 1 },
+// const products = [
+//   { id: 1, name: 'Phone', category: 'Electronics', price: 1200 },
+//   { id: 2, name: 'TV', category: 'Electronics', price: 800 },
+//   { id: 3, name: 'Shirt', category: 'Clothes', price: 50 },
+//   { id: 4, name: 'Jeans', category: 'Clothes', price: 80 },
+//   { id: 5, name: 'Bread', category: 'Food', price: 2 },
+//   { id: 6, name: 'Milk', category: 'Food', price: 1 },
+// ];
+// function groupProductsByCategory(products) {
+//   if (!products.length) return {} || null;
+//   return products.reduce((acc, cur) => {
+//     if (acc[cur.category]) {
+//       acc[cur.category].items.push(cur);
+//       acc[cur.category].totalPrice += cur.price;
+//     } else {
+//       acc[cur.category] = {
+//         totalPrice: cur.price,
+//         items: [cur],
+//       };
+//     }
+//     return acc;
+//   }, {});
+// }
+
+// console.log(groupProductsByCategory(products));
+
+//============================================
+
+// Sizda do‘konlar ro‘yxati bor. Har bir do‘kon (store) obyekt bo‘lib, unda id, name, va products massiv mavjud.
+// products massivida mahsulotlar obyekt ko‘rinishida saqlanadi (id, name, price).
+// Funksiya uchta parametr oladi:
+// stores → barcha do‘konlar
+// storeId → qaysi do‘konda o‘zgartirish kerak
+// productId → qaysi mahsulotning narxini o‘zgartirish kerak
+// newPrice → yangi narx
+// Agar storeId va productId mavjud bo‘lsa — narxni yangilab, yangi massiv qaytarsin (immutably).
+// Agar mavjud bo‘lmasa — massivni o‘zgarishsiz qaytarsin.
+
+const stores = [
+  {
+    id: 1,
+    name: 'Tech Store',
+    products: [
+      { id: 101, name: 'Phone', price: 1000 },
+      { id: 102, name: 'Laptop', price: 2000 },
+    ],
+  },
+  {
+    id: 2,
+    name: 'Clothes Store',
+    products: [
+      { id: 201, name: 'Shirt', price: 50 },
+      { id: 202, name: 'Jeans', price: 80 },
+    ],
+  },
 ];
-function groupProductsByCategory(products) {
-  if (!products.length) return {} || null;
-  return products.reduce((acc, cur) => {
-    if (acc[cur.category]) {
-      acc[cur.category].items.push(cur);
-      acc[cur.category].totalPrice += cur.price;
-    } else {
-      acc[cur.category] = {
-        totalPrice: cur.price,
-        items: [cur],
+
+function updateProductPrice(stores, storeId, productId, newPrice) {
+  if (!stores.length) return [];
+
+  return stores.map((store) => {
+    if (store.id === storeId) {
+      return {
+        ...store,
+        products: store.products.map((prod) =>
+          prod.id === productId ? { ...prod, price: newPrice } : prod
+        ),
       };
+    } else {
+      return store;
     }
-    return acc;
-  }, {});
+  });
 }
 
-console.log(groupProductsByCategory(products));
+console.log(updateProductPrice(stores, 1, 101, 1200));

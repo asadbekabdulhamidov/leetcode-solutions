@@ -3278,3 +3278,33 @@
 //     1000
 //   )
 // );
+
+//========================================================================
+// Funksiya mahsulotlarni category bo‘yicha guruhlab obyekt qaytarsin.
+
+// Har bir category ostida shu kategoriyaga tegishli mahsulotlarning umumiy narxi (totalPrice) va mahsulotlar ro‘yxati (items) bo‘lishi kerak.
+const products = [
+  { id: 1, name: 'Phone', category: 'Electronics', price: 1200 },
+  { id: 2, name: 'TV', category: 'Electronics', price: 800 },
+  { id: 3, name: 'Shirt', category: 'Clothes', price: 50 },
+  { id: 4, name: 'Jeans', category: 'Clothes', price: 80 },
+  { id: 5, name: 'Bread', category: 'Food', price: 2 },
+  { id: 6, name: 'Milk', category: 'Food', price: 1 },
+];
+function groupProductsByCategory(products) {
+  if (!products.length) return {} || null;
+  return products.reduce((acc, cur) => {
+    if (acc[cur.category]) {
+      acc[cur.category].items.push(cur);
+      acc[cur.category].totalPrice += cur.price;
+    } else {
+      acc[cur.category] = {
+        totalPrice: cur.price,
+        items: [cur],
+      };
+    }
+    return acc;
+  }, {});
+}
+
+console.log(groupProductsByCategory(products));

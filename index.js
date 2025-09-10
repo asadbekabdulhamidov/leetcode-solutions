@@ -3566,3 +3566,42 @@
 
 // let myUniqueEmail = [...new Set(emails)];
 // console.log(myUniqueEmail);
+
+//====================================================
+
+// const orders = [
+//   { id: 1, customer: 'Ali', amount: 120 },
+//   { id: 2, customer: 'Vali', amount: 80 },
+//   { id: 3, customer: 'Ali', amount: 200 },
+//   { id: 4, customer: 'Hasan', amount: 150 },
+//   { id: 5, customer: 'Vali', amount: 70 },
+// ];
+
+// Map dan foydalanib, har bir mijozning jami buyurtma summasini hisoblang.
+// Masalan: "Ali" → 320, "Vali" → 150, "Hasan" → 150.
+// Natijada Map qaytaring (ya’ni kalit mijoz, qiymat jami summa).
+
+// let totals = new Map();
+
+// for (let order of orders) {
+//   console.log(order);
+//   const { customer, amount } = order;
+
+//   if (totals.has(customer)) {
+//     totals.set(customer, totals.get(customer) + amount);
+//   } else {
+//     totals.set(customer, amount);
+//   }
+// }
+
+// console.log(totals);
+
+// let total2 = orders.reduce((acc, cur) => {
+//   if (acc[cur.customer]) {
+//     acc[cur.customer] += cur.amount;
+//   } else {
+//     acc[cur.customer] = cur.amount;
+//   }
+//   return acc;
+// }, {});
+console.log(total2);

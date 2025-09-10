@@ -3404,3 +3404,46 @@
 // }
 
 // console.log(deleteProduct(stores, 2, 201));
+
+//===================================================================
+// deleteProduct(stores, storeId, productId) funksiyasini yoz.
+// Funksiya berilgan storeId bo‘yicha do‘konni topadi.
+// O‘sha do‘kondagi productId ga teng mahsulotni o‘chiradi.
+// Agar mahsulot topilmasa — massivni o‘zgarishsiz qaytaradi.
+// Asl massiv (stores) o‘zgarmasligi kerak (immutability).
+
+// const stores = [
+//   {
+//     id: 1,
+//     name: 'Tech Store',
+//     products: [
+//       { id: 101, name: 'Phone', price: 800 },
+//       { id: 102, name: 'Laptop', price: 1500 },
+//       { id: 103, name: 'Tablet', price: 600 },
+//     ],
+//   },
+//   {
+//     id: 2,
+//     name: 'Accessory Store',
+//     products: [
+//       { id: 201, name: 'Headphones', price: 200 },
+//       { id: 202, name: 'Charger', price: 50 },
+//     ],
+//   },
+// ];
+
+// function deleteProduct(stores, storeId, productId) {
+//   if (!stores.length) return [];
+//   return stores.map((store) => {
+//     if (store.id === storeId) {
+//       return {
+//         ...store,
+//         products: store.products.filter((prod) => prod.id !== productId),
+//       };
+//     } else {
+//       return store;
+//     }
+//   });
+// }
+
+// console.log(deleteProduct(stores, 1, 102));

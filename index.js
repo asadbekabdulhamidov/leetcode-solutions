@@ -3447,3 +3447,81 @@
 // }
 
 // console.log(deleteProduct(stores, 1, 102));
+
+//================================================================
+
+const stores = [
+  {
+    id: 1,
+    name: 'Tech Store',
+    categories: [
+      {
+        id: 'c1',
+        name: 'Electronics',
+        products: [
+          { id: 101, name: 'Phone', price: 800 },
+          { id: 102, name: 'Laptop', price: 1500 },
+        ],
+      },
+      {
+        id: 'c2',
+        name: 'Home Appliances',
+        products: [
+          { id: 103, name: 'Washing Machine', price: 1200 },
+          { id: 104, name: 'Microwave', price: 400 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 2,
+    name: 'Accessory Store',
+    categories: [
+      {
+        id: 'c3',
+        name: 'Accessories',
+        products: [
+          { id: 201, name: 'Headphones', price: 200 },
+          { id: 202, name: 'Charger', price: 50 },
+        ],
+      },
+    ],
+  },
+];
+
+//   deleteProduct(stores, storeId, categoryId, productId) funksiyasini yoz:
+// storeId bo‘yicha do‘konni topadi.
+// Shu do‘kondagi categoryId bo‘yicha kategoriyani topadi.
+// O‘sha kategoriyadagi productId mahsulotni o‘chiradi.
+// Agar topilmasa → massivni o‘zgarishsiz qaytaradi.
+// Asl massiv (stores) o‘zgarmasligi kerak (immutability).
+// Bonus: { stores: updatedStores, deleted: true|false } qaytarsin.
+
+// function deleteProduct(stores, storeId, categoryId, productId) {
+//   let deleted = false;
+//   if (!stores.length) return { stores: [], delete: deleted };
+
+//   return stores.map((store) => {
+//     if (store.id === storeId) {
+//       return {
+//         ...store,
+//         categories: store.categories.map((category) => {
+//           if (category.id === categoryId) {
+//             return {
+//               ...category,
+//               products: category.products.filter(
+//                 (prod) => prod.id !== productId
+//               ),
+//             };
+//           } else {
+//             category;
+//           }
+//         }),
+//       };
+//     } else {
+//       return store;
+//     }
+//   });
+// }
+
+// console.log(deleteProduct(stores, 1, 'c1', 102));

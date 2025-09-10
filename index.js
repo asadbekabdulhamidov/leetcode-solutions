@@ -3450,44 +3450,44 @@
 
 //================================================================
 
-const stores = [
-  {
-    id: 1,
-    name: 'Tech Store',
-    categories: [
-      {
-        id: 'c1',
-        name: 'Electronics',
-        products: [
-          { id: 101, name: 'Phone', price: 800 },
-          { id: 102, name: 'Laptop', price: 1500 },
-        ],
-      },
-      {
-        id: 'c2',
-        name: 'Home Appliances',
-        products: [
-          { id: 103, name: 'Washing Machine', price: 1200 },
-          { id: 104, name: 'Microwave', price: 400 },
-        ],
-      },
-    ],
-  },
-  {
-    id: 2,
-    name: 'Accessory Store',
-    categories: [
-      {
-        id: 'c3',
-        name: 'Accessories',
-        products: [
-          { id: 201, name: 'Headphones', price: 200 },
-          { id: 202, name: 'Charger', price: 50 },
-        ],
-      },
-    ],
-  },
-];
+// const stores = [
+//   {
+//     id: 1,
+//     name: 'Tech Store',
+//     categories: [
+//       {
+//         id: 'c1',
+//         name: 'Electronics',
+//         products: [
+//           { id: 101, name: 'Phone', price: 800 },
+//           { id: 102, name: 'Laptop', price: 1500 },
+//         ],
+//       },
+//       {
+//         id: 'c2',
+//         name: 'Home Appliances',
+//         products: [
+//           { id: 103, name: 'Washing Machine', price: 1200 },
+//           { id: 104, name: 'Microwave', price: 400 },
+//         ],
+//       },
+//     ],
+//   },
+//   {
+//     id: 2,
+//     name: 'Accessory Store',
+//     categories: [
+//       {
+//         id: 'c3',
+//         name: 'Accessories',
+//         products: [
+//           { id: 201, name: 'Headphones', price: 200 },
+//           { id: 202, name: 'Charger', price: 50 },
+//         ],
+//       },
+//     ],
+//   },
+// ];
 
 //   deleteProduct(stores, storeId, categoryId, productId) funksiyasini yoz:
 // storeId bo‘yicha do‘konni topadi.
@@ -3525,3 +3525,44 @@ const stores = [
 // }
 
 // console.log(deleteProduct(stores, 1, 'c1', 102));
+
+//===============================================
+
+// let mySet = new Set([1, 1, 2, 3, 4, 45]);
+
+// console.log(mySet);
+
+// mySet.add(33);
+// mySet.delete(1);
+// console.log(mySet.clear());
+
+// const myMap = new Map();
+
+// myMap.set('name', 'Asadbek');
+// myMap.set('age', 25);
+// myMap.set(1, 'raqam ham kalit bo‘lishi mumkin');
+
+// console.log(myMap.get('name')); // Asadbek
+
+// console.log(myMap.has('age')); // true
+// // myMap.delete('age');
+// console.log(myMap.size); // 2
+
+// for (let [key, value] of myMap) {
+//   console.log(key, ':', value);
+// }
+
+// Takrorlanuvchi email manzillarni olib tashlang va faqat unikal email ro‘yxatini qaytaring.
+// Natijani massiv (Array) ko‘rinishida qaytaring.
+// const emails = [
+//   'user1@gmail.com',
+//   'user2@gmail.com',
+//   'user3@gmail.com',
+//   'user1@gmail.com',
+//   'user4@gmail.com',
+//   'user2@gmail.com',
+//   'user5@gmail.com',
+// ];
+
+// let myUniqueEmail = [...new Set(emails)];
+// console.log(myUniqueEmail);

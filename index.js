@@ -3604,4 +3604,120 @@
 //   }
 //   return acc;
 // }, {});
-console.log(total2);
+
+//========================================================
+
+// Masala 1: Unique Numbers
+// Sizga numbers nomli array berilgan. Undan faqat unique (takrorlanmagan) sonlarni olish kerak.
+// Input: [1, 2, 2, 3, 4, 4, 5]
+// Output: [1, 2, 3, 4, 5]
+// 📌 Eslatma: Set ishlating.
+
+// function unikArr(arr) {
+//   if (Array.isArray(arr)) {
+//     if (!arr.length) return [];
+//     return [...new Set(arr.flat(Infinity))];
+//   } else {
+//     return 'array emas bu';
+//   }
+// }
+
+// console.log(unikArr([]));
+// console.log(unikArr([1, 2, 2, 2, 2, 3, 4, 4, 5]));
+// console.log(unikArr(1));
+
+//===============================================
+
+// Masala 2: Student Map
+
+// Sizda studentlar haqida ma’lumotlar arrayi bor:
+// Map dan foydalanib id → name ko‘rinishida saqlang.
+// Keyin:
+// id=2 studentni olish
+// id=3 studentni o‘chirish
+// Yangi student {id:4, name:"Husan"} qo‘shis
+// const students = [
+//   { id: 1, name: 'Ali' },
+//   { id: 2, name: 'Vali' },
+//   { id: 3, name: 'Hasan' },
+// ];
+
+// function getMap(arr) {
+//   let studentMap = new Map();
+//   if (Array.isArray(arr)) {
+//     if (!arr.length) return [];
+//     arr.forEach((item) => {
+//       studentMap.set(item.id, item.name);
+//     });
+//   } else {
+//     return 'unknown';
+//   }
+
+//   return Array.from(studentMap.entries());
+// }
+
+// console.log(getMap(students));
+
+//=================================================================================
+// Sizda onlayn foydalanuvchilarni saqlash uchun Set bor.
+// Boshida ["Ali", "Vali", "Hasan"] foydalanuvchilar onlayn bo‘ladi.
+// Keyin quyidagilarni qiling:
+// "Husan" ismli yangi foydalanuvchini qo‘shing
+// "Hasan" foydalanuvchisini o‘chiring
+// "Ali" foydalanuvchisi onlaynmi-yo‘qmi tekshiring
+// Oxirida Setni massivga aylantirib qaytaring
+
+// let users = new Set(['Ali', 'Vali', 'Hasan']);
+
+// // [object Set] qaytaradi
+
+// function getSet(users) {
+//   console.log(users);
+
+//   users.add('Husan');
+//   users.delete('Hasan');
+//   console.log('Ali onlaynmi?', users.has('Ali'));
+
+//   return [...users];
+// }
+
+// console.log(getSet(users));
+
+//===============================================
+// 👉 Vazifa:
+// Set yordamida takroriy email’larni olib tashlang
+// Faqat gmail.com domeniga tegishli email’larni ajratib oling
+// Natijani massiv ko‘rinishida qaytaring
+
+// const emails = [
+//   'ali@gmail.com',
+//   'vali@gmail.com',
+//   'ali@gmail.com',
+//   'hasan@mail.com',
+//   'husan@gmail.com',
+//   'vali@gmail.com',
+// ];
+
+// function UniqueEmail(emails) {
+//   if (!Array.isArray(emails)) return 'Array emas!';
+//   if (!emails.length) return [];
+
+//   const newEmail = emails.filter((item) => item.endsWith('gmail.com'));
+//   const emailsSet = new Set(newEmail);
+//   return [...emailsSet];
+// }
+
+// console.log(UniqueEmail(emails));
+
+//================================================
+const courses = [
+  { course: 'JavaScript', students: ['Ali', 'Vali', 'Hasan'] },
+  { course: 'Python', students: ['Husan', 'Vali', 'Ali'] },
+  { course: 'Java', students: ['Sardor', 'Hasan', 'Vali'] },
+];
+
+//   Map ichida saqlang, format:
+// key → kurs nomi
+// value → talabalar Set’i (takrorlarsiz)
+// "Python" kursidagi talabalarni massiv shaklida qaytaring.
+// "Vali" nechta kursga yozilganini hisoblab qaytaring.

@@ -3710,11 +3710,11 @@
 // console.log(UniqueEmail(emails));
 
 //================================================
-const courses = [
-  { course: 'JavaScript', students: ['Ali', 'Vali', 'Hasan'] },
-  { course: 'Python', students: ['Husan', 'Vali', 'Ali'] },
-  { course: 'Java', students: ['Sardor', 'Hasan', 'Vali'] },
-];
+// const courses = [
+//   { course: 'JavaScript', students: ['Ali', 'Vali', 'Hasan'] },
+//   { course: 'Python', students: ['Husan', 'Vali', 'Ali'] },
+//   { course: 'Java', students: ['Sardor', 'Hasan', 'Vali'] },
+// ];
 
 //   Map ichida saqlang, format:
 // key → kurs nomi
@@ -3722,32 +3722,63 @@ const courses = [
 // "Python" kursidagi talabalarni massiv shaklida qaytaring.
 // "Vali" nechta kursga yozilganini hisoblab qaytaring.
 
-function courseStudents(courses) {
-  if (!Array.isArray(courses)) return 'Array emas!';
-  if (!courses.length) return [];
+// function courseStudents(courses) {
+//   if (!Array.isArray(courses)) return 'Array emas!';
+//   if (!courses.length) return [];
 
-  // 1. Map yaratamiz: course → Set(students)
-  const courseMap = new Map();
+//   // 1. Map yaratamiz: course → Set(students)
+//   const courseMap = new Map();
 
-  courses.forEach((item) => {
-    courseMap.set(item.course, new Set(item.students));
-  });
+//   courses.forEach((item) => {
+//     courseMap.set(item.course, new Set(item.students));
+//   });
 
-  // 2. Python kursidagi talabalar (massivga aylantirib qaytarish)
-  const pythonStudents = Array.from(courseMap.get('Python'));
+//   // 2. Python kursidagi talabalar (massivga aylantirib qaytarish)
+//   const pythonStudents = Array.from(courseMap.get('Python'));
 
-  // 3. "Vali" nechta kursga yozilgan?
-  let valiCount = 0;
-  for (let [course, students] of courseMap) {
-    if (students.has('Vali')) {
-      valiCount++;
+//   // 3. "Vali" nechta kursga yozilgan?
+//   let valiCount = 0;
+//   for (let [course, students] of courseMap) {
+//     if (students.has('Vali')) {
+//       valiCount++;
+//     }
+//   }
+
+//   return [
+//     `Python kursi: ${JSON.stringify(pythonStudents)}`,
+//     `Vali yozilgan kurslar soni: ${valiCount}`,
+//   ];
+// }
+
+// console.log(courseStudents(courses));
+
+//================================================================
+
+const products = [
+  'iPhone',
+  'Samsung',
+  'Nokia',
+  'iPhone',
+  'Xiaomi',
+  'Samsung',
+  'Oppo',
+];
+
+function findDuplicates(arr) {
+  let seen = new Set();
+  let duplicates = new Set();
+
+  for (let item of arr) {
+    if (seen.has(item)) {
+      duplicates.add(item);
+    } else {
+      seen.add(item);
     }
   }
 
-  return [
-    `Python kursi: ${JSON.stringify(pythonStudents)}`,
-    `Vali yozilgan kurslar soni: ${valiCount}`,
-  ];
+  return [...duplicates];
 }
 
-console.log(courseStudents(courses));
+// Test
+console.log(findDuplicates([1, 2, 3, 2, 4, 5, 1, 6, 1]));
+// [2, 1]

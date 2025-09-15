@@ -3721,3 +3721,33 @@ const courses = [
 // value → talabalar Set’i (takrorlarsiz)
 // "Python" kursidagi talabalarni massiv shaklida qaytaring.
 // "Vali" nechta kursga yozilganini hisoblab qaytaring.
+
+function courseStudents(courses) {
+  if (!Array.isArray(courses)) return 'Array emas!';
+  if (!courses.length) return [];
+
+  // 1. Map yaratamiz: course → Set(students)
+  const courseMap = new Map();
+
+  courses.forEach((item) => {
+    courseMap.set(item.course, new Set(item.students));
+  });
+
+  // 2. Python kursidagi talabalar (massivga aylantirib qaytarish)
+  const pythonStudents = Array.from(courseMap.get('Python'));
+
+  // 3. "Vali" nechta kursga yozilgan?
+  let valiCount = 0;
+  for (let [course, students] of courseMap) {
+    if (students.has('Vali')) {
+      valiCount++;
+    }
+  }
+
+  return [
+    `Python kursi: ${JSON.stringify(pythonStudents)}`,
+    `Vali yozilgan kurslar soni: ${valiCount}`,
+  ];
+}
+
+console.log(courseStudents(courses));

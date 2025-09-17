@@ -3891,3 +3891,33 @@ const emails = [
 //   countFrequency(['apple', 'banana', 'apple', 'orange', 'banana', 'apple'])
 // );
 // // Natija: Map(3) { 'apple' => 3, 'banana' => 2, 'orange' => 1 }
+
+//===================================================
+
+// Berilgan massivdagi foydalanuvchi nomlaridan foydalanib, har bir foydalanuvchi qaysi unikal mahsulotlarni sotib olganini hisoblang.
+// 👉 Ma’lumot: massivda obyektlar bor, har birida user va product mavjud.
+// 👉 Natija: Map bo‘lsin, key = user, value = Set (unikal mahsulotlar).
+
+// function userProducts(purchases) {
+//   if (!Array.isArray(purchases)) return 'bu array emas';
+//   if (!purchases.length) return new Map();
+
+//   return purchases.reduce((acc, cur) => {
+//     if (acc.has(cur.user)) {
+//       acc.get(cur.user).add(cur.product);
+//     } else {
+//       acc.set(cur.user, new Set([cur.product]));
+//     }
+//     return acc;
+//   }, new Map());
+// }
+
+// const purchases = [
+//   { user: 'Ali', product: 'Book' },
+//   { user: 'Vali', product: 'Pen' },
+//   { user: 'Ali', product: 'Book' },
+//   { user: 'Ali', product: 'Laptop' },
+//   { user: 'Vali', product: 'Notebook' },
+// ];
+
+// console.log(userProducts(purchases));

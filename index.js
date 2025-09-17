@@ -3754,31 +3754,120 @@
 
 //================================================================
 
-const products = [
-  'iPhone',
-  'Samsung',
-  'Nokia',
-  'iPhone',
-  'Xiaomi',
-  'Samsung',
-  'Oppo',
-];
+// const products = [
+//   'iPhone',
+//   'Samsung',
+//   'Nokia',
+//   'iPhone',
+//   'Xiaomi',
+//   'Samsung',
+//   'Oppo',
+// ];
 
-function findDuplicates(arr) {
-  let seen = new Set();
-  let duplicates = new Set();
+// function findDuplicates(arr) {
+//   let seen = new Set();
+//   let duplicates = new Set();
 
-  for (let item of arr) {
-    if (seen.has(item)) {
-      duplicates.add(item);
-    } else {
-      seen.add(item);
-    }
-  }
+//   for (let item of arr) {
+//     if (seen.has(item)) {
+//       duplicates.add(item);
+//     } else {
+//       seen.add(item);
+//     }
+//   }
 
-  return [...duplicates];
-}
+//   return [...duplicates];
+// }
 
-// Test
-console.log(findDuplicates([1, 2, 3, 2, 4, 5, 1, 6, 1]));
+// // Test
+// console.log(findDuplicates([1, 2, 3, 2, 4, 5, 1, 6, 1]));
 // [2, 1]
+
+//=================================================
+// const phones = [
+//   '+998901112233',
+//   '+998901112233',
+//   '+998907778899',
+//   '+998933334455',
+//   '+998907778899',
+//   '+998935551122',
+// ];
+
+// Set yordamida takroriy raqamlarni olib tashlang.
+
+// Natijani massiv ko‘rinishida qaytaring.
+
+// function getUnique(arr) {
+//   return [...new Set(arr)];
+// }
+
+// console.log(getUnique(phones));
+
+//=========================================================
+// const users = [
+//   { id: 1, name: 'Ali' },
+//   { id: 2, name: 'Vali' },
+//   { id: 3, name: 'Hasan' },
+//   { id: 4, name: 'Husan' },
+// ];
+// Map yarating, unda id → name bo‘lsin.
+
+// Mapdan foydalanuvchi id=3 bo‘yicha ismni oling.
+
+// function getMap(arr) {
+//   let myMap = new Map();
+
+//   arr.forEach((element) => {
+//     myMap.set(element.id, element.name);
+//   });
+
+//   return myMap.has(id) ? myMap.get(id) : 'Bunday id topilmadi';
+// }
+
+// console.log(getMap(users));
+
+//==================================================
+
+const emails = [
+  'ali@gmail.com',
+  'vali@gmail.com',
+  'ali@gmail.com',
+  'hasan@yahoo.com',
+  'vali@gmail.com',
+  'husan@mail.ru',
+];
+// Set yordamida unique email ro‘yxatini chiqaring.
+
+// Takrorlangan email’larni alohida massivda qaytaring.
+
+// function getSet(arr) {
+//   let seen = new Set();
+//   let dublicates = new Set();
+
+//   for (let item of arr) {
+//     if (seen.has(item)) {
+//       dublicates.add(item);
+//     } else {
+//       seen.add(item);
+//     }
+//   }
+//   return {
+//     seen: [...seen],
+//     dublicates: [...dublicates],
+//   };
+// }
+
+// console.log(getSet(emails));
+
+// console.log([...new Set(emails)]);
+
+//============================================
+
+// function getUnique(arr) {
+//   return [...new Set(arr)];
+// }
+
+// console.log(getUnique([1, 2, 2, 3, 4, 4, 5]));
+// Natija: [1, 2, 3, 4, 5]
+
+//===============================================

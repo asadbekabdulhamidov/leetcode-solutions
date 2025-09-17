@@ -3921,3 +3921,38 @@ const emails = [
 // ];
 
 // console.log(userProducts(purchases));
+//=========================================================
+
+// function loginDays(logs) {
+//   if (!Array.isArray(logs)) return 'array emasku';
+//   if (!logs.length) return new Map();
+
+//   return logs.reduce((acc, cur) => {
+//     if (acc.get(cur.user)) {
+//       acc.get(cur.user).add(cur.date);
+//     } else {
+//       acc.set(cur.user, new Set([cur.date]));
+//     }
+//     return acc;
+//   }, new Map());
+// }
+
+// const logs = [
+//   { user: 'Ali', date: '2025-09-10' },
+//   { user: 'Ali', date: '2025-09-10' },
+//   { user: 'Ali', date: '2025-09-11' },
+//   { user: 'Vali', date: '2025-09-10' },
+//   { user: 'Vali', date: '2025-09-12' },
+//   { user: 'Ali', date: '2025-09-12' },
+// ];
+
+// console.log(loginDays(logs));
+/*
+Natija:
+Map(2) {
+  'Ali' => 3,
+  'Vali' => 2
+}
+*/
+
+//====================================================

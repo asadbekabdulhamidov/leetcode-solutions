@@ -3871,3 +3871,23 @@ const emails = [
 // Natija: [1, 2, 3, 4, 5]
 
 //===============================================
+
+// Berilgan massivdagi elementlarning necha marta takrorlanganini hisoblab, natijani Map ko‘rinishida qaytaring.
+// function countFrequency(arr) {
+//   if (!Array.isArray(arr)) return 'bu array emas';
+//   if (!arr.length) return new Map();
+
+//   return arr.reduce((acc, cur) => {
+//     if (acc.has(cur)) {
+//       acc.set(cur, acc.get(cur) + 1);
+//     } else {
+//       acc.set(cur, 1);
+//     }
+//     return acc;
+//   }, new Map());
+// }
+
+// console.log(
+//   countFrequency(['apple', 'banana', 'apple', 'orange', 'banana', 'apple'])
+// );
+// // Natija: Map(3) { 'apple' => 3, 'banana' => 2, 'orange' => 1 }

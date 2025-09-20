@@ -4021,4 +4021,38 @@ Map(2) {
 //   };
 // }
 
-console.log(deleteProducts(products, [2, 5, 10]));
+// console.log(deleteProducts(products, [2, 5, 10]));
+
+//==========================================
+// 👉 Vazifa:
+// updateProduct(products, id, newData) degan funksiya yozing.
+// id – qaysi mahsulotni yangilash kerakligini bildiradi.
+// newData – obyekt, ichida faqat yangilanishi kerak bo‘lgan fieldlar bo‘ladi.
+// Funksiya asl massivni o‘zgartirishi kerak.
+// Agar id topilmasa "Product not found" qaytarsin.
+// Agar topilsa yangilangan obyektni qaytarsin.
+// let products = [
+//   { id: 1, name: 'Laptop', price: 1500, category: 'Electronics' },
+//   { id: 2, name: 'Phone', price: 800, category: 'Electronics' },
+//   { id: 3, name: 'Shirt', price: 50, category: 'Clothes' },
+// ];
+
+// function updateProduct(products, id, newProduct) {
+//   if (!Array.isArray(products)) return 'bu array emas';
+//   if (!products.length) return [];
+
+//   let productIndex = products.findIndex((item) => item.id === id);
+//   if (productIndex !== -1) {
+//     // products[productIndex] = {
+//     //   id: productIndex,
+//     //   ...newProduct,
+//     //   category: products[productIndex].category,
+//     // };
+//     products[productIndex] = Object.assign(products[productIndex], newProduct);
+//     return products;
+//   } else {
+//     return 'Product not found';
+//   }
+// }
+
+// console.log(updateProduct(products, 2, { price: 1000, name: 'Smartphone' }));

@@ -3962,13 +3962,13 @@ Map(2) {
 // Funksiya massivni aslini o‘zgartirishi kerak.
 // Agar ids ichidagi id mahsulotlar ichida topilmasa, "Some products not found" deb qaytarishi kerak.
 // Oxirida o‘chirilgan mahsulotlarni qaytarib bersin.
-let products = [
-  { id: 1, name: 'Laptop', price: 1500, category: 'Electronics' },
-  { id: 2, name: 'Phone', price: 800, category: 'Electronics' },
-  { id: 3, name: 'Shirt', price: 50, category: 'Clothes' },
-  { id: 4, name: 'Tablet', price: 1200, category: 'Electronics' },
-  { id: 5, name: 'Shoes', price: 100, category: 'Clothes' },
-];
+// let products = [
+//   { id: 1, name: 'Laptop', price: 1500, category: 'Electronics' },
+//   { id: 2, name: 'Phone', price: 800, category: 'Electronics' },
+//   { id: 3, name: 'Shirt', price: 50, category: 'Clothes' },
+//   { id: 4, name: 'Tablet', price: 1200, category: 'Electronics' },
+//   { id: 5, name: 'Shoes', price: 100, category: 'Clothes' },
+// ];
 
 // function deleteProducts(products, ids) {
 //   if (!Array.isArray(products)) return 'bu array emas';
@@ -3994,6 +3994,31 @@ let products = [
 //   }
 
 //   return [products, deleteProd];
+// }
+// function deleteProducts(products, ids) {
+//   if (!Array.isArray(products)) return "bu array emas";
+//   if (!products.length) return [];
+
+//   let deletedArr = [];
+//   let notFound = false;
+
+//   for (let id of ids) {
+//     let index = products.findIndex((item) => item.id === id);
+//     if (index !== -1) {
+//       // asl massivdan o‘chiramiz
+//       let deleted = products.splice(index, 1)[0];
+//       deletedArr.push(deleted);
+//     } else {
+//       notFound = true;
+//     }
+//   }
+
+//   return {
+//     deleted: deletedArr,
+//     message: notFound
+//       ? "Some products not found"
+//       : "All products deleted successfully",
+//   };
 // }
 
 console.log(deleteProducts(products, [2, 5, 10]));

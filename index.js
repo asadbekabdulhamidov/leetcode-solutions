@@ -3956,3 +3956,44 @@ Map(2) {
 */
 
 //====================================================
+
+// deleteProducts(products, ids) degan funksiya yozing.
+// ids — massiv bo‘lib, ichida o‘chirilishi kerak bo‘lgan mahsulotlar idlari keladi.
+// Funksiya massivni aslini o‘zgartirishi kerak.
+// Agar ids ichidagi id mahsulotlar ichida topilmasa, "Some products not found" deb qaytarishi kerak.
+// Oxirida o‘chirilgan mahsulotlarni qaytarib bersin.
+let products = [
+  { id: 1, name: 'Laptop', price: 1500, category: 'Electronics' },
+  { id: 2, name: 'Phone', price: 800, category: 'Electronics' },
+  { id: 3, name: 'Shirt', price: 50, category: 'Clothes' },
+  { id: 4, name: 'Tablet', price: 1200, category: 'Electronics' },
+  { id: 5, name: 'Shoes', price: 100, category: 'Clothes' },
+];
+
+// function deleteProducts(products, ids) {
+//   if (!Array.isArray(products)) return 'bu array emas';
+//   if (!products.length) return [];
+
+//   let deleteProd = {
+//     deleteArr: [],
+//     message: [],
+//   };
+
+//   for (let i of ids) {
+//     if (products.find((item) => item.id === i)) {
+//       products = products.filter((prod) => {
+//         if (prod.id === i) {
+//           deleteProd.deleteArr.push(prod);
+//         } else {
+//           return prod;
+//         }
+//       });
+//     } else {
+//       deleteProd.message.push([i, 'Some products not found']);
+//     }
+//   }
+
+//   return [products, deleteProd];
+// }
+
+console.log(deleteProducts(products, [2, 5, 10]));

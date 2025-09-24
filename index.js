@@ -4110,3 +4110,28 @@ Map(2) {
 
 // double().then(console.log).catch(console.log);
 // double(2).then(console.log).catch(console.log);
+
+//=======================================================
+
+// Funksiya yozing, u raqam qabul qiladi va 2 soniyadan keyin shu raqamning kvadratini qaytaradigan Promise qaytarsin.
+
+// Agar raqam bo‘lmasa → reject("❌ Iltimos, raqam yuboring!") chiqsin.
+
+// function square(num) {
+//   let p = new Promise((resolve, reject) => {
+//     if (typeof num == 'number' && !isNaN(num)) {
+//       setTimeout(() => {
+//         resolve(num ** 2);
+//       }, 2000);
+//     } else {
+//       reject('❌ Iltimos, raqam yuboring!');
+//     }
+//   });
+
+//   return p;
+// }
+
+// Promise.all([square(2), square(3), square(4)])
+//   .then(console.log)
+//   .catch(console.log)
+//   .finally(() => console.log('ishim tugadi'));

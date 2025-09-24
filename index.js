@@ -4077,3 +4077,18 @@ Map(2) {
 // myPromise.then((res) => console.log(res));
 
 //=======================================================
+// Shunday Promise yozingki:
+// Agar success = true bo‘lsa → "🎉 Muvaffaqiyatli!" qaytarsin.
+// Agar success = false bo‘lsa → "❌ Xato yuz berdi!" qaytarsin.
+// .then() orqali natijani, .catch() orqali xatoni ushlang.
+
+// let myPromise = new Promise((resolve, reject) => {
+//   let succes = true;
+//   if (succes) {
+//     resolve('🎉 Muvaffaqiyatli!');
+//   } else {
+//     reject('❌ Xato yuz berdi!');
+//   }
+// });
+
+// myPromise.then((res) => console.log(res)).catch((err) => console.log(err));

@@ -4056,3 +4056,11 @@ Map(2) {
 // }
 
 // console.log(updateProduct(products, 2, { price: 1000, name: 'Smartphone' }));
+//==================================================================
+//Savol:
+// resolve orqali 5 sonini qaytaradigan Promise yozing va natijani konsolga chiqaring.
+// let promise = new Promise((resolve) => resolve(5));
+
+// promise.then((res) => console.log(res));
+
+//================================================

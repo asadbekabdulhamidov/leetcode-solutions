@@ -4092,3 +4092,21 @@ Map(2) {
 // });
 
 // myPromise.then((res) => console.log(res)).catch((err) => console.log(err));
+
+//=====================================================
+// Shunday funksiya yozingki, u Promise qaytarsin va parametr sifatida berilgan sonni 2 ga ko‘paytirib qaytarsin.
+// Agar son berilmasa (undefined yoki null bo‘lsa), xato (reject) qaytarsin.
+
+// function double(num1) {
+//   let myPromise = new Promise((resolve, reject) => {
+//     if (num1 != undefined && num1 != null) {
+//       resolve(num1 * 2);
+//     } else {
+//       reject('error');
+//     }
+//   });
+//   return myPromise;
+// }
+
+// double().then(console.log).catch(console.log);
+// double(2).then(console.log).catch(console.log);

@@ -4064,3 +4064,16 @@ Map(2) {
 // promise.then((res) => console.log(res));
 
 //================================================
+// Shunday Promise yozingki, u setTimeout yordamida 3 soniyadan keyin "✅ Vaqt tugadi!" degan matnni qaytarsin.
+// Keyin .then() orqali konsolga chiqaring.
+// 👉 Kutilyotgan chiqish (3 sek kutib)
+
+// let myPromise = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve('✅ Vaqt tugadi!');
+//   }, 3000);
+// });
+
+// myPromise.then((res) => console.log(res));
+
+//=======================================================

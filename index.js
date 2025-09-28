@@ -4446,3 +4446,16 @@ Map(2) {
 // }
 
 // getResult();
+
+//================================================
+
+// Istalgan son qaytaradigan Promise yozing. Uni Promise’dan yechib konsolda ko‘rsating.
+// function myPromise() {
+//   return new Promise((resolve) => {
+//     resolve(1);
+//   });
+// }
+// // myPromise().then(console.log);
+
+// let myPromise1 = Promise.resolve(1);
+// myPromise1.then(console.log);

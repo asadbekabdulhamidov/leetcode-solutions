@@ -3828,14 +3828,14 @@
 
 //==================================================
 
-const emails = [
-  'ali@gmail.com',
-  'vali@gmail.com',
-  'ali@gmail.com',
-  'hasan@yahoo.com',
-  'vali@gmail.com',
-  'husan@mail.ru',
-];
+// const emails = [
+//   'ali@gmail.com',
+//   'vali@gmail.com',
+//   'ali@gmail.com',
+//   'hasan@yahoo.com',
+//   'vali@gmail.com',
+//   'husan@mail.ru',
+// ];
 // Set yordamida unique email ro‘yxatini chiqaring.
 
 // Takrorlangan email’larni alohida massivda qaytaring.
@@ -4135,3 +4135,27 @@ Map(2) {
 //   .then(console.log)
 //   .catch(console.log)
 //   .finally(() => console.log('ishim tugadi'));
+//===================================================================
+
+// function getData() {
+//   fetch("https://jsonplaceholder.typicode.com/posts/1")
+//     .then((response) => response.json())
+//     .then((data) => {
+//       console.log("✅ Ma'lumot (Promise):", data);
+//     })
+//     .catch((error) => {
+//       console.log("❌ Xatolik:", error);
+//     });
+// }
+
+// getData();
+
+// function getData(callback) {
+//   setTimeout(() => {
+//     callback('✅ Ma’lumot olindi');
+//   }, 2000);
+// }
+
+// getData((result) => {
+//   console.log(result);
+// });

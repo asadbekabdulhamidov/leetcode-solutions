@@ -4159,3 +4159,35 @@ Map(2) {
 // getData((result) => {
 //   console.log(result);
 // });
+
+// Mashq 1: Oddiy callback → Promise
+
+// Funksiya kvadrat(num, callback) yoz.
+// U sonning kvadratini hisoblab callback orqali qaytarsin.
+
+// Keyin o‘sha funksiyani Promise bilan yoz.
+
+// function getSquare(num, callback) {
+//   console.log(num);
+
+//   console.log(callback(num));
+// }
+
+// getSquare(3, (num) => {
+//   return num ** 2;
+// });
+
+// function getSquare(num) {
+//   return new Promise((resolve, reject) => {
+//     if (typeof num === 'number') {
+//       resolve(num ** 2);
+//     } else {
+//       reject('siz raqam kiritmadingiz');
+//     }
+//   });
+// }
+
+// getSquare(3)
+//   .then((res) => console.log(res))
+//   .catch((err) => console.log(err))
+//   .finally(() => console.log('ishim tugadi'));

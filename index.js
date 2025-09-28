@@ -4191,3 +4191,31 @@ Map(2) {
 //   .then((res) => console.log(res))
 //   .catch((err) => console.log(err))
 //   .finally(() => console.log('ishim tugadi'));
+
+//================================================================
+// checkEven degan funksiya yoz:
+// U son va callback qabul qiladi.
+// Agar son juft bo‘lsa → callback orqali "✅ Juft son" qaytarilsin.
+// Agar son toq bo‘lsa → callback orqali "❌ Toq son" qaytarilsin
+// function checkEven(num, callback) {
+//   let result = num % 2 === 0 ? callback('juft Son') : callback('toq son');
+// }
+
+// checkEven(4, (natija) => {
+//   console.log(natija); // ✅ Juft son
+// });
+
+// function checkEven(num) {
+//   return new Promise((resolve, reject) => {
+//     if (num % 2 === 0) {
+//       resolve('✅ Juft son');
+//     } else {
+//       reject('❌ Toq son');
+//     }
+//   });
+// }
+
+// checkEven(2)
+//   .then(console.log)
+//   .catch(console.log)
+//   .finally(() => console.log('ishim bitti'));

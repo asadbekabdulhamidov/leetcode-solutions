@@ -4317,3 +4317,49 @@ Map(2) {
 //     });
 //   });
 // });
+
+//=============================================
+///promise
+// function getUser(id) {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve({ id, name: 'Asadbek' });
+//     }, 1000);
+//   });
+// }
+
+// function getPosts(userId) {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve([
+//         { id: 1, title: 'Birinchi post', userId },
+//         { id: 2, title: 'Ikkinchi post', userId },
+//       ]);
+//     }, 1000);
+//   });
+// }
+
+// function getComments(postId) {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve([
+//         { id: 1, text: 'Zo‘r maqola!', postId },
+//         { id: 2, text: 'Rahmat!', postId },
+//       ]);
+//     }, 1000);
+//   });
+// }
+
+// getUser(1)
+//   .then((user) => {
+//     console.log('foydalanuvchi ', user);
+//     return getPosts(user.id);
+//   })
+//   .then((posts) => {
+//     console.log('postlar', posts);
+//     return getComments(posts[0].id);
+//   })
+//   .then((comments) => {
+//     console.log('comments', comments);
+//   })
+//   .catch(console.log);

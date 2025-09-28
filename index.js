@@ -4459,3 +4459,15 @@ Map(2) {
 
 // let myPromise1 = Promise.resolve(1);
 // myPromise1.then(console.log);
+
+//==================================
+// curry function
+
+// function fn(a) {
+//   return function (b) {
+//     return [a, () => a + b + b]; // array qaytaryapti
+//   };
+// }
+
+// const [a, b] = fn(2)(3);
+// console.log(a + b()); // 10

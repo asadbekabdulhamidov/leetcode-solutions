@@ -4380,3 +4380,24 @@ Map(2) {
 // }
 
 // showDate();
+
+//======================================================
+// function getNumber(callback) {
+//   setTimeout(() => callback(5), 1000);
+// }
+
+// function multiplyByTwo(num, callback) {
+//   setTimeout(() => callback(num * 2), 1000);
+// }
+
+// function addThree(num, callback) {
+//   setTimeout(() => callback(num + 3), 1000);
+// }
+
+// getNumber((num) => {
+//   multiplyByTwo(num, (multipiled) => {
+//     addThree(multipiled, (final) => {
+//       console.log('natija ', final);
+//     });
+//   });
+// });

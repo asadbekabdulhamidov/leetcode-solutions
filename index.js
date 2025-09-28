@@ -4273,3 +4273,47 @@ Map(2) {
 
 // getUser(2).then(console.log).catch(console.log);
 // console.log(3);
+
+//=============================================
+//callback hell
+// function getUser(id, callback) {
+//   console.log('⏳ Foydalanuvchi bazadan olinmoqda...');
+
+//   setTimeout(() => {
+//     callback({ id, name: 'Asadbek' });
+//   }, 1000); // 1 soniyadan keyin natija qaytadi
+// }
+
+// function getPosts(userId, callback) {
+//   console.log('⏳ Postlar serverdan olinmoqda...');
+
+//   setTimeout(() => {
+//     callback([
+//       { id: 1, title: 'Birinchi post', userId },
+//       { id: 2, title: 'Ikkinchi post', userId },
+//     ]);
+//   }, 1000);
+// }
+
+// function getComments(postId, callback) {
+//   console.log('⏳ Kommentlar serverdan olinmoqda...');
+
+//   setTimeout(() => {
+//     callback([
+//       { id: 1, text: 'Zo‘r maqola!', postId },
+//       { id: 2, text: 'Rahmat!', postId },
+//     ]);
+//   }, 1000);
+// }
+
+// getUser(1, (user) => {
+//   console.log("👤 Foydalanuvchi:", user);
+
+//   getPosts(user.id, (posts) => {
+//     console.log("📝 Postlar:", posts);
+
+//     getComments(posts[0].id, (comments) => {
+//       console.log("💬 Kommentlar:", comments);
+//     });
+//   });
+// });

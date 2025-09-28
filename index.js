@@ -4363,3 +4363,20 @@ Map(2) {
 //     console.log('comments', comments);
 //   })
 //   .catch(console.log);
+
+// async function showDate() {
+//   try {
+//     const user = await getUser(1);
+//     const posts = await getPosts(1);
+//     const comments = await getComments(1);
+//     console.log({
+//       user,
+//       posts,
+//       comments,
+//     });
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+
+// showDate();

@@ -4401,3 +4401,48 @@ Map(2) {
 //     });
 //   });
 // });
+
+// function getNumber() {
+//   return new Promise((resolve) => [
+//     setTimeout(() => {
+//       resolve(5);
+//     }, 1000),
+//   ]);
+// }
+
+// function multiplyByTwo(num) {
+//   return new Promise((resolve) => {
+//     setTimeout(() => resolve(num * 3), 1000);
+//   });
+// }
+
+// function addThree(num) {
+//   return new Promise((resolve) => {
+//     setTimeout(() => resolve(num + 3), 1000);
+//   });
+// }
+
+// getNumber()
+//   .then((num) => {
+//     return multiplyByTwo(num);
+//   })
+//   .then((num) => {
+//     return addThree(num);
+//   })
+//   .then((final) => {
+//     console.log('final', final);
+//   })
+//   .catch((err) => console.log(err));
+
+// async function getResult() {
+//   const num = await getNumber();
+//   const multiplied = await multiplyByTwo(num);
+//   const final = await addThree(multiplied);
+//   console.log({
+//     num,
+//     multiplied,
+//     final,
+//   });
+// }
+
+// getResult();

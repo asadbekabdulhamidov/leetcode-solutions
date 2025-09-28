@@ -4219,3 +4219,57 @@ Map(2) {
 //   .then(console.log)
 //   .catch(console.log)
 //   .finally(() => console.log('ishim bitti'));
+
+//==========================================================
+
+// getUser degan funksiya yoz:
+// Bu funksiya id qabul qiladi va setTimeout bilan 1 soniyadan keyin obyekt qaytarsin:
+// { id: 1, name: "Asadbek" }
+// Natija callback orqali qaytarilsin.
+
+// console.log(1);
+
+// function getUser(id, callback) {
+//   setTimeout(() => {
+//     callback({ id: 1, name: 'Asadbek' });
+//   }, 1000);
+// }
+
+// getUser(1, (user) => {
+//   console.log('Foydalanuvchi:', user);
+// });
+
+// console.log(3);
+
+// agar callback bolmaganida
+// console.log(1);
+
+// function getUser(id) {
+//   setTimeout(() => {
+//     return { id: 1, name: 'Asadbek' }; // ❌
+//   }, 1000);
+// }
+
+// let user = getUser(1); //bu yerda darhol functuon oz ishini yakunlar edi va undefined qiymat qaytar edi
+// console.log('Foydalanuvchi:', user);
+
+// console.log(3);
+
+//promise bilan
+
+// console.log(1);
+
+// function getUser(id) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       if (typeof id === 'number') {
+//         resolve({ id: 1, name: 'Asadbek' });
+//       } else {
+//         reject("id raqam bp'lishi kerak");
+//       }
+//     }, 1000);
+//   });
+// }
+
+// getUser(2).then(console.log).catch(console.log);
+// console.log(3);

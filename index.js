@@ -4534,3 +4534,15 @@ Map(2) {
 // }
 
 // console.log(myFindIndex(users,(item)=>item.age>20))
+
+//======================================================
+function mySome(users, callback) {
+  for (let item of users) {
+    if (callback(item)) {
+      return true;
+    }
+  }
+  return false;
+}
+
+console.log(mySome(users, (item) => item.age == 20));

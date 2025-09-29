@@ -4511,3 +4511,15 @@ Map(2) {
 // }
 
 // console.log(myReduce(users,0,(accumliator, item)=>accumliator+=item.age))
+//===========================================================================
+// function myFind(users,callback){
+//   for(let item of users){
+//       if( callback(item)){
+//           return item
+//       }
+
+//   }
+//       return undefined
+// }
+
+// console.log(myFind(users,(item)=>item.age>20))

@@ -4471,3 +4471,23 @@ Map(2) {
 
 // const [a, b] = fn(2)(3);
 // console.log(a + b()); // 10
+
+//=================================
+// const users = [
+//   { name: 'Asad', age: 25, isActive: true },
+//   { name: 'Ali', age: 30, isActive: false },
+//   { name: 'Nodir', age: 22, isActive: true },
+//   { name: 'Dina', age: 28, isActive: false },
+// ];
+
+// function getNames(users, callback) {
+//   let namesArr = [];
+
+//   for (let item of users) {
+//     namesArr.push(callback(item));
+//   }
+
+//   return namesArr;
+// }
+
+// console.log(getNames(users, (item) => item.name));

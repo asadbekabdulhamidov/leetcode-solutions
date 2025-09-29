@@ -4523,3 +4523,14 @@ Map(2) {
 // }
 
 // console.log(myFind(users,(item)=>item.age>20))
+//=======================================================
+// function myFindIndex(users,callback){
+//   for(let i=0; i<=users.length; i++){
+//       if(callback(users[i])){
+//           return i
+//       }
+//   }
+//         return -1
+// }
+
+// console.log(myFindIndex(users,(item)=>item.age>20))

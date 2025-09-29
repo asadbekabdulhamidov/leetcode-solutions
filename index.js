@@ -4491,3 +4491,23 @@ Map(2) {
 // }
 
 // console.log(getNames(users, (item) => item.name));
+//===========================================================================
+
+// const users = [
+//   { name: "Asad", age: 25, isActive: true },
+//   { name: "Ali", age: 30, isActive: false },
+//   { name: "Nodir", age: 22, isActive: true },
+//   { name: "Dina", age: 28, isActive: false },
+// ];
+
+// function myReduce(users,initialValue,callback){
+//     let accumliator=initialValue
+//     for(let item of users){
+//         accumliator=callback(accumliator,item)
+//     }
+
+//     return accumliator
+
+// }
+
+// console.log(myReduce(users,0,(accumliator, item)=>accumliator+=item.age))

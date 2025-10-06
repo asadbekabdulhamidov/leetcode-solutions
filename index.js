@@ -4614,13 +4614,13 @@ Map(2) {
 // console.log(getTopRatedProducts(products));
 
 //============================================================
-const users = [
-  { id: 1, name: 'Ali', isActive: true, posts: 12 },
-  { id: 2, name: 'Vali', isActive: false, posts: 3 },
-  { id: 3, name: 'Hasan', isActive: true, posts: 20 },
-  { id: 4, name: 'Husan', isActive: true, posts: 7 },
-  { id: 5, name: 'Aziz', isActive: false, posts: 15 },
-];
+// const users = [
+//   { id: 1, name: 'Ali', isActive: true, posts: 12 },
+//   { id: 2, name: 'Vali', isActive: false, posts: 3 },
+//   { id: 3, name: 'Hasan', isActive: true, posts: 20 },
+//   { id: 4, name: 'Husan', isActive: true, posts: 7 },
+//   { id: 5, name: 'Aziz', isActive: false, posts: 15 },
+// ];
 
 // Vazifa:
 // Faqat isActive: true foydalanuvchilarni oling.
@@ -4694,11 +4694,39 @@ const users = [
 
 // console.log(numbers(10));
 
-function evenNumbers(n) {
-  const length = Math.floor(n / 2) + 1;
-  return Array.from({ length }, (_, i) => i * 2);
-}
+// function evenNumbers(n) {
+//   const length = Math.floor(n / 2) + 1;
+//   return Array.from({ length }, (_, i) => i * 2);
+// }
 
-console.log(evenNumbers(10)); // [0, 2, 4, 6, 8, 10]
-console.log(evenNumbers(100)); // [0, 2, 4, ..., 100]
-console.log(evenNumbers(7)); // [0, 2, 4, 6]
+// console.log(evenNumbers(10)); // [0, 2, 4, 6, 8, 10]
+// console.log(evenNumbers(100)); // [0, 2, 4, ..., 100]
+// console.log(evenNumbers(7)); // [0, 2, 4, 6]
+
+// let arr = Array.from({ length: 5 }, (_, i) => '🤢');
+// console.log(arr);
+
+//===============================
+//  output //{
+//   Electronics: 3350,
+//   Food: 10
+// }
+
+const products = [
+  { id: 1, name: 'Phone', category: 'Electronics', price: 1200 },
+  { id: 2, name: 'TV', category: 'Electronics', price: 2000 },
+  { id: 3, name: 'Apple', category: 'Food', price: 4 },
+  { id: 4, name: 'Orange', category: 'Food', price: 6 },
+  { id: 5, name: 'Keyboard', category: 'Electronics', price: 150 },
+];
+
+// let totalPriceByCategory = products.reduce((acc, cur) => {
+//   if (!acc[cur.category]) {
+//     acc[cur.category] = cur.price;
+//   } else {
+//     acc[cur.category] += cur.price;
+//   }
+//   return acc;
+// }, {});
+
+// console.log(totalPriceByCategory);

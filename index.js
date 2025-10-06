@@ -4685,3 +4685,11 @@ const users = [
 // }
 
 // console.log(letterIndex('JS'));
+
+//==================================
+
+// function numbers(n) {
+//   return Array.from({ length: n }, (_, i) => i + 1);
+// }
+
+// console.log(numbers(10));

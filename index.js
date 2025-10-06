@@ -4693,3 +4693,12 @@ const users = [
 // }
 
 // console.log(numbers(10));
+
+function evenNumbers(n) {
+  const length = Math.floor(n / 2) + 1;
+  return Array.from({ length }, (_, i) => i * 2);
+}
+
+console.log(evenNumbers(10)); // [0, 2, 4, 6, 8, 10]
+console.log(evenNumbers(100)); // [0, 2, 4, ..., 100]
+console.log(evenNumbers(7)); // [0, 2, 4, 6]

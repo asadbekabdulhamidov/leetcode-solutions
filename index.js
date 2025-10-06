@@ -4560,3 +4560,55 @@ Map(2) {
 // }
 
 // console.log(myEvery(users,(item)=>item.age==12))
+
+//================================================
+// Faqat 4.5 va undan yuqori reytingdagi mahsulotlarni ajratib oling.
+// Ularni narxi bo‘yicha kamayish tartibida (price descending) saralang.
+// Natijani quyidagicha qaytaring:
+
+// const products = [
+//   { id: 1, name: 'Phone', price: 1200, rating: 4.5 },
+//   { id: 2, name: 'TV', price: 800, rating: 4.8 },
+//   { id: 3, name: 'Laptop', price: 2500, rating: 4.2 },
+//   { id: 4, name: 'Headphones', price: 150, rating: 4.9 },
+//   { id: 5, name: 'Keyboard', price: 100, rating: 3.9 },
+// ];
+
+// function PriceDescending(arr) {
+//   if (!Array.isArray(arr)) return 'bu array bosh ekan';
+//   if (!arr.length) return [];
+
+//   let newArr = arr
+//     .filter((product) => product.rating >= 4.5)
+//     .sort((a, b) => b.rating - a.rating)
+//     .map((item) => {
+//       return { name: item.name, rating: item.rating };
+//     });
+
+//   return newArr;
+// }
+
+// console.log(PriceDescending(products));
+
+// bu yuqoridagi yoldan optimal nega deganda for filter dan teezroq ishlaydi!
+
+// function getTopRatedProducts(arr) {
+//   if (!Array.isArray(arr)) return 'Bu array emas!';
+//   if (arr.length === 0) return [];
+
+//   const result = [];
+
+//   for (let item of arr) {
+//     if (item.rating >= 4.5) {
+//       result.push({ name: item.name, rating: item.rating, price: item.price });
+//     }
+//   }
+
+//   // endi faqat kerakli elementlar bo‘yicha sort
+//   result.sort((a, b) => b.price - a.price);
+
+//   // narxni olib tashlab, yakuniy ko‘rinish
+//   return result.map(({ name, rating }) => ({ name, rating }));
+// }
+
+// console.log(getTopRatedProducts(products));

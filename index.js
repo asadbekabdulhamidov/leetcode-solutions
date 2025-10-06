@@ -4680,3 +4680,8 @@ const users = [
 // console.log(range(3, 10));
 
 //======================================
+// function letterIndex(str) {
+//   return Array.from(str, (l, i) => `${i + 1}:${l}`);
+// }
+
+// console.log(letterIndex('JS'));

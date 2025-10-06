@@ -4612,3 +4612,42 @@ Map(2) {
 // }
 
 // console.log(getTopRatedProducts(products));
+
+//============================================================
+const users = [
+  { id: 1, name: 'Ali', isActive: true, posts: 12 },
+  { id: 2, name: 'Vali', isActive: false, posts: 3 },
+  { id: 3, name: 'Hasan', isActive: true, posts: 20 },
+  { id: 4, name: 'Husan', isActive: true, posts: 7 },
+  { id: 5, name: 'Aziz', isActive: false, posts: 15 },
+];
+
+// Vazifa:
+// Faqat isActive: true foydalanuvchilarni oling.
+// Ularni posts soni bo‘yicha kamayish tartibida (desc) tartiblang.
+// Natijada quyidagi formatda qaytaring:
+
+// function getIsActiveUsers(arr) {
+//   if (!Array.isArray(arr)) return 'Bu array emas!';
+//   if (arr.length === 0) return [];
+
+//   let result = [];
+
+//   for (let item of arr) {
+//     if (item.isActive) {
+//       result.push({
+//         name: item.name,
+
+//         posts: item.posts,
+//       });
+//     }
+//   }
+
+//   result.sort((a, b) => b.posts - a.posts);
+
+//   return result.map(({ name, posts }) => {
+//     return { name, posts };
+//   });
+// }
+
+// console.log(getIsActiveUsers(users));

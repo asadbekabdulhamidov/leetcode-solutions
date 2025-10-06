@@ -4651,3 +4651,32 @@ const users = [
 // }
 
 // console.log(getIsActiveUsers(users));
+
+//===============================================
+// const word = 'Asad';
+// const arr = Array.from(word);
+// console.log(arr);
+
+// const arr = Array.from({ length: 5 });
+// console.log(arr);
+
+// const arr = Array.from({ length: 5 }, (value, index) => index);
+// console.log(arr);
+
+// Masala: Raqamlar oralig‘i
+
+// Vazifa:
+// range(start, end) degan funksiya yozing.
+// U start dan end gacha bo‘lgan barcha sonlarni massivda qaytarsin.
+
+// function range(start, end) {
+//   let arr = Array.from({ length: end - start + 1 }, (_, i) => {
+//     return start + i;
+//   });
+
+//   return arr;
+// }
+
+// console.log(range(3, 10));
+
+//======================================

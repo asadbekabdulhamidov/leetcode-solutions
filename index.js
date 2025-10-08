@@ -4712,13 +4712,13 @@ Map(2) {
 //   Food: 10
 // }
 
-const products = [
-  { id: 1, name: 'Phone', category: 'Electronics', price: 1200 },
-  { id: 2, name: 'TV', category: 'Electronics', price: 2000 },
-  { id: 3, name: 'Apple', category: 'Food', price: 4 },
-  { id: 4, name: 'Orange', category: 'Food', price: 6 },
-  { id: 5, name: 'Keyboard', category: 'Electronics', price: 150 },
-];
+// const products = [
+//   { id: 1, name: 'Phone', category: 'Electronics', price: 1200 },
+//   { id: 2, name: 'TV', category: 'Electronics', price: 2000 },
+//   { id: 3, name: 'Apple', category: 'Food', price: 4 },
+//   { id: 4, name: 'Orange', category: 'Food', price: 6 },
+//   { id: 5, name: 'Keyboard', category: 'Electronics', price: 150 },
+// ];
 
 // let totalPriceByCategory = products.reduce((acc, cur) => {
 //   if (!acc[cur.category]) {
@@ -4730,3 +4730,39 @@ const products = [
 // }, {});
 
 // console.log(totalPriceByCategory);
+
+//============================================
+// const products = [
+//   { name: 'Laptop', category: 'Electronics', price: 1200 },
+//   { name: 'Phone', category: 'Electronics', price: 800 },
+//   { name: 'T-shirt', category: 'Clothing', price: 30 },
+//   { name: 'Jeans', category: 'Clothing', price: 50 },
+//   { name: 'Apple', category: 'Food', price: 2 },
+//   { name: 'Bread', category: 'Food', price: 3 },
+// ];
+// getTotalPriceByCategory(products) degan function yozing, u har bir kategoriyaga qarab umumiy narxni hisoblab, quyidagi obyektni qaytarsin:
+// function getTotalPriceByCategory(products) {
+//   if (!Array.isArray(products)) return 'bu array emas ekan';
+//   if (!products.length) return {};
+
+//   return products.reduce((acc, cur) => {
+//     if (acc[cur.category]) {
+//       acc[cur.category] += cur.price;
+//     } else {
+//       acc[cur.category] = cur.price;
+//     }
+//     return acc;
+//   }, {});
+// }
+
+// function getTotalPriceByCategory(products) {
+//   if (!Array.isArray(products)) return {};
+//   if (!products.length) return {};
+
+//   return products.reduce((acc, { category, price }) => {
+//     acc[category] = (acc[category] || 0) + price;
+//     return acc;
+//   }, {});
+// }
+
+// console.log(getTotalPriceByCategory(products));

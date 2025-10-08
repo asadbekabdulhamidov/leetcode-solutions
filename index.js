@@ -4766,3 +4766,42 @@ Map(2) {
 // }
 
 // console.log(getTotalPriceByCategory(products));
+
+//========================================================
+
+// Shartlar:
+// Faqat bitta reduce() ishlatilsin
+// Destructuring ishlatish tavsiya etiladi
+// Edge case: bo‘sh array bo‘lsa {} qaytsin
+// Agar discount yoki tax ko‘rsatilmagan bo‘lsa, ularni 0 deb oling
+
+const products = [
+  {
+    name: 'Laptop',
+    category: 'Electronics',
+    price: 1200,
+    discount: 10,
+    tax: 12,
+  },
+  { name: 'Phone', category: 'Electronics', price: 800, discount: 5, tax: 12 },
+  { name: 'T-shirt', category: 'Clothing', price: 30, discount: 0, tax: 5 },
+  { name: 'Jeans', category: 'Clothing', price: 50, discount: 10, tax: 5 },
+  { name: 'Apple', category: 'Food', price: 2, discount: 0, tax: 8 },
+  { name: 'Bread', category: 'Food', price: 3, discount: 0, tax: 8 },
+];
+
+function getFinalTotalByCategory(products) {
+  if (!Array.isArray(products)) return 'bu array emas ekan';
+  if (!products.length) return {};
+
+  return products.reduce((acc, { price, discount, category, tax }) => {
+    acc[category] =
+      (acc[category] || 0) +
+      price -
+      (price * discount) / 100 +
+      (price * tax) / 100;
+    return acc;
+  }, {});
+}
+
+console.log(getFinalTotalByCategory(products));

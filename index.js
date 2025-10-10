@@ -4834,3 +4834,31 @@ Map(2) {
 // // 👉 "Javascript Is Fun"
 
 //=================================================
+// Masala: removeDuplicateChars(str)
+
+// Shart:
+// Berilgan str satrdan takrorlanuvchi harflarni olib tashlang.
+// Ya’ni, har bir harf faqat bir marta chiqsin (tartib saqlansin).
+// 🧾 Qo‘shimcha talablar:
+// Argument string emas bo‘lsa — "string kiriting" deb qaytarsin.
+// Bo‘sh string bo‘lsa — "matn yo‘q" deb qaytarsin.
+// Natija bo‘sh joylarni ham saqlab qolsin.
+// 🧠 Misollar:
+
+// function removeDuplicateChars(str) {
+//   if (typeof str !== 'string') return 'string jonating';
+//   if (!str.trim()) return 'matn yo‘q';
+
+//   let arr = [...new Set(str)].join('');
+//   return arr;
+// }
+// console.log(removeDuplicateChars('programming'));
+// // 👉 "progamin"
+
+// console.log(removeDuplicateChars('hello world'));
+// // 👉 "helo wrd"
+
+// console.log(removeDuplicateChars(''));
+// // 👉 "matn yo‘q"
+
+//=======================================================

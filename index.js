@@ -4862,3 +4862,45 @@ Map(2) {
 // // 👉 "matn yo‘q"
 
 //=======================================================
+// Argument string bo‘lmasa — "string kiriting" deb qaytsin.
+// Faqat harflarni hisoblasin (bo‘sh joy yoki belgilarga e’tibor bermasin).
+// Bo‘sh string yoki faqat bo‘sh joy bo‘lsa — "matn yo‘q" deb qaytsin.
+
+// function countCharacter(str) {
+//   if (typeof str !== 'string') return 'string jonating';
+//   if (!str.trim()) return 'matn yo‘q';
+
+//   return str.split('').reduce((acc, cur) => {
+//     if (acc[cur]) {
+//       acc[cur] += 1;
+//     } else {
+//       acc[cur] = 1;
+//     }
+
+//     return acc;
+//   }, {});
+// }
+// function countCharacter(str) {
+//   if (typeof str !== 'string') return 'string jonating';
+//   if (!str.trim()) return 'matn yo‘q';
+
+//   let obj = {};
+
+//   for (item of str) {
+//     if (/[a-z]/.test(item)) {
+//       // faqat harflarni hisoblaymiz
+//       obj[item] = (obj[item] || 0) + 1;
+//     }
+//   }
+//   return obj;
+// }
+// console.log(countCharacter('hello'));
+// // 👉 { h: 1, e: 1, l: 2, o: 1 }
+
+// console.log(countCharacter('javascript'));
+// // 👉 { j: 1, a: 2, v: 1, s: 1, c: 1, r: 1, i: 1, p: 1, t: 1 }
+
+// console.log(countCharacter('  '));
+// // 👉 "matn yo‘q"
+
+//===========================================

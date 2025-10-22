@@ -4904,3 +4904,74 @@ Map(2) {
 // // 👉 "matn yo‘q"
 
 //===========================================
+
+// const users = [
+//   { id: 1, name: 'Asadbek' },
+//   { id: 2, name: 'Jasur' },
+//   { id: 3, name: 'Malika' },
+// ];
+
+// const orders = [
+//   { id: 101, userId: 1, amount: 120, status: 'active' },
+//   { id: 102, userId: 1, amount: 80, status: 'cancelled' },
+//   { id: 103, userId: 2, amount: 50, status: 'active' },
+//   { id: 104, userId: 3, amount: 200, status: 'active' },
+//   { id: 105, userId: 3, amount: 100, status: 'pending' },
+// ];
+//output
+//   [
+//     { name: 'Asadbek', totalActiveAmount: 120 },
+//     { name: 'Jasur', totalActiveAmount: 50 },
+//     { name: 'Malika', totalActiveAmount: 200 },
+//   ];
+// Shartlar:
+// Har bir foydalanuvchiga tegishli faqat status: 'active' bo‘lgan buyurtmalarni hisoblang.
+// reduce() va/yoki filter(), map() dan foydalanish tavsiya etiladi.
+// Kod return qiladigan qiymat yangi massiv bo‘lsin (mavjud massivlar o‘zgarmasin).
+
+// function getTotalActiveAmount(users, orders) {
+//   let filterOrders = orders.filter((item) => item.status === 'active');
+//   return users.map(user=>{
+//     if(user.id===filterOrders.userId)
+//   })
+// }
+
+// console.log(getTotalActiveAmount(users, orders));
+
+//================================================
+// Masala: Birinchi noyob belgi indeksi
+
+// Shart:
+// Sizga str beriladi. Matnda faqat 1 marta uchraydigan birinchi belgining indeksini qaytaring. Agar bunday belgi bo‘lmasa, -1 qaytaring.
+// Case-sensitive (katta-kichik harf farq qiladi)
+// Bo‘sh joy ham belgi hisoblanadi
+// Imkon qadar O(n) yechim yozishga harakat qiling (bir martalik sanash + ikkinchi martalik tekshiruv).
+
+// function firstUniqueIndex(str) {
+//   if (typeof str !== 'string') return 'string kiriting';
+//   if (!str.length) return -1;
+
+//   const freq = {};
+
+//   // 1. Harflar chastotasini hisoblash
+//   for (let char of str) {
+//     freq[char] = (freq[char] || 0) + 1;
+//   }
+
+//   console.log(freq);
+
+//   // // 2. Noyob bo‘lgan birinchi belgining indeksini topish
+//   // for (let i = 0; i < str.length; i++) {
+//   //   if (freq[str[i]] === 1) {
+//   //     return i;
+//   //   }
+//   // }
+
+//   // return -1;
+// }
+
+// console.log(firstUniqueIndex('salomlar')); // 1  ('a')
+// // console.log(firstUniqueIndex('aabbcc')); // -1
+// // console.log(firstUniqueIndex('swiss')); // 1  ('w')
+// // console.log(firstUniqueIndex('')); // -1
+// // console.log(firstUniqueIndex('Aa')); // 0  ('A')

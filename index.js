@@ -5006,3 +5006,25 @@ Map(2) {
 
 // toTitleCase('');
 // 👉 ""
+
+// //===============================================
+// 🧩 Masala: Palindromni tekshirish (soddalashtirilgan)
+// Shart:
+// Berilgan str matn palindrom ekanini aniqlang.
+// Faqat harflar va raqamlar hisobga olinsin.
+// Katta-kichik harf farqi hisobga olinmasin.
+// Bo‘sh joylar, vergul, nuqta va boshqa belgilar e’tiborga olinmasin.
+
+function isPalindrome(str) {
+  if (typeof str !== 'string') return 'string kiriting';
+  if (!str.trim().length) return true;
+
+  str = str.replace(/[^a-z0-9]/gi, '').toLowerCase();
+
+  return str.split('').reverse().join('') === str ? true : false;
+}
+console.log(isPalindrome('A man, a plan, a canal: Panama')); // true
+console.log(isPalindrome('race a car')); // false
+console.log(isPalindrome('No lemon, no melon')); // true
+console.log(isPalindrome('12321')); // true
+console.log(isPalindrome('  ')); // true (bo‘sh — palindrom deb olinadi)

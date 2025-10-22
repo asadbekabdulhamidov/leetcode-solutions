@@ -5044,3 +5044,36 @@ Map(2) {
 // console.log(normalizeSpaces('   Frontend     Dev  ')); // "Frontend Dev"
 // console.log(normalizeSpaces('NoSpaces')); // "NoSpaces"
 // console.log(normalizeSpaces('      ')); // ""  (bo‘sh bo‘ladi)
+
+//==================================================================
+
+// Shart:
+// str ichidagi har bir so‘zni teskari qilib yozing, lekin bo‘sh joylar soni va joylashuvi o‘zgarmasin.
+// So‘z — ketma-ket harflar/raqamlar ketma-ketligi deb oling.
+// Ko‘p bo‘sh joylar, bosh/oxir bo‘sh joylar ham saqlanadi.
+// Case o‘zgarmaydi (faqat tartib teskari).
+// O(n) yondashuvga intiling.
+
+// function reverseWordsKeepSpaces(str) {
+//   if (typeof str !== 'string') return 'string kirgizing';
+//   if (!str.length) return 'string kirgizing';
+
+//   // return str
+//   //   .split(' ')
+//   //   .map((item) => item.split('').reverse().join(''))
+//   //   .join(' ');
+
+//   let arr = str.split(' ');
+//   // console.log(arr);
+
+//   let newStr = [];
+//   for (let item of arr) {
+//     newStr.push(item.split('').reverse().join(''));
+//   }
+//   return newStr.join(' ');
+// }
+// console.log(reverseWordsKeepSpaces('Hello world')); // "olleH dlrow"
+// console.log(reverseWordsKeepSpaces('  Frontend   Dev  ')); // "  dnetnorF   veD  "
+// console.log(reverseWordsKeepSpaces('JS is  fun')); // "SJ si  nuf"
+// console.log(reverseWordsKeepSpaces('NoSpaces')); // "secapSoN"
+// console.log(reverseWordsKeepSpaces('    ')); // "    "

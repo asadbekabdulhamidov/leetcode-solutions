@@ -5077,3 +5077,29 @@ Map(2) {
 // console.log(reverseWordsKeepSpaces('JS is  fun')); // "SJ si  nuf"
 // console.log(reverseWordsKeepSpaces('NoSpaces')); // "secapSoN"
 // console.log(reverseWordsKeepSpaces('    ')); // "    "
+//===========================================
+
+// function longestWord(sentence) {
+//   if (typeof sentence !== 'string') return 'string kiriting';
+//   if (!sentence.trim().length) return ''; // faqat bo‘sh joy bo‘lsa
+
+//   const words = sentence.split(' '); // matnni so‘zlarga ajratamiz
+//   let longest = ''; // eng uzun so‘zni saqlovchi o‘zgaruvchi
+
+//   for (const word of words) {
+//     if (!word) continue; // bo‘sh elementlarni o‘tkazib yuboramiz
+//     if (word.length > longest.length) {
+//       longest = word; // eng uzun so‘z topilsa, yangilaymiz
+//     }
+//   }
+
+//   return longest;
+// }
+
+// // 🔍 Testlar:
+// console.log(longestWord('I love solving string problems')); // "problems"
+// console.log(longestWord('  Frontend   development  is fun')); // "development"
+// console.log(longestWord('JS  TS  Go')); // "JS"
+// console.log(longestWord('NoSpaces')); // "NoSpaces"
+// console.log(longestWord('     ')); // ""
+//=========================================================

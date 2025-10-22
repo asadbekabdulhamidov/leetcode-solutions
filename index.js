@@ -4975,3 +4975,34 @@ Map(2) {
 // // console.log(firstUniqueIndex('swiss')); // 1  ('w')
 // // console.log(firstUniqueIndex('')); // -1
 // // console.log(firstUniqueIndex('Aa')); // 0  ('A')
+//============================================================
+
+// 🧩 Masala: So‘z boshini katta qilish (Title Case)
+// Shrt:
+// Sizga str beriladi. Har bir so‘zning birinchi harfini katta, qolganlarini esa kichik harfga o‘tkazing.
+// So‘zlar orasida bir nechta bo‘sh joylar ham bo‘lishi mumkin — ular saqlanib qolishi kerak.
+
+// function toTitleCase(str) {
+//   if (typeof str !== 'string') return 'string kiriting';
+//   if (!str.length) return ' bu bosh string';
+
+//   return str
+//     .split(' ')
+//     .map((item) => {
+//       if (!item) return '';
+//       return item[0].toUpperCase() + item.slice(1).toLowerCase();
+//     })
+//     .join(' ');
+// }
+
+// console.log(toTitleCase('jAVaScRIPt is AWESOME'));
+// // 👉 "Javascript Is Awesome"
+
+// toTitleCase('  hello    WORLD ');
+// // 👉 "  Hello    World "
+
+// toTitleCase('my name IS asadBEK');
+// // 👉 "My Name Is Asadbek"
+
+// toTitleCase('');
+// 👉 ""

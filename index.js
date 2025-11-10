@@ -5161,29 +5161,38 @@ Map(2) {
 // U massivdagi obyektlarni id va name qiymatlari bo‘yicha solishtirib, takrorlanuvchilarni olib tashlasin.
 // Ya’ni agar id ham, name ham bir xil bo‘lsa — o‘sha obyekt takror deb hisoblanadi.
 
-function removeDuplicateUsers(arr) {
-  if (!Array.isArray(arr)) return 'array kiriting';
-  if (!arr.length) return [];
+// function removeDuplicateUsers(arr) {
+//   if (!Array.isArray(arr)) return 'array kiriting';
+//   if (!arr.length) return [];
 
-  return arr.reduce((acc, cur) => {
-    let isExist = acc.some(
-      (item) => item.id === cur.id && cur.name === item.name
-    );
-    if (!isExist) {
-      acc.push(cur);
-    }
+//   return arr.reduce((acc, cur) => {
+//     let isExist = acc.some(
+//       (item) => item.id === cur.id && cur.name === item.name
+//     );
+//     if (!isExist) {
+//       acc.push(cur);
+//     }
 
-    return acc;
-  }, []);
-}
+//     return acc;
+//   }, []);
+// }
 
-const users = [
-  { id: 1, name: 'Ali' },
-  { id: 2, name: 'Vali' },
-  { id: 1, name: 'Ali' },
-  { id: 1, name: 'Hasan' },
-  { id: 2, name: 'Vali' },
-  { id: 3, name: 'Ali' },
-];
+// const users = [
+//   { id: 1, name: 'Ali' },
+//   { id: 2, name: 'Vali' },
+//   { id: 1, name: 'Ali' },
+//   { id: 1, name: 'Hasan' },
+//   { id: 2, name: 'Vali' },
+//   { id: 3, name: 'Ali' },
+// ];
 
-console.log(removeDuplicateUsers(users));
+// console.log(removeDuplicateUsers(users));
+
+// function removeDuplicateUsers(arr) {
+//   const map = new Map();
+//   for (const user of arr) {
+//     const key = `${user.id}-${user.name}`;
+//     if (!map.has(key)) map.set(key, user);
+//   }
+//   return [...map.values()];
+// }

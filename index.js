@@ -5133,15 +5133,46 @@ Map(2) {
 
 // removeDuplicateObjects(arr) nomli function yozing.
 // U massivdagi obyektlarning id qiymati bo‘yicha takrorlanuvchilarni olib tashlab, faqat bir martalik obyektlarni qoldirsin.
-function removeDuplicateObjects(arr) {
+// function removeDuplicateObjects(arr) {
+//   if (!Array.isArray(arr)) return 'array kiriting';
+//   if (!arr.length) return [];
+
+//   return arr.reduce((acc, cur) => {
+//     isExist = acc.some((item) => item.id === cur.id);
+//     if (!isExist) {
+//       acc.push(cur);
+//     }
+//     return acc;
+//   }, []);
+// }
+
+// const users = [
+//   { id: 1, name: 'Ali' },
+//   { id: 2, name: 'Vali' },
+//   { id: 1, name: 'Ali' },
+//   { id: 3, name: 'Hasan' },
+//   { id: 2, name: 'Vali' },
+// ];
+
+// console.log(removeDuplicateObjects(users));
+
+//==========================
+// removeDuplicateUsers(arr) nomli function yozing.
+// U massivdagi obyektlarni id va name qiymatlari bo‘yicha solishtirib, takrorlanuvchilarni olib tashlasin.
+// Ya’ni agar id ham, name ham bir xil bo‘lsa — o‘sha obyekt takror deb hisoblanadi.
+
+function removeDuplicateUsers(arr) {
   if (!Array.isArray(arr)) return 'array kiriting';
   if (!arr.length) return [];
 
   return arr.reduce((acc, cur) => {
-    isExist = acc.some((item) => item.id === cur.id);
+    let isExist = acc.some(
+      (item) => item.id === cur.id && cur.name === item.name
+    );
     if (!isExist) {
       acc.push(cur);
     }
+
     return acc;
   }, []);
 }
@@ -5150,8 +5181,9 @@ const users = [
   { id: 1, name: 'Ali' },
   { id: 2, name: 'Vali' },
   { id: 1, name: 'Ali' },
-  { id: 3, name: 'Hasan' },
+  { id: 1, name: 'Hasan' },
   { id: 2, name: 'Vali' },
+  { id: 3, name: 'Ali' },
 ];
 
-console.log(removeDuplicateObjects(users));
+console.log(removeDuplicateUsers(users));

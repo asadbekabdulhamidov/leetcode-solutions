@@ -5103,3 +5103,28 @@ Map(2) {
 // console.log(longestWord('NoSpaces')); // "NoSpaces"
 // console.log(longestWord('     ')); // ""
 //=========================================================
+
+// 🧩 Masala: Unikal qiymatlar
+
+// Shart:
+// removeDuplicates(arr) nomli function yozing.
+// U berilgan massivdagi takrorlanuvchi elementlarni olib tashlab, faqat unikal elementlardan iborat yangi massiv qaytarsin.
+// function removeDuplicates(arr) {
+//   if (!Array.isArray(arr)) return 'array kiriting';
+//   if (!arr.length) return [];
+
+//   return arr.reduce((acc, curval) => {
+//     if (!acc.includes(curval)) {
+//       acc.push(curval);
+//     }
+
+//     return acc;
+//   }, []);
+// }
+// console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5]));
+// function removeDuplicates(arr) {
+//   if(!Array.isArray(arr)) return 'array kiriting'
+// if (!arr.length) return [];
+//   return [...new Set(arr)];
+// }
+// console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5]));

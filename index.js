@@ -5196,3 +5196,31 @@ Map(2) {
 //   }
 //   return [...map.values()];
 // }
+
+//========================================
+// groupByCity(users) nomli function yozing.
+// U foydalanuvchilar massivini city qiymati bo‘yicha guruhlab, quyidagicha obyekt qaytarsin 👇
+// function groupByCity(users) {
+//   if (!Array.isArray(users)) return 'array kiriting';
+//   if (!users.length) return [];
+
+//   return users.reduce((acc, cur) => {
+//     if (acc[cur.city]) {
+//       acc[cur.city].push(cur);
+//     } else {
+//       acc[cur.city] = [cur];
+//     }
+//     return acc;
+//   }, {});
+// }
+
+// const users = [
+//   { name: 'Ali', city: 'Tashkent' },
+//   { name: 'Vali', city: 'Fergana' },
+//   { name: 'Hasan', city: 'Tashkent' },
+//   { name: 'Jasur', city: 'Fergana' },
+//   { name: 'Gani', city: 'Andijan' },
+// ];
+// console.log(groupByCity(users));
+
+//=======================================================

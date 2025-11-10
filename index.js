@@ -5128,3 +5128,30 @@ Map(2) {
 //   return [...new Set(arr)];
 // }
 // console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5]));
+
+//========================================================
+
+// removeDuplicateObjects(arr) nomli function yozing.
+// U massivdagi obyektlarning id qiymati bo‘yicha takrorlanuvchilarni olib tashlab, faqat bir martalik obyektlarni qoldirsin.
+function removeDuplicateObjects(arr) {
+  if (!Array.isArray(arr)) return 'array kiriting';
+  if (!arr.length) return [];
+
+  return arr.reduce((acc, cur) => {
+    isExist = acc.some((item) => item.id === cur.id);
+    if (!isExist) {
+      acc.push(cur);
+    }
+    return acc;
+  }, []);
+}
+
+const users = [
+  { id: 1, name: 'Ali' },
+  { id: 2, name: 'Vali' },
+  { id: 1, name: 'Ali' },
+  { id: 3, name: 'Hasan' },
+  { id: 2, name: 'Vali' },
+];
+
+console.log(removeDuplicateObjects(users));

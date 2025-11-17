@@ -5262,3 +5262,15 @@ function fnUpdate(arr, id, newPrice) {
     prod.id === id ? { ...prod, price: newPrice } : prod
   );
 }
+
+// Delete → berilgan id bo‘yicha productni o‘chir.
+
+function fnDelete(arr, id) {
+  if (!Array.isArray(arr))
+    return `products arrayi kerak bu ${typeof arr} array emas`;
+  if (!arr.length) return [];
+
+  let deleteIndex = arr.findIndex((item) => item.id === id);
+
+  arr.splice(deleteIndex, 1);
+}

@@ -5240,3 +5240,13 @@ function createProds(arr, newItem) {
 
   arr.push({ id: arr[arr.length - 1].id + 1, ...newItem });
 }
+
+// Read → faqat tech kategoriyadagi productlarni filter qilib qaytar.
+
+function fnRead(arr, category) {
+  if (!Array.isArray(arr))
+    return `products arrayi kerak bu ${typeof arr} array emas`;
+  if (!arr.length) return [];
+
+  return arr.filter((prod) => prod.category === category);
+}

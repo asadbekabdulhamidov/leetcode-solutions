@@ -5224,3 +5224,19 @@ Map(2) {
 // console.log(groupByCity(users));
 
 //=======================================================
+
+const products = [
+  { id: 1, name: 'Phone', price: 1200, category: 'tech' },
+  { id: 2, name: 'Laptop', price: 3500, category: 'tech' },
+  { id: 3, name: 'Table', price: 300, category: 'furniture' },
+  { id: 4, name: 'Chair', price: 150, category: 'furniture' },
+];
+
+// create
+// 1️⃣ Create → yangi product qo‘shadigan function yoz (id avtomatik bo‘lsin).
+function createProds(arr, newItem) {
+  if (!Array.isArray(arr))
+    return `products arrayi kerak bu ${typeof arr} array emas`;
+
+  arr.push({ id: arr[arr.length - 1].id + 1, ...newItem });
+}

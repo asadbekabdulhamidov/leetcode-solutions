@@ -5250,3 +5250,15 @@ function fnRead(arr, category) {
 
   return arr.filter((prod) => prod.category === category);
 }
+
+// 3️⃣ Update → berilgan id bo‘yicha productning price qiymatini o‘zgartir.
+
+function fnUpdate(arr, id, newPrice) {
+  if (!Array.isArray(arr))
+    return `products arrayi kerak bu ${typeof arr} array emas`;
+  if (!arr.length) return [];
+
+  return arr.map((prod) =>
+    prod.id === id ? { ...prod, price: newPrice } : prod
+  );
+}
